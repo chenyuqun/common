@@ -13,8 +13,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.zizaike.core.framework.exception.ServiceException;
-import com.zizaike.entity.solr.Place;
+import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.solr.Room;
 
 /**  
@@ -38,6 +37,6 @@ public interface RoomSolrService extends CrudRepository<Room, Integer> {
      * @return
      * @since JDK 1.7
      */
-    List<Room> queryRoomByWords(String words,int locTypeid) throws ServiceException;
+    List<Room> queryRoomByWords(String words,int locTypeid) throws ZZKServiceException;
 }
   
