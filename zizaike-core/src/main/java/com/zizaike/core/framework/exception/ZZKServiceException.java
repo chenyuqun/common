@@ -11,7 +11,7 @@ package com.zizaike.core.framework.exception;
  * @version
  * @since JDK 1.7
  */
-public class ZZKServiceException extends RuntimeException {
+public class ZZKServiceException extends Exception {
     /**
      * serialVersionUID:TODO(用一句话描述这个变量表示什么).
      * 
