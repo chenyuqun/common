@@ -9,6 +9,8 @@
 
 package com.zizaike.entity.solr;
 
+import java.util.List;
+
 import org.apache.solr.client.solrj.beans.Field;
 
 import com.zizaike.entity.solr.model.SearchableRoom;
@@ -308,7 +310,7 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      * 没有空房的日期 t_room_status_tracs的room_num和beds_num 通过drupal_node. room_price_count_check判断。如果是2就用beds_num否则就用room_num
      */
     @Field(SOLDOUT_ROOM_DATES_SS_FIELD)
-    private String soldoutRoomDatesSs;
+    private List<String> soldoutRoomDatesSs;
     /**
      * 民宿的第一张图片
      * drupal_field_data_field_image.entity_id与drupal_node.nid关联，且drupal_field_data_field_image.bundle=’article’
@@ -450,7 +452,7 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      * 民宿分类标签，见国内民宿 drupal_users. category_tags
      */
     @Field(CATEGORY_TAGS_SS_FIELD)
-    private String categoryTagsSs;
+    private List<String> categoryTagsSs;
     /**
      * 由上面的替换
      */
@@ -792,10 +794,10 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setRoomThumImgVersionI(int roomThumImgVersionI) {
         this.roomThumImgVersionI = roomThumImgVersionI;
     }
-    public String getSoldoutRoomDatesSs() {
+    public List<String> getSoldoutRoomDatesSs() {
         return soldoutRoomDatesSs;
     }
-    public void setSoldoutRoomDatesSs(String soldoutRoomDatesSs) {
+    public void setSoldoutRoomDatesSs(List<String> soldoutRoomDatesSs) {
         this.soldoutRoomDatesSs = soldoutRoomDatesSs;
     }
     public String getHomestayDefaultImageS() {
@@ -960,10 +962,11 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setOtherServiceTcn(String otherServiceTcn) {
         this.otherServiceTcn = otherServiceTcn;
     }
-    public String getCategoryTagsSs() {
+   
+    public List<String> getCategoryTagsSs() {
         return categoryTagsSs;
     }
-    public void setCategoryTagsSs(String categoryTagsSs) {
+    public void setCategoryTagsSs(List<String> categoryTagsSs) {
         this.categoryTagsSs = categoryTagsSs;
     }
     public String getCategoryTagsS() {
