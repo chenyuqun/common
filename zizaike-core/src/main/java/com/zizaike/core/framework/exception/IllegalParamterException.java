@@ -14,7 +14,7 @@ package com.zizaike.core.framework.exception;
  * @version   
  * @since JDK 1.7
  */
-public class IllegalParamterException extends ServiceException {
+public class IllegalParamterException extends ZZKServiceException {
 
 	private static final long serialVersionUID = -9145714915360036533L;
 

@@ -11,7 +11,7 @@ package com.zizaike.core.framework.exception;
  * @version
  * @since JDK 1.7
  */
-public class ServiceException extends RuntimeException {
+public class ZZKServiceException extends RuntimeException {
     /**
      * serialVersionUID:TODO(用一句话描述这个变量表示什么).
      * 
@@ -27,30 +27,30 @@ public class ServiceException extends RuntimeException {
      */
     private String description;
 
-    protected ServiceException() {
+    protected ZZKServiceException() {
     }
 
-    public ServiceException(IErrorCode errorCode) {
+    public ZZKServiceException(IErrorCode errorCode) {
         this(errorCode, null);
     }
 
-    public ServiceException(String code, String desc) {
+    public ZZKServiceException(String code, String desc) {
         this.errorCode = new ErrorCode(code, desc);
         description = desc;
     }
 
-    public ServiceException(String description, IErrorCode errorCode) {
+    public ZZKServiceException(String description, IErrorCode errorCode) {
         this(errorCode.getErrorCode(), description);
     }
 
    
 
-    public ServiceException(String description, IErrorCode errorCode, Throwable cause) {
+    public ZZKServiceException(String description, IErrorCode errorCode, Throwable cause) {
         this(errorCode, cause);
         this.description = description;
     }
 
-    public ServiceException(IErrorCode errorCode, Throwable cause) {
+    public ZZKServiceException(IErrorCode errorCode, Throwable cause) {
         super(cause);
         if (errorCode == null) {
             throw new java.lang.IllegalArgumentException("error code could not null.");

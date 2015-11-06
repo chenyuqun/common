@@ -11,13 +11,13 @@ package com.zizaike.is.recommend;
 
 import java.util.List;
 
-import com.zizaike.core.framework.exception.ServiceException;
+import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.recommend.hot.Recommend;
 
 /**  
  * ClassName:IHotRecommendDao <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
+ * Function: 热推服务接口. <br/>  
+ * Reason:   interface. <br/>  
  * Date:     2015年11月5日 下午2:08:52 <br/>  
  * @author   snow.zhang  
  * @version    
@@ -31,9 +31,9 @@ public interface HotRecommendService {
      *  
      * @author snow.zhang  
      * @return
-     * @throws ServiceException  
+     * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    List<Recommend> quryHotRecommend () throws ServiceException;
+    List<Recommend> quryHotRecommend () throws ZZKServiceException;
 }
   

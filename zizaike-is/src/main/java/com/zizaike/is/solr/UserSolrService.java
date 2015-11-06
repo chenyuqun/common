@@ -11,7 +11,7 @@ package com.zizaike.is.solr;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.zizaike.core.framework.exception.ServiceException;
+import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.solr.User;
 
 /**
@@ -35,5 +35,5 @@ public interface UserSolrService extends CrudRepository<User, Integer> {
      * @return
      * @since JDK 1.7
      */
-    User queryUserById(Integer id) throws ServiceException;
+    User queryUserById(Integer id) throws ZZKServiceException;
 }
