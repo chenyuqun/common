@@ -27,7 +27,9 @@
 		<solr.version>4.7.0</solr.version>
 		<spring.data.solr.version>1.5.0.RELEASE</spring.data.solr.version>
 		<springdata.commons>1.11.1.BUILD-SNAPSHOT</springdata.commons>
-
+		<!-- redis -->
+		<jedis.version>2.7.2</jedis.version>
+		
 		<zizaike.core.version>1.0.1-SNAPSHOT</zizaike.core.version>
 		<zizaike.entity.version>1.0.1-SNAPSHOT</zizaike.entity.version>
 		<zizaike.is.version>1.0.1-SNAPSHOT</zizaike.is.version>
@@ -255,6 +257,14 @@
 				<version>1.1.39</version>
 			</dependency>
 			<!-- fastjson end -->
+			<!-- redis start -->
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${jedis.version}</version>
+				<optional>true</optional>
+			</dependency>
+			<!-- redis end -->
 		</dependencies>
 	</dependencyManagement>
 
