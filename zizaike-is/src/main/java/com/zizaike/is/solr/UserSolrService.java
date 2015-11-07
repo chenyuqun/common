@@ -9,10 +9,13 @@
 
 package com.zizaike.is.solr;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.solr.User;
+import com.zizaike.entity.solr.dto.AssociateWordsDTO;
 
 /**
  * ClassName:UserService <br/>
@@ -36,4 +39,14 @@ public interface UserSolrService extends CrudRepository<User, Integer> {
      * @since JDK 1.7
      */
     User queryUserById(Integer id) throws ZZKServiceException;
+    /**
+     * 
+     * queryUserById:通过查询User相关信息. <br/>
+     * 
+     * @author alex
+     * @param words,destId,locid
+     * @return
+     * @since JDK 1.7
+     */
+    List<AssociateWordsDTO> queryUserByWordsAndLoc(String words,Integer destId,Integer locid) throws ZZKServiceException;
 }
