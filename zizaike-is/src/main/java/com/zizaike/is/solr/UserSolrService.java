@@ -41,7 +41,7 @@ public interface UserSolrService extends CrudRepository<User, Integer> {
     User queryUserById(Integer id) throws ZZKServiceException;
     /**
      * 
-     * queryUserById:通过查询User相关信息. <br/>
+     * queryUserByWordsAndLoc:查询locId下的民宿相关信息. <br/>
      * 
      * @author alex
      * @param words,destId,locid
@@ -49,4 +49,15 @@ public interface UserSolrService extends CrudRepository<User, Integer> {
      * @since JDK 1.7
      */
     List<AssociateWordsDTO> queryUserByWordsAndLoc(String words,Integer destId,Integer locid) throws ZZKServiceException;
+    
+    /**
+     * 
+     * queryUserByWordsAndLoc:查询全站下的民宿相关信息. <br/>
+     * 
+     * @author alex
+     * @param words,destId
+     * @return  
+     * @since JDK 1.7
+     */
+    List<AssociateWordsDTO> queryUserByWordsAndDest(String words,Integer destId) throws ZZKServiceException;
 }

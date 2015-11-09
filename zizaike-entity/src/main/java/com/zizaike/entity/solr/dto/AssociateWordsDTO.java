@@ -37,14 +37,6 @@ public class AssociateWordsDTO implements java.io.Serializable{
      * 地址id
      */
     private Integer locId;
-//    /**
-//     * 纬度
-//     */
-//    private Double slat;
-//    /**
-//     * 经度
-//     */
-//    private Double slng;
     /**
      * 民宿名称/商圈名称
      */
@@ -57,6 +49,10 @@ public class AssociateWordsDTO implements java.io.Serializable{
      * 民宿地址
      */
     private String address;
+    /**
+     * 是否全站 1是 0不是
+     */
+    private Integer isAllDest;
     public Integer getAssociateType() {
         return associateType;
     }
@@ -92,6 +88,12 @@ public class AssociateWordsDTO implements java.io.Serializable{
     }
     public void setAddress(String address) {
         this.address = address;
+    }
+    public Integer getIsAllDest() {
+        return isAllDest;
+    }
+    public void setIsAllDest(Integer isAllDest) {
+        this.isAllDest = isAllDest;
     }
     
 }
