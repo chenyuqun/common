@@ -1,7 +1,6 @@
 package com.zizaike.core.framework.cache.support.redis;
 
 import com.zizaike.core.framework.cache.CacheDao;
-import com.zizaike.core.framework.cache.CounterDao;
 
 /**
  * 
@@ -13,10 +12,7 @@ import com.zizaike.core.framework.cache.CounterDao;
  * @version
  * @since JDK 1.7
  */
-public interface RedisCacheDao extends CacheDao, CounterDao {
-
-
-    Object ping();
+public interface RedisCacheDao extends CacheDao {
 
 
 }

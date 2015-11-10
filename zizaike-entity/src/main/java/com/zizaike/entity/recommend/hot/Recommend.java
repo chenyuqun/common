@@ -136,4 +136,12 @@ public class Recommend implements java.io.Serializable {
     public void setRecommendType(RecommendType recommendType) {
         this.recommendType = recommendType;
     }
+
+    @Override
+    public String toString() {
+        return "Recommend [id=" + id + ", destId=" + destId + ", recommendType=" + recommendType + ", eName=" + eName
+                + ", recommendName=" + recommendName + ", rank=" + rank + ", active=" + active + ", relationId="
+                + relationId + ", createAt=" + createAt + ", updateAt=" + updateAt + "]";
+    }
+    
 }
