@@ -3,6 +3,7 @@ package com.zizaike.core.framework.cache;
 import java.util.Collection;
 import java.util.List;
 
+import com.alibaba.fastjson.TypeReference;
 import com.zizaike.core.framework.exception.ZZKServiceException;
 
 /**
@@ -30,6 +31,19 @@ public interface CacheDao {
      * @since JDK 1.7
      */
     <T> T get(CacheKeyPrefix prefix, String key, Class<T> clazz) throws ZZKServiceException;
+    /**
+     * 
+     * get:引用类型. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param prefix
+     * @param key
+     * @param reference
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    <T> T get(CacheKeyPrefix prefix, String key, TypeReference<T> reference) throws ZZKServiceException;
 
     /**
      * 
@@ -80,7 +94,7 @@ public interface CacheDao {
      * @param key  
      * @since JDK 1.7
      */
-    void delete(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
+    Long delete(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
 
     /****
      * 获取Key剩余有效时间。
@@ -90,7 +104,7 @@ public interface CacheDao {
      * @param key 键
      * @return int 失效时间，单位秒 当 key 不存在或没有设置生存时间时，返回 -1
      */
-    int getKeyExpiresIn(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
+    Long getKeyExpiresIn(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
 
     /****
      * 判断键是否存在
