@@ -10,7 +10,7 @@ package com.zizaike.core.framework.cache;
  * @version
  * @since JDK 1.7
  */
-public interface CounterService {
+public interface CounterDao {
     /**
      * 
      * ClassName: Counter <br/>

@@ -3,6 +3,8 @@ package com.zizaike.core.framework.cache;
 import java.util.Collection;
 import java.util.List;
 
+import com.zizaike.core.framework.exception.ZZKServiceException;
+
 /**
  * 
  * ClassName: CacheService <br/>
@@ -14,7 +16,7 @@ import java.util.List;
  * @version
  * @since JDK 1.7
  */
-public interface CacheService {
+public interface CacheDao {
 
     /**
      * 
@@ -27,7 +29,7 @@ public interface CacheService {
      * @return
      * @since JDK 1.7
      */
-    <T> T get(CacheKeyPrefix prefix, String key, Class<T> clazz);
+    <T> T get(CacheKeyPrefix prefix, String key, Class<T> clazz) throws ZZKServiceException;
 
     /**
      * 
@@ -40,7 +42,7 @@ public interface CacheService {
      * @return  
      * @since JDK 1.7
      */
-    <T> List<T> gets(CacheKeyPrefix prefix, Collection<String> keys, Class<T> clazz);
+    <T> List<T> gets(CacheKeyPrefix prefix, Collection<String> keys, Class<T> clazz) throws ZZKServiceException;
 
     
     /**
@@ -53,7 +55,7 @@ public interface CacheService {
      * @param value  缓存对象，对于不同的缓存实现，对对象有不同要求，比如Memcached需要对象实现序列化接口，具体参见不同子类
      * @since JDK 1.7
      */
-    void set(CacheKeyPrefix prefix, String key, Object value);
+    void set(CacheKeyPrefix prefix, String key, Object value) throws ZZKServiceException;
 
     
     /**
@@ -67,7 +69,7 @@ public interface CacheService {
      * @param expiresIn  
      * @since JDK 1.7
      */
-    void set(CacheKeyPrefix prefix, String key, Object value, int expiresIn);
+    void setEx(CacheKeyPrefix prefix, String key, Object value, int seconds) throws ZZKServiceException;
 
     /**
      * 
@@ -78,7 +80,7 @@ public interface CacheService {
      * @param key  
      * @since JDK 1.7
      */
-    void delete(CacheKeyPrefix prefix, String key);
+    void delete(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
 
     /****
      * 获取Key剩余有效时间。
@@ -88,7 +90,7 @@ public interface CacheService {
      * @param key 键
      * @return int 失效时间，单位秒 当 key 不存在或没有设置生存时间时，返回 -1
      */
-    int getKeyExpiresIn(CacheKeyPrefix prefix, String key);
+    int getKeyExpiresIn(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
 
     /****
      * 判断键是否存在
@@ -99,6 +101,6 @@ public interface CacheService {
      * @param key 键
      * @return boolean 存在返回<code>true</code>，不存在返回<code>false</code>
      */
-    boolean exist(CacheKeyPrefix prefix, String key);
+    boolean exist(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
 
 }

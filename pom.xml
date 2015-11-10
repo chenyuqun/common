@@ -13,6 +13,7 @@
 		<slf4j.version>1.7.5</slf4j.version>
 		<logback.version>1.0.11</logback.version>
 		<drools.version>6.1.0.Final</drools.version>
+		<commons-lang.version>3.2.1</commons-lang.version>
 		<!-- mybatis generator -->
 		<mybatis.generator.configFile>${basedir}/src/main/resources/maven_build/generatorConfig.xml
 		</mybatis.generator.configFile>
@@ -29,7 +30,6 @@
 		<springdata.commons>1.11.1.BUILD-SNAPSHOT</springdata.commons>
 		<!-- redis -->
 		<jedis.version>2.7.2</jedis.version>
-		
 		<zizaike.core.version>1.0.1-SNAPSHOT</zizaike.core.version>
 		<zizaike.entity.version>1.0.1-SNAPSHOT</zizaike.entity.version>
 		<zizaike.is.version>1.0.1-SNAPSHOT</zizaike.is.version>
@@ -43,7 +43,7 @@
 	</modules>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
+		<dependency>
 				<groupId>com.zizaike</groupId>
 				<artifactId>zizaike-core</artifactId>
 				<version>${zizaike.core.version}</version>
@@ -257,14 +257,12 @@
 				<version>1.1.39</version>
 			</dependency>
 			<!-- fastjson end -->
-			<!-- redis start -->
+			
 			<dependency>
-				<groupId>redis.clients</groupId>
-				<artifactId>jedis</artifactId>
-				<version>${jedis.version}</version>
-				<optional>true</optional>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang.version}</version>
 			</dependency>
-			<!-- redis end -->
 		</dependencies>
 	</dependencyManagement>
 
@@ -374,4 +372,5 @@
 		</pluginManagement>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 	</build>
+	
 </project>
