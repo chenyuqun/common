@@ -31,11 +31,20 @@ public class Recommend implements java.io.Serializable {
     /**
      * english name
      */
-    private String eName;
+    private String engName;
     /**
      * name
      */
     private String recommendName;
+    
+    public String getEngName() {
+        return engName;
+    }
+
+    public void setEngName(String engName) {
+        this.engName = engName;
+    }
+
     /**
      * 排序值
      */
@@ -66,13 +75,6 @@ public class Recommend implements java.io.Serializable {
         this.relationId = relationId;
     }
 
-    public String geteName() {
-        return eName;
-    }
-
-    public void seteName(String eName) {
-        this.eName = eName;
-    }
 
     public Integer getId() {
         return id;
@@ -139,7 +141,7 @@ public class Recommend implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Recommend [id=" + id + ", destId=" + destId + ", recommendType=" + recommendType + ", eName=" + eName
+        return "Recommend [id=" + id + ", destId=" + destId + ", recommendType=" + recommendType + ", engName=" + engName
                 + ", recommendName=" + recommendName + ", rank=" + rank + ", active=" + active + ", relationId="
                 + relationId + ", createAt=" + createAt + ", updateAt=" + updateAt + "]";
     }
