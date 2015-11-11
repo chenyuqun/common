@@ -1,4 +1,4 @@
-package com.zizaike.entity.loctype;
+package com.zizaike.entity.recommend.hot;
 /**
  * 
  * ClassName: Loctype <br/>  

@@ -28,7 +28,7 @@ public class AssociateWordsDTO implements java.io.Serializable{
     /**
      * 关联类型 1城市2商圈3景点4民宿名称5民宿地址
      */
-    private Integer associateType;
+    private AssociateType associateType;
     /**
      * 目的地
      */
@@ -53,10 +53,10 @@ public class AssociateWordsDTO implements java.io.Serializable{
      * 是否全站 1是 0不是
      */
     private Integer isAllDest;
-    public Integer getAssociateType() {
+    public AssociateType getAssociateType() {
         return associateType;
     }
-    public void setAssociateType(Integer associateType) {
+    public void setAssociateType(AssociateType associateType) {
         this.associateType = associateType;
     }
     public Integer getDestId() {

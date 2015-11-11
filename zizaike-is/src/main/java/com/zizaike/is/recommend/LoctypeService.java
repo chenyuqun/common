@@ -7,12 +7,12 @@
  *  
 */  
 
-package com.zizaike.is.loctype;  
+package com.zizaike.is.recommend;  
 
 import java.util.List;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
-import com.zizaike.entity.loctype.Loctype;
+import com.zizaike.entity.recommend.hot.Loctype;
 import com.zizaike.entity.recommend.hot.Recommend;
 
 /**  
