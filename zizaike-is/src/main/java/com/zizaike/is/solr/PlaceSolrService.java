@@ -16,8 +16,9 @@ import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.solr.core.query.result.GroupPage;
 
-import com.zizaike.core.framework.exception.ServiceException;
+import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.solr.Place;
+import com.zizaike.entity.solr.dto.AssociateWordsDTO;
 
 /**  
  * ClassName:PlaceSolrService <br/>  
@@ -40,7 +41,7 @@ public interface PlaceSolrService extends CrudRepository<Place, Integer>{
      * @return
      * @since JDK 1.7
      */
-    List<Place> queryPlaceByWords(String words) throws ServiceException;
+    List<Place> queryPlaceByWords(String words) throws ZZKServiceException;
     /**
      * 
      * queryPlaceByWordsAndLoc:通过输入字符在目标地点内查询目标Place相关信息. <br/>
@@ -50,7 +51,7 @@ public interface PlaceSolrService extends CrudRepository<Place, Integer>{
      * @return
      * @since JDK 1.7
      */
-    List<Place> queryPlaceByWordsAndLoc(String words,Integer locid) throws ServiceException;
+    List<AssociateWordsDTO> queryPlaceByWordsAndLoc(String words,Integer destId,Integer locid) throws ZZKServiceException;
 
 }
   

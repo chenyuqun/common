@@ -2,6 +2,7 @@ package com.zizaike.core.common;
 
 
 import java.util.Properties;
+import java.util.Set;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
@@ -38,6 +39,9 @@ public class PropertyConfigurer extends PropertyPlaceholderConfigurer {
 	
 	public Object setProperty(String key, String value) {
 		return props.setProperty(key, value);
+	}
+	public Set<Object> getPropertyKeySet(){
+	    return props.keySet();
 	}
 
 }

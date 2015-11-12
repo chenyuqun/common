@@ -7,7 +7,7 @@
  *  
 */  
   
-package com.zizaike.is.recommend;  
+package com.zizaike.is.redis;  
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ import com.zizaike.entity.recommend.hot.Recommend;
  * @since    JDK 1.7  
  * @see        
  */
-public interface HotRecommendService {
+public interface HotRecommendRedisService {
     /**
      * 
      * quryHotRecommend:热门推荐. <br/>  
@@ -34,6 +34,16 @@ public interface HotRecommendService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    List<Recommend> quryHotRecommend () throws ZZKServiceException;
+    List<Recommend> qury () throws ZZKServiceException;
+   
+    /**
+     * 
+     * save:设置缓存+seconds. <br/>  
+     *  
+     * @author snow.zhang  
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    void save (List<Recommend> value) throws ZZKServiceException;
 }
   
