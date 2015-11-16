@@ -113,9 +113,9 @@ public class SignUtil {
     }
     public static void main(String[] args) {
         Map<String, String> map = new HashMap<String, String>();
-        map.put("service", "order.updateOrderStatus");
-        map.put("field", "id");
-        map.put("user_token", "32423424");
+        map.put("words", "淡水");
+        map.put("destId", "10");
+        map.put("locid", "60515");
         map.put("apiKey", "6cd0f0bd288704f76711ff404f82c06c");
         String apiSecret = "888888";
         String signResult = SignUtil.getSign(map, apiSecret);

@@ -1,12 +1,10 @@
 package com.zizaike.core.common.util.encrypt;
 
-import java.io.IOException;
 
+import org.apache.commons.codec.binary.Base64;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
 
 /**
  * 
@@ -32,13 +30,8 @@ public abstract class Base64Encrypt {
         if (source == null) {
             return null;
         }
-        try {
-            byte[] buff = new BASE64Decoder().decodeBuffer(source);
-            return new String(buff);
-        } catch (IOException e) {
-            LOG.error(e.toString());
-        }
-        return null;
+        byte[] buff = Base64.decodeBase64(source);
+        return new String(buff);
     }
 
     /**
@@ -51,12 +44,7 @@ public abstract class Base64Encrypt {
         if (source == null) {
             return null;
         }
-        try {
-            return new BASE64Decoder().decodeBuffer(new java.io.ByteArrayInputStream(source));
-        } catch (IOException e) {
-            LOG.error(e.toString());
-        }
-        return null;
+        return Base64.decodeBase64(new java.io.ByteArrayInputStream(source).toString());
     }
 
     /**
@@ -66,10 +54,10 @@ public abstract class Base64Encrypt {
      * @return
      */
     public static final String encode(String source) {
-        if (source == null) {
-            return null;
+        if (source!=null) {
+            return Base64.encodeBase64String(source.getBytes());
         }
-        return new BASE64Encoder().encode(source.getBytes());
+        return null;
     }
 
     /**
@@ -82,7 +70,7 @@ public abstract class Base64Encrypt {
         if (source == null) {
             return null;
         }
-        return new BASE64Encoder().encode(source);
+        return Base64.encodeBase64String(source);
     }
 
 }
