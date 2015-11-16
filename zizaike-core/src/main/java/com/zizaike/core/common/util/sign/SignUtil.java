@@ -6,6 +6,8 @@ import java.util.Map.Entry;
 import java.util.TreeMap;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.zizaike.core.common.util.encrypt.MD5Encrypt;
 
@@ -20,8 +22,10 @@ import com.zizaike.core.common.util.encrypt.MD5Encrypt;
  * @since JDK 1.7
  */
 public class SignUtil {
-
-    private static final String KEY_API_SIGN = "apiSign";
+    public static final String API_KEY = "apiKey";
+    public static final String API_SIGN = "apiSign";
+    public static final String API_SECRET = "apiSecret";
+    private static final Logger LOG = LoggerFactory.getLogger(SignUtil.class);
 
     /**
      * 
@@ -34,8 +38,8 @@ public class SignUtil {
      */
     public static String getSign(Map<String, String> params, String apiSecret) {
         String sign = "";
-        if (params.containsKey(KEY_API_SIGN)) {
-            params.remove(KEY_API_SIGN);
+        if (params.containsKey(API_SIGN)) {
+            params.remove(API_SIGN);
         }
         sign = signParamValue(params, apiSecret);
         return sign;
@@ -107,19 +111,15 @@ public class SignUtil {
         buffer.deleteCharAt(buffer.length() - 1);
         return buffer.toString();
     }
-
     public static void main(String[] args) {
         Map<String, String> map = new HashMap<String, String>();
         map.put("service", "order.updateOrderStatus");
         map.put("field", "id");
         map.put("user_token", "32423424");
-        map.put("apiKey", "7f895b1c57bafe9eb8c85ed621231d4f");
-        map.put("apiSign", "7f895b1c57bafe9eb8c85ed621231d4f");
+        map.put("apiKey", "6cd0f0bd288704f76711ff404f82c06c");
         String apiSecret = "888888";
         String signResult = SignUtil.getSign(map, apiSecret);
-        System.out.println(signResult);
-        String r = "7f895b1c57bafe9eb8c85ed621231d4fidorder.updateOrderStatus32423424123456";
-        System.out.println(MD5Encrypt.encrypt(r));
+        LOG.info(signResult);
 
     }
 }

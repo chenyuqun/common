@@ -5,6 +5,10 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 import sun.misc.BASE64Decoder;
 
 /**
@@ -19,6 +23,7 @@ import sun.misc.BASE64Decoder;
  */
 @SuppressWarnings("restriction")
 public class AesEncrypt {
+    private static final Logger LOG = LoggerFactory.getLogger(AesEncrypt.class);
 	public static String encrypt(String data,String key,String iv) throws Exception {
         try {
             Cipher cipher = Cipher.getInstance("AES/CBC/NoPadding");
@@ -43,7 +48,7 @@ public class AesEncrypt {
             return new sun.misc.BASE64Encoder().encode(encrypted);
   
         } catch (Exception e) {
-            e.printStackTrace();
+            LOG.error(e.toString());
             return null;
         }
     }
@@ -64,7 +69,7 @@ public class AesEncrypt {
             return originalString;
         }
         catch (Exception e) {
-            e.printStackTrace();
+            LOG.error(e.toString());
             return null;
         }
     }
