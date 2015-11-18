@@ -19,7 +19,7 @@ import javax.crypto.spec.DESKeySpec;
  */
 public abstract class DesEncrypt {
 
-    private final static String DES = "DES";
+    private static final String DES = "DES";
 
     /**
      * Description 根据键值进行加密

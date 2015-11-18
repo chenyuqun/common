@@ -37,6 +37,16 @@ public interface LoctypeService {
      * @since JDK 1.7
      */
     List<Loctype> queryLoctype (Loctype loctype) throws ZZKServiceException;
+    /**
+     * 
+     * queryByAreaLevel:查询所有国家的行政级别是:省、市的数据. <br/>  
+     *  
+     * @author snow.zhang  
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    List<Loctype> queryByAreaLevel ()throws ZZKServiceException;
     
 }
   

@@ -34,17 +34,12 @@ public abstract class Base64Encrypt {
         return new String(buff);
     }
 
-    /**
-     * base64编码的解码器
-     * 
-     * @param source
-     * @return
-     */
     public static final byte[] decode(byte[] source) {
         if (source == null) {
             return null;
         }
-        return Base64.decodeBase64(new java.io.ByteArrayInputStream(source).toString());
+        byte[] b = Base64.decodeBase64(new java.io.ByteArrayInputStream(source).toString());
+        return b;
     }
 
     /**
@@ -53,9 +48,9 @@ public abstract class Base64Encrypt {
      * @param source
      * @return
      */
-    public static final String encode(String source) {
-        if (source!=null) {
-            return Base64.encodeBase64String(source.getBytes());
+    public static final String encode(String sourceStr) {
+        if (sourceStr!=null) {
+            return Base64.encodeBase64String(sourceStr.getBytes());
         }
         return null;
     }

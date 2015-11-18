@@ -1,4 +1,7 @@
 package com.zizaike.entity.recommend.hot;
+
+import com.alibaba.fastjson.annotation.JSONType;
+
 /**
  * 
  * ClassName: Loctype <br/>  
@@ -10,6 +13,7 @@ package com.zizaike.entity.recommend.hot;
  * @version   
  * @since JDK 1.7
  */
+@JSONType(ignores={"rank","typeCode","createAt","updateAt","mapX","mapY","mapZoom","localid","roomNum","homeNum","vhomeNum"})
 public class Loctype implements java.io.Serializable{
    
     private static final long serialVersionUID = -2348195872872844335L;
@@ -45,6 +49,18 @@ public class Loctype implements java.io.Serializable{
     private Integer homeNum;
 
     private Integer vhomeNum;
+    /**
+     * 行政级别类型
+     */
+    private AreaLevel areaLevel;
+    
+    public AreaLevel getAreaLevel() {
+        return areaLevel;
+    }
+
+    public void setAreaLevel(AreaLevel areaLevel) {
+        this.areaLevel = areaLevel;
+    }
 
     public Integer getId() {
         return id;
