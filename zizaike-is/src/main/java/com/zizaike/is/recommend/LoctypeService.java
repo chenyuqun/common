@@ -12,8 +12,8 @@ package com.zizaike.is.recommend;
 import java.util.List;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
-import com.zizaike.entity.recommend.hot.Loctype;
-import com.zizaike.entity.recommend.hot.Recommend;
+import com.zizaike.entity.recommend.Loctype;
+import com.zizaike.entity.recommend.Recommend;
 
 /**  
  * ClassName:LoctypeService <br/>  

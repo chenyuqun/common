@@ -10,7 +10,7 @@
 package com.zizaike.entity.solr.dto;  
 
 import com.zizaike.core.framework.ienum.IEnum;
-import com.zizaike.entity.recommend.hot.RecommendType;
+import com.zizaike.entity.recommend.RecommendType;
 
 /**  
  * ClassName: AssociateType <br/>  
