@@ -1,10 +1,9 @@
 package com.zizaike.core.common.util.encrypt;
 
-
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 /**
  * 
@@ -27,10 +26,7 @@ public abstract class Base64Encrypt {
      * @return
      */
     public static final String decode(String source) {
-        if (source == null) {
-            return null;
-        }
-        byte[] buff = Base64.decodeBase64(source);
+        byte[] buff = decode(source.getBytes());
         return new String(buff);
     }
 
@@ -41,18 +37,16 @@ public abstract class Base64Encrypt {
         byte[] b = Base64.decodeBase64(new java.io.ByteArrayInputStream(source).toString());
         return b;
     }
-
     /**
-     * base64编码的编码器
      * 
-     * @param source
-     * @return
+     * encode:编. <br/>  
+     * @author snow.zhang  
+     * @param sourceStr
+     * @return  
+     * @since JDK 1.7
      */
     public static final String encode(String sourceStr) {
-        if (sourceStr!=null) {
-            return Base64.encodeBase64String(sourceStr.getBytes());
-        }
-        return null;
+        return encode(sourceStr.getBytes());
     }
 
     /**

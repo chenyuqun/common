@@ -60,9 +60,7 @@ public abstract class DesEncrypt {
      * @throws Exception
      */
     private static byte[] encrypt(byte[] data, byte[] key) {
-        // 生成一个可信任的随机数源
         SecureRandom sr = new SecureRandom();
-
         try {
             // 从原始密钥数据创建DESKeySpec对象
             DESKeySpec dks = new DESKeySpec(key);
