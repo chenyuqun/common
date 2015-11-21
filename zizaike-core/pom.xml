@@ -12,10 +12,22 @@
 	<packaging>jar</packaging>
 	<name>zizaike-core</name>
 	<url>http://maven.apache.org</url>
-	<version>1.0.2-SNAPSHOTS</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>zizaike-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://192.168.8.17:8081/content/repositories/zizaike-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>zizaike-releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://192.168.8.17:8081/content/repositories/zizaike-releases/</url>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 		<!-- spring start -->
 		<dependency>

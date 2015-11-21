@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zizaike.entity.recommend.DestConfigMapper" >
+  <resultMap id="BaseResultMap" type="com.zizaike.entity.recommend.DestConfig" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="dest_id" property="destId" jdbcType="INTEGER" />
+    <result column="domain" property="domain" jdbcType="VARCHAR" />
+    <result column="default_language" property="defaultLanguage" jdbcType="VARCHAR" />
+    <result column="pay_channel" property="payChannel" jdbcType="VARCHAR" />
+    <result column="exchange_rate" property="exchangeRate" jdbcType="DOUBLE" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="currency_ios_code" property="currencyIosCode" jdbcType="VARCHAR" />
+    <result column="currency_code" property="currencyCode" jdbcType="VARCHAR" />
+    <result column="dest_name" property="destName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, dest_id, domain, default_language, pay_channel, exchange_rate, status, currency_ios_code, 
+    currency_code, dest_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_dest_config
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_dest_config
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zizaike.entity.recommend.DestConfig" >
+    insert into t_dest_config (id, dest_id, domain, 
+      default_language, pay_channel, exchange_rate, 
+      status, currency_ios_code, currency_code, 
+      dest_name)
+    values (#{id,jdbcType=INTEGER}, #{destId,jdbcType=INTEGER}, #{domain,jdbcType=VARCHAR}, 
+      #{defaultLanguage,jdbcType=VARCHAR}, #{payChannel,jdbcType=VARCHAR}, #{exchangeRate,jdbcType=DOUBLE}, 
+      #{status,jdbcType=INTEGER}, #{currencyIosCode,jdbcType=VARCHAR}, #{currencyCode,jdbcType=VARCHAR}, 
+      #{destName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zizaike.entity.recommend.DestConfig" >
+    insert into t_dest_config
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="destId != null" >
+        dest_id,
+      </if>
+      <if test="domain != null" >
+        domain,
+      </if>
+      <if test="defaultLanguage != null" >
+        default_language,
+      </if>
+      <if test="payChannel != null" >
+        pay_channel,
+      </if>
+      <if test="exchangeRate != null" >
+        exchange_rate,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="currencyIosCode != null" >
+        currency_ios_code,
+      </if>
+      <if test="currencyCode != null" >
+        currency_code,
+      </if>
+      <if test="destName != null" >
+        dest_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="destId != null" >
+        #{destId,jdbcType=INTEGER},
+      </if>
+      <if test="domain != null" >
+        #{domain,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultLanguage != null" >
+        #{defaultLanguage,jdbcType=VARCHAR},
+      </if>
+      <if test="payChannel != null" >
+        #{payChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangeRate != null" >
+        #{exchangeRate,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="currencyIosCode != null" >
+        #{currencyIosCode,jdbcType=VARCHAR},
+      </if>
+      <if test="currencyCode != null" >
+        #{currencyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="destName != null" >
+        #{destName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zizaike.entity.recommend.DestConfig" >
+    update t_dest_config
+    <set >
+      <if test="destId != null" >
+        dest_id = #{destId,jdbcType=INTEGER},
+      </if>
+      <if test="domain != null" >
+        domain = #{domain,jdbcType=VARCHAR},
+      </if>
+      <if test="defaultLanguage != null" >
+        default_language = #{defaultLanguage,jdbcType=VARCHAR},
+      </if>
+      <if test="payChannel != null" >
+        pay_channel = #{payChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangeRate != null" >
+        exchange_rate = #{exchangeRate,jdbcType=DOUBLE},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="currencyIosCode != null" >
+        currency_ios_code = #{currencyIosCode,jdbcType=VARCHAR},
+      </if>
+      <if test="currencyCode != null" >
+        currency_code = #{currencyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="destName != null" >
+        dest_name = #{destName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zizaike.entity.recommend.DestConfig" >
+    update t_dest_config
+    set dest_id = #{destId,jdbcType=INTEGER},
+      domain = #{domain,jdbcType=VARCHAR},
+      default_language = #{defaultLanguage,jdbcType=VARCHAR},
+      pay_channel = #{payChannel,jdbcType=VARCHAR},
+      exchange_rate = #{exchangeRate,jdbcType=DOUBLE},
+      status = #{status,jdbcType=INTEGER},
+      currency_ios_code = #{currencyIosCode,jdbcType=VARCHAR},
+      currency_code = #{currencyCode,jdbcType=VARCHAR},
+      dest_name = #{destName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

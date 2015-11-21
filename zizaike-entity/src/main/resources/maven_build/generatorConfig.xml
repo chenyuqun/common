@@ -21,7 +21,7 @@
 		<javaClientGenerator type="XMLMAPPER" targetPackage="${mybatis.generator.package.path}" targetProject="${mybatis.generator.javaFileDir}">
 		</javaClientGenerator>
 		
-		<table tableName="t_search_recommend" domainObjectName="recommend.Recommend" enableCountByExample="false" enableUpdateByExample="false"  
+		<table tableName="t_dest_config" domainObjectName="area.DestConfig" enableCountByExample="false" enableUpdateByExample="false"  
            enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>
 
