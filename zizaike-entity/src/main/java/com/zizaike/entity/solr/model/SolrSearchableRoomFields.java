@@ -99,6 +99,7 @@ public enum SolrSearchableRoomFields implements Field{
     CATEGORY_TAGS_SS(SearchableRoom.CATEGORY_TAGS_SS_FIELD),
     CATEGORY_TAGS_S(SearchableRoom.CATEGORY_TAGS_S_FIELD),
     SCORE_F(SearchableRoom.SCORE_F_FIELD),
+    DISTANCE(SearchableRoom.DISTANCE_FIELD),
     ;
     private  String fieldName;
     

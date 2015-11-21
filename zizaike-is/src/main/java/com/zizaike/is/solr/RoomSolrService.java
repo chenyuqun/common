@@ -15,6 +15,8 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.solr.Room;
+import com.zizaike.entity.solr.RoomSolr;
+import com.zizaike.entity.solr.SearchWordsVo;
 
 /**  
  * ClassName:RoomSolrService <br/>  
@@ -38,5 +40,21 @@ public interface RoomSolrService extends CrudRepository<Room, Integer> {
      * @since JDK 1.7
      */
     List<Room> queryRoomByWords(String words,int locTypeid) throws ZZKServiceException;
+    /**
+     * 
+     * searchSolr:(这里用一句话描述这个方法的作用). <br/>  
+     * TODO(这里描述这个方法适用条件 – 可选).<br/>  
+     * TODO(这里描述这个方法的执行流程 – 可选).<br/>  
+     * TODO(这里描述这个方法的使用方法 – 可选).<br/>  
+     * TODO(这里描述这个方法的注意事项 – 可选).<br/>  
+     *  
+     * @author alex 
+     * @param words
+     * @param desId
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    RoomSolr searchSolr(SearchWordsVo searchWordsVo) throws ZZKServiceException;
 }
   
