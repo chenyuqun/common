@@ -28,11 +28,20 @@ public class RoomList implements java.io.Serializable {
      * @since JDK 1.7
      */
     private static final long serialVersionUID = 141024384141125664L;
-    
-    private int uid;
-    
-    private List<Room> roomList;
 
+    private int uid;
+    private int minPrice;
+    private int isSpeed;
+    private int commentNum;
+    private int hsRatingAvgI;
+    private int userPoiId;
+    private String homeStayImage;
+    private String username;
+    private String address;
+    private String userPhoto;
+    private String userPoiName;
+    private Double distance;
+    
     public int getUid() {
         return uid;
     }
@@ -41,12 +50,92 @@ public class RoomList implements java.io.Serializable {
         this.uid = uid;
     }
 
-    public List<Room> getRoomList() {
-        return roomList;
+    public int getMinPrice() {
+        return minPrice;
     }
 
-    public void setRoomList(List<Room> roomList) {
-        this.roomList = roomList;
+    public void setMinPrice(int minPrice) {
+        this.minPrice = minPrice;
+    }
+
+    public int getIsSpeed() {
+        return isSpeed;
+    }
+
+    public void setIsSpeed(int isSpeed) {
+        this.isSpeed = isSpeed;
+    }
+
+    public int getCommentNum() {
+        return commentNum;
+    }
+
+    public void setCommentNum(int commentNum) {
+        this.commentNum = commentNum;
+    }
+
+    public int getHsRatingAvgI() {
+        return hsRatingAvgI;
+    }
+
+    public void setHsRatingAvgI(int hsRatingAvgI) {
+        this.hsRatingAvgI = hsRatingAvgI;
+    }
+
+    public int getUserPoiId() {
+        return userPoiId;
+    }
+
+    public void setUserPoiId(int userPoiId) {
+        this.userPoiId = userPoiId;
+    }
+
+    public String getHomeStayImage() {
+        return homeStayImage;
+    }
+
+    public void setHomeStayImage(String homeStayImage) {
+        this.homeStayImage = homeStayImage;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getUserPhoto() {
+        return userPhoto;
+    }
+
+    public void setUserPhoto(String userPhoto) {
+        this.userPhoto = userPhoto;
+    }
+
+    public String getUserPoiName() {
+        return userPoiName;
+    }
+
+    public void setUserPoiName(String userPoiName) {
+        this.userPoiName = userPoiName;
+    }
+
+    public Double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Double distance) {
+        this.distance = distance;
     }
     
     

@@ -13,6 +13,7 @@ import java.util.List;
 
 import org.apache.solr.client.solrj.beans.Field;
 
+import com.alibaba.fastjson.annotation.JSONType;
 import com.zizaike.entity.solr.model.SearchableRoom;
 
 /**
@@ -26,6 +27,7 @@ import com.zizaike.entity.solr.model.SearchableRoom;
  * @since JDK 1.6
  * @see
  */
+@JSONType(ignores={"title"})
 public class Room extends SearchableRoom implements java.io.Serializable{
     private static final long serialVersionUID = -1880464345310885435L;
     /**
@@ -465,6 +467,8 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     private float scoreF;
     @Field(DISTANCE_FIELD)
     private Double distance;
+    @Field(HS_SPEED_ROOM_I_FIELD)
+    private int hsSpeedRoomI;
     public int getId() {
         return id;
     }
@@ -988,7 +992,13 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setDistance(Double distance) {
         this.distance = distance;
     }
-    
+    public int getHsSpeedRoomI() {
+        return hsSpeedRoomI;
+    }
+    public void setHsSpeedRoomI(int hsSpeedRoomI) {
+        this.hsSpeedRoomI = hsSpeedRoomI;
+    }
+ 
     
 
 }

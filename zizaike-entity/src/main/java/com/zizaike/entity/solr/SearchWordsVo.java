@@ -26,7 +26,6 @@ import com.zizaike.entity.recommend.RecommendType;
 public class SearchWordsVo implements java.io.Serializable {
 
     /**  
-     * serialVersionUID:TODO(用一句话描述这个变量表示什么).  
      * @since JDK 1.7
      */
     private static final long serialVersionUID = -7333138315217342971L;
@@ -54,6 +53,10 @@ public class SearchWordsVo implements java.io.Serializable {
      * 100,800
      */
     private String price;
+    /*
+     * 1.推荐排序(默认)2 价格从高到低 3 价格从低到高 4 好评优先
+     */
+    private int order;
     
     public String getKeyWords() {
         return keyWords;
@@ -133,6 +136,14 @@ public class SearchWordsVo implements java.io.Serializable {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
     }
     
     

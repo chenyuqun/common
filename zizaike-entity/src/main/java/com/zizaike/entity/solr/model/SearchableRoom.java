@@ -108,5 +108,6 @@ public class SearchableRoom {
     public static final String CATEGORY_TAGS_S_FIELD = "category_tags_s";
     public static final String SCORE_F_FIELD = "score_f";
     public static final String DISTANCE_FIELD = "distance";
+    public static final String HS_SPEED_ROOM_I_FIELD = "hs_speed_room_i";
 
 }
