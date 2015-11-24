@@ -3,6 +3,7 @@ package com.zizaike.entity.recommend;
 import java.util.Date;
 
 import com.alibaba.fastjson.annotation.JSONType;
+import com.zizaike.core.common.ranslator.Translate;
 
 /**
  * 
@@ -35,6 +36,7 @@ public class Recommend implements java.io.Serializable {
     /**
      * name
      */
+    @Translate
     private String recommendName;
     
     public String getEngName() {

@@ -46,6 +46,11 @@ public class CountryArea implements Serializable{
     public void setAreaList(List<Loctype> areaList) {
         this.areaList = areaList;
     }
+    @Override
+    public String toString() {
+        return "CountryArea [country=" + country + ", areaList=" + areaList + "]";
+    }
+    
     
     
 }
