@@ -3,6 +3,7 @@ package com.zizaike.entity.recommend;
 import java.io.Serializable;
 
 import com.alibaba.fastjson.annotation.JSONType;
+import com.zizaike.core.common.ranslator.Translate;
 
 /**
  * 
@@ -42,7 +43,7 @@ public class DestConfig implements Serializable{
     private String currencyIosCode;
 
     private String currencyCode;
-
+    @Translate
     private String destName;
 
     public Integer getId() {
@@ -124,4 +125,13 @@ public class DestConfig implements Serializable{
     public void setDestName(String destName) {
         this.destName = destName;
     }
+
+    @Override
+    public String toString() {
+        return "DestConfig [id=" + id + ", destId=" + destId + ", domain=" + domain + ", defaultLanguage="
+                + defaultLanguage + ", payChannel=" + payChannel + ", exchangeRate=" + exchangeRate + ", status="
+                + status + ", currencyIosCode=" + currencyIosCode + ", currencyCode=" + currencyCode + ", destName="
+                + destName + "]";
+    }
+    
 }

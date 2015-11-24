@@ -28,5 +28,15 @@ public interface  HanLPService{
      * @since JDK 1.7
      */
     String convertToTraditionalChinese(String str);
+    /**
+     * 
+     * convertToSimplifiedChinese:繁体转简体. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param str
+     * @return  
+     * @since JDK 1.7
+     */
+    String convertToSimplifiedChinese(String str);
 }
   

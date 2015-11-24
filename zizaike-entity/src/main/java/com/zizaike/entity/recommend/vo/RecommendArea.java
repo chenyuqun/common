@@ -45,6 +45,11 @@ public class RecommendArea implements Serializable{
     public void setCountryAreas(List<CountryArea> countryAreas) {
         this.countryAreas = countryAreas;
     }
+    @Override
+    public String toString() {
+        return "RecommendArea [recommends=" + recommends + ", countryAreas=" + countryAreas + "]";
+    }
+    
     
     
 }

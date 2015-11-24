@@ -197,14 +197,16 @@ public abstract class HexUtil {
  	   return null;
     }
     
-    /**
     public static void main(String[] args) {   
-        String srcStr = "待转换字符串";   
-        String encodeStr = encodeHexStr(srcStr.getBytes());   
-        String decodeStr = new String(decodeHex(encodeStr.toCharArray()));   
-        //System.out.println("转换前：" + srcStr);   
-        //System.out.println("转换后：" + encodeStr);   
-        //System.out.println("还原后：" + decodeStr);   
+//        String srcStr = "待转换字符串";   
+//        String encodeStr = encodeHexStr(srcStr.getBytes());   
+//        String decodeStr = new String(decodeHex(encodeStr.toCharArray()));   
+//        System.out.println("转换前：" + srcStr);   
+//        System.out.println("转换后：" + encodeStr);   
+//        System.out.println("还原后：" + decodeStr); 
+        //String str = "6cd0f0bd288704f76711ff404f82c06c1060515淡水888888";
+        //System.err.println(encodeHexStr(str,true));
+        
+        
     }   
-  */ 
 }  

@@ -11,6 +11,7 @@ package com.zizaike.entity.solr.dto;
 
 import java.io.Serializable;
 
+import com.zizaike.core.common.ranslator.Translate;
 import com.zizaike.entity.solr.type.PoiType;
 
 /**  
@@ -26,6 +27,7 @@ public class PlaceDTO implements Serializable {
 
     private static final long serialVersionUID = -3099077490620291681L;
     private int id;
+    @Translate
     private String poiName;
     private PoiType poiType;
     
@@ -46,6 +48,10 @@ public class PlaceDTO implements Serializable {
     }
     public void setPoiType(PoiType poiType) {
         this.poiType = poiType;
+    }
+    @Override
+    public String toString() {
+        return "PlaceDTO [id=" + id + ", poiName=" + poiName + ", poiType=" + poiType + "]";
     } 
 
 }
