@@ -71,7 +71,7 @@ public class Place extends SearchablePlace implements java.io.Serializable {
     /**
      * 经度
      */
-    @Field(GOOGLE_MAP_LAT_FIELD)
+    @Field(GOOGLE_MAP_LNG_FIELD)
     private Double googleMapLng;
     /**
      * 地址

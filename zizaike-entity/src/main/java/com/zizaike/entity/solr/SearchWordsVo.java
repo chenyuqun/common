@@ -31,21 +31,29 @@ public class SearchWordsVo implements java.io.Serializable {
      */
     private static final long serialVersionUID = -7333138315217342971L;
     
- private String keyWords;
+    private String keyWords;
     
     private int destId;
     /*
      * 要变成location_typeid 
      */
-    private int searcid;
+    private int searchid;
     
-    private Date checkInDate;
+    private String checkInDate;
     
-    private Date checkOutDate;
+    private String checkOutDate;
     
-    private RecommendType recommendType;
+    private SearchType searchType;
     
     private int page;
+    
+    private String service;
+    
+    private int roomModel;
+    /*
+     * 100,800
+     */
+    private String price;
     
     public String getKeyWords() {
         return keyWords;
@@ -63,36 +71,36 @@ public class SearchWordsVo implements java.io.Serializable {
         this.destId = destId;
     }
 
-    public int getSearcid() {
-        return searcid;
+    public int getSearchid() {
+        return searchid;
     }
 
-    public void setSearcid(int searcid) {
-        this.searcid = searcid;
+    public void setSearchid(int searchid) {
+        this.searchid = searchid;
     }
 
-    public Date getCheckInDate() {
+    public String getCheckInDate() {
         return checkInDate;
     }
 
-    public void setCheckInDate(Date checkInDate) {
+    public void setCheckInDate(String checkInDate) {
         this.checkInDate = checkInDate;
     }
 
-    public Date getCheckOutDate() {
+    public String getCheckOutDate() {
         return checkOutDate;
     }
 
-    public void setCheckOutDate(Date checkOutDate) {
+    public void setCheckOutDate(String checkOutDate) {
         this.checkOutDate = checkOutDate;
     }
 
-    public RecommendType getRecommendType() {
-        return recommendType;
+    public SearchType getSearchType() {
+        return searchType;
     }
 
-    public void setRecommendType(RecommendType recommendType) {
-        this.recommendType = recommendType;
+    public void setSearchType(SearchType searchType) {
+        this.searchType = searchType;
     }
 
     public int getPage() {
@@ -102,6 +110,32 @@ public class SearchWordsVo implements java.io.Serializable {
     public void setPage(int page) {
         this.page = page;
     }
+
+    public String getService() {
+        return service;
+    }
+
+    public void setService(String service) {
+        this.service = service;
+    }
+
+    public int getRoomModel() {
+        return roomModel;
+    }
+
+    public void setRoomModel(int roomModel) {
+        this.roomModel = roomModel;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+    
+    
     
    
     

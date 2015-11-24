@@ -64,6 +64,16 @@ public interface PlaceSolrService extends CrudRepository<Place, Integer>{
      * @since JDK 1.7
      */
     List<PlaceDTO> queryPlaceByLocId(Integer locid) throws ZZKServiceException;
+    /**
+     * 
+     * queryPlaceById:通过id获取Place信息 <br/>  
+     * @author alex 
+     * @param id
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    Place queryPlaceById(Integer id) throws ZZKServiceException;
 
 }
   
