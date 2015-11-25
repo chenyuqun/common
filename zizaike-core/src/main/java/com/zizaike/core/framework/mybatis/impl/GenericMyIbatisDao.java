@@ -31,8 +31,7 @@ import com.zizaike.core.framework.mybatis.IBaseDao;
 /**
  * 
  * ClassName: GenericMyIbatisDao <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Reason: TODO ADD REASON(可选). <br/>
+ * Function: 基本dao. <br/>
  * date: 2015年11月4日 下午3:42:45 <br/>
  * 
  * @author snow.zhang

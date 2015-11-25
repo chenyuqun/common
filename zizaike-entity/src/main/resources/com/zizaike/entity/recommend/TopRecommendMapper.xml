@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zizaike.entity.recommend.TopRecommendMapper" >
+  <resultMap id="BaseResultMap" type="com.zizaike.entity.recommend.TopRecommend" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="dest_id" property="destId" jdbcType="INTEGER" />
+    <result column="top_number" property="topNumber" jdbcType="INTEGER" />
+    <result column="active" property="active" jdbcType="INTEGER" />
+    <result column="create_at" property="createAt" jdbcType="TIMESTAMP" />
+    <result column="update_at" property="updateAt" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, dest_id, top_number, active, create_at, update_at
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_top_recommend
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_top_recommend
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.zizaike.entity.recommend.TopRecommend" >
+    insert into t_top_recommend (id, dest_id, top_number, 
+      active, create_at, update_at
+      )
+    values (#{id,jdbcType=INTEGER}, #{destId,jdbcType=INTEGER}, #{topNumber,jdbcType=INTEGER}, 
+      #{active,jdbcType=INTEGER}, #{createAt,jdbcType=TIMESTAMP}, #{updateAt,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zizaike.entity.recommend.TopRecommend" >
+    insert into t_top_recommend
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="destId != null" >
+        dest_id,
+      </if>
+      <if test="topNumber != null" >
+        top_number,
+      </if>
+      <if test="active != null" >
+        active,
+      </if>
+      <if test="createAt != null" >
+        create_at,
+      </if>
+      <if test="updateAt != null" >
+        update_at,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="destId != null" >
+        #{destId,jdbcType=INTEGER},
+      </if>
+      <if test="topNumber != null" >
+        #{topNumber,jdbcType=INTEGER},
+      </if>
+      <if test="active != null" >
+        #{active,jdbcType=INTEGER},
+      </if>
+      <if test="createAt != null" >
+        #{createAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateAt != null" >
+        #{updateAt,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zizaike.entity.recommend.TopRecommend" >
+    update t_top_recommend
+    <set >
+      <if test="destId != null" >
+        dest_id = #{destId,jdbcType=INTEGER},
+      </if>
+      <if test="topNumber != null" >
+        top_number = #{topNumber,jdbcType=INTEGER},
+      </if>
+      <if test="active != null" >
+        active = #{active,jdbcType=INTEGER},
+      </if>
+      <if test="createAt != null" >
+        create_at = #{createAt,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateAt != null" >
+        update_at = #{updateAt,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zizaike.entity.recommend.TopRecommend" >
+    update t_top_recommend
+    set dest_id = #{destId,jdbcType=INTEGER},
+      top_number = #{topNumber,jdbcType=INTEGER},
+      active = #{active,jdbcType=INTEGER},
+      create_at = #{createAt,jdbcType=TIMESTAMP},
+      update_at = #{updateAt,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
