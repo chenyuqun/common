@@ -88,7 +88,8 @@ public enum SolrSearchableUserFields implements Field{
     LATLNG_P_1_D(SearchableUser.LATLNG_P_1_D_FIELD),
     LATLNG_P(SearchableUser.LATLNG_P_FIELD),
     USER_PHOTO_VERSION_I(SearchableUser.USER_PHOTO_VERSION_I_FIELD),
-    PM_USERS_I(SearchableUser.PM_USERS_I_FIELD), 
+    PM_USERS_I(SearchableUser.PM_USERS_I_FIELD),
+    HS_SPEED_ROOM_I(SearchableUser.HS_SPEED_ROOM_I_FIELD),
     ;
     /**
      * fileName
