@@ -33,7 +33,7 @@ public class RoomList implements java.io.Serializable {
     private int minPrice;
     private int isSpeed;
     private int commentNum;
-    private int hsRatingAvgI;
+    private float hsRatingAvg;
     private int userPoiId;
     private String homeStayImage;
     private String username;
@@ -74,12 +74,13 @@ public class RoomList implements java.io.Serializable {
         this.commentNum = commentNum;
     }
 
-    public int getHsRatingAvgI() {
-        return hsRatingAvgI;
+    
+    public float getHsRatingAvg() {
+        return hsRatingAvg;
     }
 
-    public void setHsRatingAvgI(int hsRatingAvgI) {
-        this.hsRatingAvgI = hsRatingAvgI;
+    public void setHsRatingAvg(float hsRatingAvg) {
+        this.hsRatingAvg = hsRatingAvg;
     }
 
     public int getUserPoiId() {
