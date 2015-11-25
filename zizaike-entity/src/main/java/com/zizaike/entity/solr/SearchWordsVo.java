@@ -57,7 +57,8 @@ public class SearchWordsVo implements java.io.Serializable {
      * 1.推荐排序(默认)2 价格从高到低 3 价格从低到高 4 好评优先
      */
     private int order;
-    
+    private int multiprice;
+   
     public String getKeyWords() {
         return keyWords;
     }
@@ -145,9 +146,15 @@ public class SearchWordsVo implements java.io.Serializable {
     public void setOrder(int order) {
         this.order = order;
     }
-    
-    
-    
+
+    public int getMultiprice() {
+        return multiprice;
+    }
+
+    public void setMultiprice(int multiprice) {
+        this.multiprice = multiprice;
+    }
+        
    
     
 }

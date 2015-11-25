@@ -41,7 +41,7 @@ public class RoomList implements java.io.Serializable {
     private String userPhoto;
     private String userPoiName;
     private Double distance;
-    
+    private String currencyCode;
     public int getUid() {
         return uid;
     }
@@ -136,6 +136,14 @@ public class RoomList implements java.io.Serializable {
 
     public void setDistance(Double distance) {
         this.distance = distance;
+    }
+
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
     }
     
     

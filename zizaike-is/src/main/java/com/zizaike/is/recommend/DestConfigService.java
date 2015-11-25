@@ -28,5 +28,7 @@ import com.zizaike.entity.recommend.DestConfig;
 
 public interface DestConfigService {
     List<DestConfig> query() throws ZZKServiceException;
+    
+    DestConfig queryByDestId(Integer destId) throws ZZKServiceException;
 }
   
