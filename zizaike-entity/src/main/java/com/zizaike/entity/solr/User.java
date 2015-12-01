@@ -1,5 +1,7 @@
 package com.zizaike.entity.solr;
 
+import java.util.List;
+
 import org.apache.solr.client.solrj.beans.Field;
 
 import com.zizaike.entity.solr.model.SearchableUser;
@@ -350,6 +352,21 @@ public class User extends SearchableUser implements java.io.Serializable {
      */
     @Field(HS_SPEED_ROOM_I_FIELD)
     private Integer hsSpeedRoomI;
+    /**
+     * 新字段 多值
+     */
+    @Field(LOCATION_TYPEID_FIELD)
+    private List<Integer> locationTypeid;
+    /**
+     * 新字段
+     */
+    @Field(LOCATION_TYPECODE_FIELD)
+    private String locationTypecode;
+    /**
+     * 新字段 多值
+     */
+    @Field(LOCATION_TYPENAME_FIELD)
+    private List<String> locationTypename;
     public Integer getId() {
         return id;
     }
@@ -781,6 +798,24 @@ public class User extends SearchableUser implements java.io.Serializable {
     }
     public void setHsSpeedRoomI(Integer hsSpeedRoomI) {
         this.hsSpeedRoomI = hsSpeedRoomI;
+    }
+    public List<Integer> getLocationTypeid() {
+        return locationTypeid;
+    }
+    public void setLocationTypeid(List<Integer> locationTypeid) {
+        this.locationTypeid = locationTypeid;
+    }
+    public String getLocationTypecode() {
+        return locationTypecode;
+    }
+    public void setLocationTypecode(String locationTypecode) {
+        this.locationTypecode = locationTypecode;
+    }
+    public List<String> getLocationTypename() {
+        return locationTypename;
+    }
+    public void setLocationTypename(List<String> locationTypename) {
+        this.locationTypename = locationTypename;
     }
     
     

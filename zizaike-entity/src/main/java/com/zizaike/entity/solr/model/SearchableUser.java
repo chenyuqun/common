@@ -87,5 +87,8 @@ public class SearchableUser {
     public static final String USER_PHOTO_VERSION_I_FIELD = "user_photo_version_i";
     public static final String PM_USERS_I_FIELD = "pm_users_i";
     public static final String HS_SPEED_ROOM_I_FIELD = "hs_speed_room_i";
+    public static final String LOCATION_TYPEID_FIELD = "location_typeid";
+    public static final String LOCATION_TYPECODE_FIELD = "location_typecode";
+    public static final String LOCATION_TYPENAME_FIELD = "location_typename";
    
 }

@@ -90,6 +90,9 @@ public enum SolrSearchableUserFields implements Field{
     USER_PHOTO_VERSION_I(SearchableUser.USER_PHOTO_VERSION_I_FIELD),
     PM_USERS_I(SearchableUser.PM_USERS_I_FIELD),
     HS_SPEED_ROOM_I(SearchableUser.HS_SPEED_ROOM_I_FIELD),
+    LOCATION_TYPEID(SearchableUser.LOCATION_TYPEID_FIELD),
+    LOCATION_TYPECODE(SearchableUser.LOCATION_TYPECODE_FIELD),
+    LOCATION_TYPENAME(SearchableUser.LOCATION_TYPENAME_FIELD),
     ;
     /**
      * fileName
