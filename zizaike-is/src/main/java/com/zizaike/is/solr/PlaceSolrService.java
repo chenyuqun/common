@@ -19,6 +19,7 @@ import org.springframework.data.solr.core.query.result.GroupPage;
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.solr.Place;
 import com.zizaike.entity.solr.dto.AssociateWordsDTO;
+import com.zizaike.entity.solr.dto.PlaceDTO;
 
 /**  
  * ClassName:PlaceSolrService <br/>  
@@ -52,6 +53,27 @@ public interface PlaceSolrService extends CrudRepository<Place, Integer>{
      * @since JDK 1.7
      */
     List<AssociateWordsDTO> queryPlaceByWordsAndLoc(String words,Integer destId,Integer locid) throws ZZKServiceException;
+    /**
+     * 
+     * queryPlaceByLocId:通过 locaid find. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param locid
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    List<PlaceDTO> queryPlaceByLocId(Integer locid) throws ZZKServiceException;
+    /**
+     * 
+     * queryPlaceById:通过id获取Place信息 <br/>  
+     * @author alex 
+     * @param id
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    Place queryPlaceById(Integer id) throws ZZKServiceException;
 
 }
   

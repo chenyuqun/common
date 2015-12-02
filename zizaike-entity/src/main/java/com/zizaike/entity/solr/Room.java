@@ -13,6 +13,7 @@ import java.util.List;
 
 import org.apache.solr.client.solrj.beans.Field;
 
+import com.alibaba.fastjson.annotation.JSONType;
 import com.zizaike.entity.solr.model.SearchableRoom;
 
 /**
@@ -26,6 +27,7 @@ import com.zizaike.entity.solr.model.SearchableRoom;
  * @since JDK 1.6
  * @see
  */
+@JSONType(ignores={"title"})
 public class Room extends SearchableRoom implements java.io.Serializable{
     private static final long serialVersionUID = -1880464345310885435L;
     /**
@@ -116,7 +118,7 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      * 目的地id Drupal_node.dest_id
      */
     @Field(DEST_ID_FIELD)
-    private String destId;
+    private int destId;
 
     /**
      * 民宿是否有早餐 用民宿uid关联
@@ -133,7 +135,7 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      * '309'=>1, '310'=>2, '315'=>3, '313'=>4, '321'=>5, '312'=>6, '322'=>7, '311'=>8, '323'=>9, '314'=>10,
      */
     @Field(ROOM_MODEL_FIELD)
-    private int roomModel;
+    private String roomModel;
 
     /**
      * 成交数 drupal_node.order_succ
@@ -463,7 +465,10 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      */
     @Field(SCORE_F_FIELD)
     private float scoreF;
-    
+    @Field(DISTANCE_FIELD)
+    private Double distance;
+    @Field(HS_SPEED_ROOM_I_FIELD)
+    private int hsSpeedRoomI;
     public int getId() {
         return id;
     }
@@ -572,10 +577,10 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setDateList(String dateList) {
         this.dateList = dateList;
     }
-    public String getDestId() {
+    public int getDestId() {
         return destId;
     }
-    public void setDestId(String destId) {
+    public void setDestId(int destId) {
         this.destId = destId;
     }
     public int getBreakfast() {
@@ -590,10 +595,10 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setBreakfastRemark(String breakfastRemark) {
         this.breakfastRemark = breakfastRemark;
     }
-    public int getRoomModel() {
+    public String getRoomModel() {
         return roomModel;
     }
-    public void setRoomModel(int roomModel) {
+    public void setRoomModel(String roomModel) {
         this.roomModel = roomModel;
     }
     public int getOrderSucc() {
@@ -981,7 +986,19 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setScoreF(float scoreF) {
         this.scoreF = scoreF;
     }
-    
+    public Double getDistance() {
+        return distance;
+    }
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
+    public int getHsSpeedRoomI() {
+        return hsSpeedRoomI;
+    }
+    public void setHsSpeedRoomI(int hsSpeedRoomI) {
+        this.hsSpeedRoomI = hsSpeedRoomI;
+    }
+ 
     
 
 }

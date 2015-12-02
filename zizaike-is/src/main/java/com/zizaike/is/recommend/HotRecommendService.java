@@ -12,7 +12,7 @@ package com.zizaike.is.recommend;
 import java.util.List;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
-import com.zizaike.entity.recommend.hot.Recommend;
+import com.zizaike.entity.recommend.Recommend;
 
 /**  
  * ClassName:IHotRecommendDao <br/>  
@@ -35,5 +35,15 @@ public interface HotRecommendService {
      * @since JDK 1.7
      */
     List<Recommend> quryHotRecommend () throws ZZKServiceException;
+    /**
+     * 
+     * quryTopHotRecommend:查询top热推  app 使用. <br/>  
+     *  
+     * @author snow.zhang  
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    List<Recommend> quryTopHotRecommend () throws ZZKServiceException;
 }
   

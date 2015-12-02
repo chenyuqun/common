@@ -1,4 +1,4 @@
-package com.zizaike.entity.recommend.hot;
+package com.zizaike.entity.recommend;
 
 import com.zizaike.core.framework.ienum.IEnum;
 

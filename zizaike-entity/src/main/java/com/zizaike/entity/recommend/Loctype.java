@@ -1,8 +1,11 @@
-package com.zizaike.entity.recommend.hot;
+package com.zizaike.entity.recommend;
+
+import com.alibaba.fastjson.annotation.JSONType;
+import com.zizaike.core.common.ranslator.Translate;
+
 /**
  * 
  * ClassName: Loctype <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
  * Reason: 地址表. <br/>  
  * date: 2015年11月10日 下午1:40:54 <br/>  
  *  
@@ -10,6 +13,7 @@ package com.zizaike.entity.recommend.hot;
  * @version   
  * @since JDK 1.7
  */
+@JSONType(ignores={"rank","destId","createAt","updateAt","status","mapX","mapY","mapZoom","localid","roomNum","homeNum","vhomeNum"})
 public class Loctype implements java.io.Serializable{
    
     private static final long serialVersionUID = -2348195872872844335L;
@@ -17,7 +21,7 @@ public class Loctype implements java.io.Serializable{
     private Integer id;
 
     private Integer destId;
-
+    @Translate
     private String typeName;
 
     private Integer parentId;
@@ -45,6 +49,18 @@ public class Loctype implements java.io.Serializable{
     private Integer homeNum;
 
     private Integer vhomeNum;
+    /**
+     * 行政级别类型
+     */
+    private AreaLevel areaLevel;
+    
+    public AreaLevel getAreaLevel() {
+        return areaLevel;
+    }
+
+    public void setAreaLevel(AreaLevel areaLevel) {
+        this.areaLevel = areaLevel;
+    }
 
     public Integer getId() {
         return id;
@@ -173,4 +189,14 @@ public class Loctype implements java.io.Serializable{
     public void setVhomeNum(Integer vhomeNum) {
         this.vhomeNum = vhomeNum;
     }
+
+    @Override
+    public String toString() {
+        return "Loctype [id=" + id + ", destId=" + destId + ", typeName=" + typeName + ", parentId=" + parentId
+                + ", typeCode=" + typeCode + ", typeDesc=" + typeDesc + ", status=" + status + ", rank=" + rank
+                + ", nameCode=" + nameCode + ", mapX=" + mapX + ", mapY=" + mapY + ", mapZoom=" + mapZoom + ", locid="
+                + locid + ", roomNum=" + roomNum + ", homeNum=" + homeNum + ", vhomeNum=" + vhomeNum + ", areaLevel="
+                + areaLevel + "]";
+    }
+    
 }

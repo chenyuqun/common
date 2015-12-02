@@ -12,8 +12,8 @@ package com.zizaike.is.recommend;
 import java.util.List;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
-import com.zizaike.entity.recommend.hot.Loctype;
-import com.zizaike.entity.recommend.hot.Recommend;
+import com.zizaike.entity.recommend.Loctype;
+import com.zizaike.entity.recommend.Recommend;
 
 /**  
  * ClassName:LoctypeService <br/>  
@@ -37,6 +37,16 @@ public interface LoctypeService {
      * @since JDK 1.7
      */
     List<Loctype> queryLoctype (Loctype loctype) throws ZZKServiceException;
+    /**
+     * 
+     * queryByAreaLevel:查询所有国家的行政级别是:省、市的数据. <br/>  
+     *  
+     * @author snow.zhang  
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    List<Loctype> queryByAreaLevel ()throws ZZKServiceException;
     
 }
   

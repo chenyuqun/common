@@ -1,5 +1,7 @@
 package com.zizaike.entity.solr;
 
+import java.util.List;
+
 import org.apache.solr.client.solrj.beans.Field;
 
 import com.zizaike.entity.solr.model.SearchableUser;
@@ -345,573 +347,477 @@ public class User extends SearchableUser implements java.io.Serializable {
      */
     @Field(PM_USERS_I_FIELD)
     private Integer pmUsersI;
-
+    /**
+     * 是否速订
+     */
+    @Field(HS_SPEED_ROOM_I_FIELD)
+    private Integer hsSpeedRoomI;
+    /**
+     * 新字段 多值
+     */
+    @Field(LOCATION_TYPEID_FIELD)
+    private List<Integer> locationTypeid;
+    /**
+     * 新字段
+     */
+    @Field(LOCATION_TYPECODE_FIELD)
+    private String locationTypecode;
+    /**
+     * 新字段 多值
+     */
+    @Field(LOCATION_TYPENAME_FIELD)
+    private List<String> locationTypename;
     public Integer getId() {
         return id;
     }
-
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
-
-    public long getVersion() {
+    public Long getVersion() {
         return version;
     }
-
-    public void setVersion(long version) {
+    public void setVersion(Long version) {
         this.version = version;
     }
-
     public String getText() {
         return text;
     }
-
     public void setText(String text) {
         this.text = text;
     }
-
     public Integer getCreated() {
         return created;
     }
-
-    public void setCreated(int created) {
+    public void setCreated(Integer created) {
         this.created = created;
     }
-
     public Integer getChanged() {
         return changed;
     }
-
-    public void setChanged(int changed) {
+    public void setChanged(Integer changed) {
         this.changed = changed;
     }
-
     public Integer getUid() {
         return uid;
     }
-
-    public void setUid(int uid) {
+    public void setUid(Integer uid) {
         this.uid = uid;
     }
-
     public String getUsername() {
         return username;
     }
-
     public void setUsername(String username) {
         this.username = username;
     }
-
     public String getNickname() {
         return nickname;
     }
-
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
-
     public String getUsermail() {
         return usermail;
     }
-
     public void setUsermail(String usermail) {
         this.usermail = usermail;
     }
-
     public String getAddress() {
         return address;
     }
-
     public void setAddress(String address) {
         this.address = address;
     }
-
     public String getPhone() {
         return phone;
     }
-
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
     public Integer getUserPhotoId() {
         return userPhotoId;
     }
-
-    public void setUserPhotoId(int userPhotoId) {
+    public void setUserPhotoId(Integer userPhotoId) {
         this.userPhotoId = userPhotoId;
     }
-
     public String getUserPhotoFile() {
         return userPhotoFile;
     }
-
     public void setUserPhotoFile(String userPhotoFile) {
         this.userPhotoFile = userPhotoFile;
     }
-
     public String getHomestayPhotoFile() {
         return homestayPhotoFile;
     }
-
     public void setHomestayPhotoFile(String homestayPhotoFile) {
         this.homestayPhotoFile = homestayPhotoFile;
     }
-
     public String getBlankAccount() {
         return blankAccount;
     }
-
     public void setBlankAccount(String blankAccount) {
         this.blankAccount = blankAccount;
     }
-
     public String getAboutme() {
         return aboutme;
     }
-
     public void setAboutme(String aboutme) {
         this.aboutme = aboutme;
     }
-
     public String getAdditionalServices() {
         return additionalServices;
     }
-
     public void setAdditionalServices(String additionalServices) {
         this.additionalServices = additionalServices;
     }
-
     public String getDingfangshuoming() {
         return dingfangshuoming;
     }
-
     public void setDingfangshuoming(String dingfangshuoming) {
         this.dingfangshuoming = dingfangshuoming;
     }
-
     public String getZhuyishixiang() {
         return zhuyishixiang;
     }
-
     public void setZhuyishixiang(String zhuyishixiang) {
         this.zhuyishixiang = zhuyishixiang;
     }
-
     public String getJiaotongzixun() {
         return jiaotongzixun;
     }
-
     public void setJiaotongzixun(String jiaotongzixun) {
         this.jiaotongzixun = jiaotongzixun;
     }
-
     public String getHuodong() {
         return huodong;
     }
-
     public void setHuodong(String huodong) {
         this.huodong = huodong;
     }
-
     public Integer getRoomNum() {
         return roomNum;
     }
-
-    public void setRoomNum(int roomNum) {
+    public void setRoomNum(Integer roomNum) {
         this.roomNum = roomNum;
     }
-
     public Integer getOrderSucc() {
         return orderSucc;
     }
-
-    public void setOrderSucc(int orderSucc) {
+    public void setOrderSucc(Integer orderSucc) {
         this.orderSucc = orderSucc;
     }
-
     public Integer getPmsgReply() {
         return pmsgReply;
     }
-
-    public void setPmsgReply(int pmsgReply) {
+    public void setPmsgReply(Integer pmsgReply) {
         this.pmsgReply = pmsgReply;
     }
-
     public Integer getSendSms() {
         return sendSms;
     }
-
-    public void setSendSms(int sendSms) {
+    public void setSendSms(Integer sendSms) {
         this.sendSms = sendSms;
     }
-
     public String getSendSmsTelnum() {
         return sendSmsTelnum;
     }
-
     public void setSendSmsTelnum(String sendSmsTelnum) {
         this.sendSmsTelnum = sendSmsTelnum;
     }
-
     public String getFollowLanguage() {
         return followLanguage;
     }
-
     public void setFollowLanguage(String followLanguage) {
         this.followLanguage = followLanguage;
     }
-
     public Integer getCommentNum() {
         return commentNum;
     }
-
-    public void setCommentNum(int commentNum) {
+    public void setCommentNum(Integer commentNum) {
         this.commentNum = commentNum;
     }
-
     public Integer getIntRoomNid() {
         return intRoomNid;
     }
-
-    public void setIntRoomNid(int intRoomNid) {
+    public void setIntRoomNid(Integer intRoomNid) {
         this.intRoomNid = intRoomNid;
     }
-
     public Integer getIntRoomPrice() {
         return intRoomPrice;
     }
-
-    public void setIntRoomPrice(int intRoomPrice) {
+    public void setIntRoomPrice(Integer intRoomPrice) {
         this.intRoomPrice = intRoomPrice;
     }
-
     public Integer getIntRoomPriceTw() {
         return intRoomPriceTw;
     }
-
-    public void setIntRoomPriceTw(int intRoomPriceTw) {
+    public void setIntRoomPriceTw(Integer intRoomPriceTw) {
         this.intRoomPriceTw = intRoomPriceTw;
     }
-
     public Integer getLocTypeid() {
         return locTypeid;
     }
-
-    public void setLocTypeid(int locTypeid) {
+    public void setLocTypeid(Integer locTypeid) {
         this.locTypeid = locTypeid;
     }
-
     public String getLocTypecode() {
         return locTypecode;
     }
-
     public void setLocTypecode(String locTypecode) {
         this.locTypecode = locTypecode;
     }
-
     public String getLocTypename() {
         return locTypename;
     }
-
     public void setLocTypename(String locTypename) {
         this.locTypename = locTypename;
     }
-
     public Integer getPid() {
         return pid;
     }
-
-    public void setPid(int pid) {
+    public void setPid(Integer pid) {
         this.pid = pid;
     }
-
     public String getPoiTitle() {
         return poiTitle;
     }
-
     public void setPoiTitle(String poiTitle) {
         this.poiTitle = poiTitle;
     }
-
     public String getPoiPhone() {
         return poiPhone;
     }
-
     public void setPoiPhone(String poiPhone) {
         this.poiPhone = poiPhone;
     }
-
     public String getPoiEmail() {
         return poiEmail;
     }
-
     public void setPoiEmail(String poiEmail) {
         this.poiEmail = poiEmail;
     }
-
     public String getPoiMaster() {
         return poiMaster;
     }
-
     public void setPoiMaster(String poiMaster) {
         this.poiMaster = poiMaster;
     }
-
     public String getPoiAddress() {
         return poiAddress;
     }
-
     public void setPoiAddress(String poiAddress) {
         this.poiAddress = poiAddress;
     }
-
     public String getPoiImages() {
         return poiImages;
     }
-
     public void setPoiImages(String poiImages) {
         this.poiImages = poiImages;
     }
-
     public Integer getStatus() {
         return status;
     }
-
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
-
     public Integer getVerifiedByZzk() {
         return verifiedByZzk;
     }
-
-    public void setVerifiedByZzk(int verifiedByZzk) {
+    public void setVerifiedByZzk(Integer verifiedByZzk) {
         this.verifiedByZzk = verifiedByZzk;
     }
-
     public Integer getZzkWeights() {
         return zzkWeights;
     }
-
-    public void setZzkWeights(int zzkWeights) {
+    public void setZzkWeights(Integer zzkWeights) {
         this.zzkWeights = zzkWeights;
     }
-
     public Integer getRevPercent() {
         return revPercent;
     }
-
-    public void setRevPercent(int revPercent) {
+    public void setRevPercent(Integer revPercent) {
         this.revPercent = revPercent;
     }
-
     public Integer getPricePercent() {
         return pricePercent;
     }
-
-    public void setPricePercent(int pricePercent) {
+    public void setPricePercent(Integer pricePercent) {
         this.pricePercent = pricePercent;
     }
-
     public Integer getRebateNum() {
         return rebateNum;
     }
-
-    public void setRebateNum(int rebateNum) {
+    public void setRebateNum(Integer rebateNum) {
         this.rebateNum = rebateNum;
     }
-
     public String getRebateRemark() {
         return rebateRemark;
     }
-
     public void setRebateRemark(String rebateRemark) {
         this.rebateRemark = rebateRemark;
     }
-
     public String getBlankAccountPoi() {
         return blankAccountPoi;
     }
-
     public void setBlankAccountPoi(String blankAccountPoi) {
         this.blankAccountPoi = blankAccountPoi;
     }
-
     public String getBlankName() {
         return blankName;
     }
-
     public void setBlankName(String blankName) {
         this.blankName = blankName;
     }
-
     public String getBlankNameSub() {
         return blankNameSub;
     }
-
     public void setBlankNameSub(String blankNameSub) {
         this.blankNameSub = blankNameSub;
     }
-
     public String getBlankUsername() {
         return blankUsername;
     }
-
     public void setBlankUsername(String blankUsername) {
         this.blankUsername = blankUsername;
     }
-
     public String getBlankDaihao() {
         return blankDaihao;
     }
-
     public void setBlankDaihao(String blankDaihao) {
         this.blankDaihao = blankDaihao;
     }
-
     public String getBlankDaihaoSub() {
         return blankDaihaoSub;
     }
-
     public void setBlankDaihaoSub(String blankDaihaoSub) {
         this.blankDaihaoSub = blankDaihaoSub;
     }
-
     public String getAlipayAccount() {
         return alipayAccount;
     }
-
     public void setAlipayAccount(String alipayAccount) {
         this.alipayAccount = alipayAccount;
     }
-
     public String getPaypalAccount() {
         return paypalAccount;
     }
-
     public void setPaypalAccount(String paypalAccount) {
         this.paypalAccount = paypalAccount;
     }
-
     public Integer getDestId() {
         return destId;
     }
-
-    public void setDestId(int destId) {
+    public void setDestId(Integer destId) {
         this.destId = destId;
     }
-
     public String getCnBlankAccount() {
         return cnBlankAccount;
     }
-
     public void setCnBlankAccount(String cnBlankAccount) {
         this.cnBlankAccount = cnBlankAccount;
     }
-
     public String getCnBlankName() {
         return cnBlankName;
     }
-
     public void setCnBlankName(String cnBlankName) {
         this.cnBlankName = cnBlankName;
     }
-
     public String getCnBlankNameSub() {
         return cnBlankNameSub;
     }
-
     public void setCnBlankNameSub(String cnBlankNameSub) {
         this.cnBlankNameSub = cnBlankNameSub;
     }
-
     public String getCnBlankUsername() {
         return cnBlankUsername;
     }
-
     public void setCnBlankUsername(String cnBlankUsername) {
         this.cnBlankUsername = cnBlankUsername;
     }
-
     public Double getSlat() {
         return slat;
     }
-
     public void setSlat(Double slat) {
         this.slat = slat;
     }
-
     public Double getSlng() {
         return slng;
     }
-
     public void setSlng(Double slng) {
         this.slng = slng;
     }
-
     public String getDefaultImageS() {
         return defaultImageS;
     }
-
     public void setDefaultImageS(String defaultImageS) {
         this.defaultImageS = defaultImageS;
     }
-
     public String getLatestSuccessTimeS() {
         return latestSuccessTimeS;
     }
-
     public void setLatestSuccessTimeS(String latestSuccessTimeS) {
         this.latestSuccessTimeS = latestSuccessTimeS;
     }
-
     public Integer getBreakfastI() {
         return breakfastI;
     }
-
-    public void setBreakfastI(int breakfastI) {
+    public void setBreakfastI(Integer breakfastI) {
         this.breakfastI = breakfastI;
     }
-
     public double getLatlngP0D() {
         return latlngP0D;
     }
-
     public void setLatlngP0D(double latlngP0D) {
         this.latlngP0D = latlngP0D;
     }
-
     public double getLatlngP1D() {
         return latlngP1D;
     }
-
     public void setLatlngP1D(double latlngP1D) {
         this.latlngP1D = latlngP1D;
     }
-
     public String getLatlngP() {
         return latlngP;
     }
-
     public void setLatlngP(String latlngP) {
         this.latlngP = latlngP;
     }
-
     public Integer getUserPhotoVersionI() {
         return userPhotoVersionI;
     }
-
-    public void setUserPhotoVersionI(int userPhotoVersionI) {
+    public void setUserPhotoVersionI(Integer userPhotoVersionI) {
         this.userPhotoVersionI = userPhotoVersionI;
     }
-
     public Integer getPmUsersI() {
         return pmUsersI;
     }
-
-    public void setPmUsersI(int pmUsersI) {
+    public void setPmUsersI(Integer pmUsersI) {
         this.pmUsersI = pmUsersI;
     }
-
+    public Integer getHsSpeedRoomI() {
+        return hsSpeedRoomI;
+    }
+    public void setHsSpeedRoomI(Integer hsSpeedRoomI) {
+        this.hsSpeedRoomI = hsSpeedRoomI;
+    }
+    public List<Integer> getLocationTypeid() {
+        return locationTypeid;
+    }
+    public void setLocationTypeid(List<Integer> locationTypeid) {
+        this.locationTypeid = locationTypeid;
+    }
+    public String getLocationTypecode() {
+        return locationTypecode;
+    }
+    public void setLocationTypecode(String locationTypecode) {
+        this.locationTypecode = locationTypecode;
+    }
+    public List<String> getLocationTypename() {
+        return locationTypename;
+    }
+    public void setLocationTypename(List<String> locationTypename) {
+        this.locationTypename = locationTypename;
+    }
+    
+    
+    
 }
