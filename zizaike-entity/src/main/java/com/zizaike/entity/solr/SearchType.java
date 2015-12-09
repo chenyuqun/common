@@ -24,7 +24,7 @@ import com.zizaike.entity.recommend.RecommendType;
  */
 public enum SearchType implements IEnum {
     /**
-     * 商圈
+     * 商圈(热推)
      */
     BUSINES_CIRCLE(1),
     /**

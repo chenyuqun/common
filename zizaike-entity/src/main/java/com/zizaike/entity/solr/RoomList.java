@@ -9,7 +9,6 @@
   
 package com.zizaike.entity.solr;  
 
-import java.util.List;
 
 /**  
  * ClassName:RoomList <br/>  
@@ -42,6 +41,9 @@ public class RoomList implements java.io.Serializable {
     private String userPoiName;
     private Double distance;
     private String currencyCode;
+    //是否促销
+    private int isPromotion=0;
+    
     public int getUid() {
         return uid;
     }
@@ -146,6 +148,16 @@ public class RoomList implements java.io.Serializable {
     public void setCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
     }
+
+    public int getIsPromotion() {
+        return isPromotion;
+    }
+
+    public void setIsPromotion(int isPromotion) {
+        this.isPromotion = isPromotion;
+    }
+    
+    
     
     
 

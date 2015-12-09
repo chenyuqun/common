@@ -34,7 +34,7 @@ public class SearchWordsVo implements java.io.Serializable {
     
     private int destId;
     /*
-     * 要变成location_typeid 
+     * 要变成location_type_id/poi_id
      */
     private int searchid;
     
@@ -54,11 +54,50 @@ public class SearchWordsVo implements java.io.Serializable {
      */
     private String price;
     /*
-     * 1.推荐排序(默认)2 价格从高到低 3 价格从低到高 4 好评优先
+     * 1.推荐排序(默认)2 价格从高到低 3 价格从低到高 4 好评优先 5.距离从近到远,6距离从远到近
      */
     private int order;
     private int multiprice;
-   
+    /**
+     * 搜索半径
+     */
+    private Float searchRadius;
+
+
+    /**
+     * 渠道 0 手机(默认),1 web
+     */
+    private int channel =0;
+    /**
+     * 促销 默认是不选
+     */
+    private int promotion = 0;
+
+    public int getPromotion() {
+        return promotion;
+    }
+
+    public void setPromotion(int promotion) {
+        this.promotion = promotion;
+    }
+
+    public int getChannel() {
+        return channel;
+    }
+
+    public void setChannel(int channel) {
+        this.channel = channel;
+    }
+
+
+    public Float getSearchRadius() {
+        return searchRadius;
+    }
+
+    public void setSearchRadius(Float searchRadius) {
+        this.searchRadius = searchRadius;
+    }
+
     public String getKeyWords() {
         return keyWords;
     }

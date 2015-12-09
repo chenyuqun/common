@@ -89,6 +89,14 @@ public class Place extends SearchablePlace implements java.io.Serializable {
     private long version;
     @Field(ADMIN_UID_FIELD)
     private Integer adminUid;
+    @Field(SEARCH_RADIUS_FIELD)
+    private Float searchRadius;
+    public Float getSearchRadius() {
+        return searchRadius;
+    }
+    public void setSearchRadius(Float searchRadius) {
+        this.searchRadius = searchRadius;
+    }
     public Integer getId() {
         return id;
     }
