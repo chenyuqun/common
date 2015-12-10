@@ -11,6 +11,7 @@ package com.zizaike.entity.solr;
 
 import java.util.Date;
 
+import com.zizaike.entity.base.ChannelType;
 import com.zizaike.entity.recommend.Recommend;
 import com.zizaike.entity.recommend.RecommendType;
 
@@ -67,11 +68,23 @@ public class SearchWordsVo implements java.io.Serializable {
     /**
      * 渠道 0 手机(默认),1 web
      */
-    private int channel =0;
+    private ChannelType channel = ChannelType.APP;
+    
+    
     /**
      * 促销 默认是不选
      */
     private int promotion = 0;
+    
+    
+
+    public ChannelType getChannel() {
+        return channel;
+    }
+
+    public void setChannel(ChannelType channel) {
+        this.channel = channel;
+    }
 
     public int getPromotion() {
         return promotion;
@@ -81,13 +94,6 @@ public class SearchWordsVo implements java.io.Serializable {
         this.promotion = promotion;
     }
 
-    public int getChannel() {
-        return channel;
-    }
-
-    public void setChannel(int channel) {
-        this.channel = channel;
-    }
 
 
     public Float getSearchRadius() {

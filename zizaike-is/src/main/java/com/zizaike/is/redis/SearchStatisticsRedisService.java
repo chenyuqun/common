@@ -9,10 +9,13 @@
   
 package com.zizaike.is.redis;
 
+import java.util.List;
 import java.util.Set;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.base.ChannelType;
+import com.zizaike.entity.recommend.SearchStatistics;
+import com.zizaike.entity.recommend.SearchStatisticsSet;
 
 /**
  * ClassName:SearchRedisService <br/>
@@ -30,7 +33,7 @@ public interface SearchStatisticsRedisService {
      * @param member
      * @throws ZZKServiceException
      */
-     void zincrHotSearch(ChannelType channelType,String member) throws ZZKServiceException;
+     void zincrHotSearch(SearchStatistics searchStatistics) throws ZZKServiceException;
    
     /**
      *
@@ -40,14 +43,14 @@ public interface SearchStatisticsRedisService {
      * @throws ZZKServiceException
      * @since JDK 1.7
      */
-     Set getHotSearch(ChannelType channelType) throws ZZKServiceException;
+     List<SearchStatistics> getHotSearch(ChannelType channelType) throws ZZKServiceException;
 
     /**
      * hot搜索每天更新
      * @param member
      * @throws ZZKServiceException
      */
-    void zincrHotSearchEveryDay(ChannelType channelType,String member) throws ZZKServiceException;
+    void zincrHotSearchEveryDay(SearchStatistics searchStatistics) throws ZZKServiceException;
 
     /**
      * 
@@ -59,7 +62,7 @@ public interface SearchStatisticsRedisService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    Set getHotSearchEveryDay(ChannelType channelType) throws ZZKServiceException;
+    List<SearchStatistics>  getHotSearchEveryDay(ChannelType channelType) throws ZZKServiceException;
     /**
      * 
      * zincrResultLessSearch:无结果member 累加. <br/>  
@@ -70,7 +73,7 @@ public interface SearchStatisticsRedisService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    void zincrResultLessSearch(ChannelType channelType,String member) throws ZZKServiceException;
+    void zincrResultLessSearch(SearchStatistics searchStatistics) throws ZZKServiceException;
     /**
      * 
      * getResultLessSearch:得到无结果数据. <br/>  
@@ -81,7 +84,7 @@ public interface SearchStatisticsRedisService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    Set getResultLessSearch(ChannelType channelType) throws ZZKServiceException;
+    List<SearchStatistics>  getResultLessSearch(ChannelType channelType) throws ZZKServiceException;
     /**
      * 
      * zincrResultLessSearchEveryDay:无结果每天累加. <br/>  
@@ -92,7 +95,7 @@ public interface SearchStatisticsRedisService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    void zincrResultLessSearchEveryDay(ChannelType channelType,String member) throws ZZKServiceException;
+    void zincrResultLessSearchEveryDay(SearchStatistics searchStatistics) throws ZZKServiceException;
     /**
      * 
      * getResultLessSearchEveryDay:无结果每天信息得到. <br/>  
@@ -103,7 +106,7 @@ public interface SearchStatisticsRedisService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    Set getResultLessSearchEveryDay(ChannelType channelType) throws ZZKServiceException;
+    List<SearchStatistics>  getResultLessSearchEveryDay(ChannelType channelType) throws ZZKServiceException;
 
 }
   

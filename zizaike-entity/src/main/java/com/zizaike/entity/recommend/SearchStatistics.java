@@ -15,7 +15,7 @@ import com.zizaike.entity.base.ChannelType;
  * @version   
  * @since JDK 1.7
  */
-@JSONType(ignores={"id","searchType","statisticsType","active","createAt","updateAt"})
+@JSONType(ignores={"id","channel","searchType","statisticsType","active","createAt","updateAt"})
 public class SearchStatistics implements Serializable{
     private static final long serialVersionUID = 7825187615804629015L;
 
