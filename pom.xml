@@ -30,9 +30,9 @@
 		<springdata.commons>1.11.1.BUILD-SNAPSHOT</springdata.commons>
 		<!-- redis -->
 		<jedis.version>2.7.2</jedis.version>
-		<zizaike.core.version>1.0.2-RELEASE</zizaike.core.version>
-		<zizaike.entity.version>1.0.3-SNAPSHOT</zizaike.entity.version>
-		<zizaike.is.version>1.0.2-RELEASE</zizaike.is.version>
+		<zizaike.core.version>1.0.3-RELEASE</zizaike.core.version>
+		<zizaike.entity.version>1.0.3-RELEASE</zizaike.entity.version>
+		<zizaike.is.version>1.0.3-RELEASE</zizaike.is.version>
 	</properties>
 
 
