@@ -109,5 +109,6 @@ public class SearchableRoom {
     public static final String SCORE_F_FIELD = "score_f";
     public static final String DISTANCE_FIELD = "distance";
     public static final String HS_SPEED_ROOM_I_FIELD = "hs_speed_room_i";
+    public static final String DISCOUNT_ROOM_DATES_SS_FIELD = "discount_room_dates_ss";
 
 }

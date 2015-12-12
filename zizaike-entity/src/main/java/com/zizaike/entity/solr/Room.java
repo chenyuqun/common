@@ -469,6 +469,19 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     private Double distance;
     @Field(HS_SPEED_ROOM_I_FIELD)
     private int hsSpeedRoomI;
+    /**
+     * 促销时间列表
+     */
+    @Field(DISCOUNT_ROOM_DATES_SS_FIELD)
+    private List<String> discountRoomDatesSs;
+    
+    
+    public List<String> getDiscountRoomDatesSs() {
+        return discountRoomDatesSs;
+    }
+    public void setDiscountRoomDatesSs(List<String> discountRoomDatesSs) {
+        this.discountRoomDatesSs = discountRoomDatesSs;
+    }
     public int getId() {
         return id;
     }

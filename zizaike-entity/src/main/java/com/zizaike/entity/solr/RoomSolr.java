@@ -11,7 +11,6 @@ package com.zizaike.entity.solr;
 
 import java.util.List;
 
-import org.apache.solr.client.solrj.beans.Field;
 
 /**  
  * ClassName:PlaceSolr <br/>  

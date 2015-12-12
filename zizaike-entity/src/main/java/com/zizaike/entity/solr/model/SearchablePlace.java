@@ -32,7 +32,11 @@ public class SearchablePlace {
     public static final String GOOGLE_MAP_LAT_FIELD = "google_map_lat";
     public static final String ADMIN_UID_FIELD = "admin_uid";
     public static final String GOOGLE_MAP_LNG_FIELD = "google_map_lng";
+    /**
+     * 搜索半径
+     */
+    public static final String SEARCH_RADIUS_FIELD = "search_radius";
     public static final String VERSION_FIELD = "_version_";
-    
+
 }
   

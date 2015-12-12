@@ -2,6 +2,7 @@ package com.zizaike.core.framework.cache;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 import com.alibaba.fastjson.TypeReference;
 import com.zizaike.core.framework.exception.ZZKServiceException;
@@ -31,67 +32,66 @@ public interface CacheDao {
      * @since JDK 1.7
      */
     <T> T get(CacheKeyPrefix prefix, String key, Class<T> clazz) throws ZZKServiceException;
+
     /**
      * 
-     * get:引用类型. <br/>  
-     *  
-     * @author snow.zhang  
+     * get:引用类型. <br/>
+     * 
+     * @author snow.zhang
      * @param prefix
      * @param key
      * @param reference
      * @return
-     * @throws ZZKServiceException  
+     * @throws ZZKServiceException
      * @since JDK 1.7
      */
     <T> T get(CacheKeyPrefix prefix, String key, TypeReference<T> reference) throws ZZKServiceException;
 
     /**
      * 
-     * gets:批量获取. <br/>  
-     *  
-     * @author snow.zhang  
+     * gets:批量获取. <br/>
+     * 
+     * @author snow.zhang
      * @param prefix
      * @param keys
      * @param clazz
-     * @return  
+     * @return
      * @since JDK 1.7
      */
     <T> List<T> gets(CacheKeyPrefix prefix, Collection<String> keys, Class<T> clazz) throws ZZKServiceException;
 
-    
     /**
      * 
-     * set:设置对象，不同实现对序列化实现有不同方式. <br/>  
-     *  
-     * @author snow.zhang  
+     * set:设置对象，不同实现对序列化实现有不同方式. <br/>
+     * 
+     * @author snow.zhang
      * @param prefix
      * @param key
-     * @param value  缓存对象，对于不同的缓存实现，对对象有不同要求，比如Memcached需要对象实现序列化接口，具体参见不同子类
+     * @param value 缓存对象，对于不同的缓存实现，对对象有不同要求，比如Memcached需要对象实现序列化接口，具体参见不同子类
      * @since JDK 1.7
      */
     void set(CacheKeyPrefix prefix, String key, Object value) throws ZZKServiceException;
 
-    
     /**
      * 
-     * set:设置指定过期时间的对象，不同实现对序列化实现有不同方式. <br/>  
-     *  
-     * @author snow.zhang  
+     * set:设置指定过期时间的对象，不同实现对序列化实现有不同方式. <br/>
+     * 
+     * @author snow.zhang
      * @param prefix
      * @param key
      * @param value 缓存对象，对于不同的缓存实现，对对象有不同要求，比如Memcached需要对象实现序列化接口，具体参见不同子类
-     * @param expiresIn  
+     * @param expiresIn
      * @since JDK 1.7
      */
     void setEx(CacheKeyPrefix prefix, String key, Object value, int seconds) throws ZZKServiceException;
 
     /**
      * 
-     * delete: 删除键. <br/>  
-     *  
-     * @author snow.zhang  
+     * delete: 删除键. <br/>
+     * 
+     * @author snow.zhang
      * @param prefix
-     * @param key  
+     * @param key
      * @since JDK 1.7
      */
     Long delete(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
@@ -117,4 +117,25 @@ public interface CacheDao {
      */
     boolean exist(CacheKeyPrefix prefix, String key) throws ZZKServiceException;
 
+    /**
+     * 有序集合元素自增长
+     * 
+     * @param prefix
+     * @param key
+     * @param score
+     * @param member
+     * @throws ZZKServiceException
+     */
+    void zincrby(CacheKeyPrefix prefix, String key, double score, String member) throws ZZKServiceException;
+
+    /**
+     * 得到 top 有序集合元素
+     * 
+     * @param prefix
+     * @param key
+     * @param start
+     * @param end
+     * @return
+     */
+    Set zrevrangeWithScores(CacheKeyPrefix prefix, String key, long start, long end) throws ZZKServiceException;
 }
