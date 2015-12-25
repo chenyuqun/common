@@ -110,5 +110,8 @@ public class SearchableRoom {
     public static final String DISTANCE_FIELD = "distance";
     public static final String HS_SPEED_ROOM_I_FIELD = "hs_speed_room_i";
     public static final String DISCOUNT_ROOM_DATES_SS_FIELD = "discount_room_dates_ss";
+    public static final String IS_BNB_CUXIAO_I_FIELD = "is_bnb_cuxiao_i";
+    public static final String IS_BNB_FIRST_ORDER_I_FIELD = "is_bnb_first_order_i";
+
 
 }
