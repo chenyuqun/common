@@ -43,7 +43,43 @@ public class RoomList implements java.io.Serializable {
     private String currencyCode;
     //是否商家优惠
     private int isPromotion=0;
+    /**
+     * 平台:是否首单立减
+     */
+    private Boolean isBnbFirstOrderI;
+    /**
+     * 平台:是否促销
+     */
+    private Boolean isBnbCuxiaoI;
+    /**
+     * 促销消息
+     */
+    private String promotionInfo;
     
+    public String getPromotionInfo() {
+        return promotionInfo;
+    }
+
+    public void setPromotionInfo(String promotionInfo) {
+        this.promotionInfo = promotionInfo;
+    }
+
+    public Boolean getIsBnbFirstOrderI() {
+        return isBnbFirstOrderI;
+    }
+
+    public void setIsBnbFirstOrderI(Boolean isBnbFirstOrderI) {
+        this.isBnbFirstOrderI = isBnbFirstOrderI;
+    }
+
+    public Boolean getIsBnbCuxiaoI() {
+        return isBnbCuxiaoI;
+    }
+
+    public void setIsBnbCuxiaoI(Boolean isBnbCuxiaoI) {
+        this.isBnbCuxiaoI = isBnbCuxiaoI;
+    }
+
     public int getUid() {
         return uid;
     }

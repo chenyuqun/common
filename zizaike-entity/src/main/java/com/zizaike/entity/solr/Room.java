@@ -479,12 +479,12 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     @Field(DISCOUNT_ROOM_DATES_SS_FIELD)
     private List<String> discountRoomDatesSs;
     /**
-     * 平台促销:是否促销
+     * 平台:是否促销
      */
     @Field(IS_BNB_CUXIAO_I_FIELD)
     private Boolean isBnbCuxiaoI ;
     /**
-     * 平台促销:是否首单立减
+     * 平台:是否首单立减
      */
     @Field(IS_BNB_FIRST_ORDER_I_FIELD)
     private Boolean isBnbFirstOrderI;
