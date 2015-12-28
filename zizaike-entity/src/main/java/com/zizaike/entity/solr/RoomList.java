@@ -42,20 +42,38 @@ public class RoomList implements java.io.Serializable {
     private Double distance;
     private String currencyCode;
     //是否商家优惠
+    /**
+     * 商家:惠
+     */
     private int isPromotion=0;
     /**
-     * 平台:是否首单立减
+     * 平台:减
      */
-    private Boolean isBnbFirstOrderI=false;
+    private int isSubtract=0;
     /**
-     * 平台:是否促销
+     * 平台:促
      */
-    private Boolean isBnbCuxiaoI=false;
+    private int isSalesPromotion=0;
     /**
      * 促销消息
      */
     private String promotionInfo;
-    
+    public int getIsSubtract() {
+        return isSubtract;
+    }
+
+    public void setIsSubtract(int isSubtract) {
+        this.isSubtract = isSubtract;
+    }
+
+    public int getIsSalesPromotion() {
+        return isSalesPromotion;
+    }
+
+    public void setIsSalesPromotion(int isSalesPromotion) {
+        this.isSalesPromotion = isSalesPromotion;
+    }
+
     public String getPromotionInfo() {
         return promotionInfo;
     }
@@ -64,21 +82,6 @@ public class RoomList implements java.io.Serializable {
         this.promotionInfo = promotionInfo;
     }
 
-    public Boolean getIsBnbFirstOrderI() {
-        return isBnbFirstOrderI;
-    }
-
-    public void setIsBnbFirstOrderI(Boolean isBnbFirstOrderI) {
-        this.isBnbFirstOrderI = isBnbFirstOrderI;
-    }
-
-    public Boolean getIsBnbCuxiaoI() {
-        return isBnbCuxiaoI;
-    }
-
-    public void setIsBnbCuxiaoI(Boolean isBnbCuxiaoI) {
-        this.isBnbCuxiaoI = isBnbCuxiaoI;
-    }
 
     public int getUid() {
         return uid;
