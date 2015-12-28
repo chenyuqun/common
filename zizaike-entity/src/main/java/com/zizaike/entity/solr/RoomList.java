@@ -46,11 +46,11 @@ public class RoomList implements java.io.Serializable {
     /**
      * 平台:是否首单立减
      */
-    private Boolean isBnbFirstOrderI;
+    private Boolean isBnbFirstOrderI=false;
     /**
      * 平台:是否促销
      */
-    private Boolean isBnbCuxiaoI;
+    private Boolean isBnbCuxiaoI=false;
     /**
      * 促销消息
      */
