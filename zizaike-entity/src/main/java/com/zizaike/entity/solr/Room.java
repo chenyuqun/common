@@ -482,29 +482,27 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      * 平台:是否促销
      */
     @Field(IS_BNB_CUXIAO_I_FIELD)
-    private Boolean isBnbCuxiaoI ;
+    private int isBnbCuxiaoI ;
     /**
      * 平台:是否首单立减
      */
     @Field(IS_BNB_FIRST_ORDER_I_FIELD)
-    private Boolean isBnbFirstOrderI;
-
-    public Boolean getBnbFirstOrderI() {
-        return isBnbFirstOrderI;
-    }
-
-    public void setBnbFirstOrderI(Boolean bnbFirstOrderI) {
-        isBnbFirstOrderI = bnbFirstOrderI;
-    }
-
-    public Boolean getBnbCuxiaoI() {
+    private int isBnbFirstOrderI;
+    
+    
+    
+    public int getIsBnbCuxiaoI() {
         return isBnbCuxiaoI;
     }
-
-    public void setBnbCuxiaoI(Boolean bnbCuxiaoI) {
-        isBnbCuxiaoI = bnbCuxiaoI;
+    public void setIsBnbCuxiaoI(int isBnbCuxiaoI) {
+        this.isBnbCuxiaoI = isBnbCuxiaoI;
     }
-    
+    public int getIsBnbFirstOrderI() {
+        return isBnbFirstOrderI;
+    }
+    public void setIsBnbFirstOrderI(int isBnbFirstOrderI) {
+        this.isBnbFirstOrderI = isBnbFirstOrderI;
+    }
     public List<String> getDiscountRoomDatesSs() {
         return discountRoomDatesSs;
     }
@@ -1137,4 +1135,5 @@ public class Room extends SearchableRoom implements java.io.Serializable{
                 ", isBnbFirstOrderI=" + isBnbFirstOrderI +
                 '}';
     }
+    
 }
