@@ -467,15 +467,42 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     private float scoreF;
     @Field(DISTANCE_FIELD)
     private Double distance;
+
+
+
     @Field(HS_SPEED_ROOM_I_FIELD)
+
     private int hsSpeedRoomI;
     /**
-     * 促销时间列表
+     * 商家促销时间列表
      */
     @Field(DISCOUNT_ROOM_DATES_SS_FIELD)
     private List<String> discountRoomDatesSs;
+    /**
+     * 平台:是否促销
+     */
+    @Field(IS_BNB_CUXIAO_I_FIELD)
+    private int isBnbCuxiaoI ;
+    /**
+     * 平台:是否首单立减
+     */
+    @Field(IS_BNB_FIRST_ORDER_I_FIELD)
+    private int isBnbFirstOrderI;
     
     
+    
+    public int getIsBnbCuxiaoI() {
+        return isBnbCuxiaoI;
+    }
+    public void setIsBnbCuxiaoI(int isBnbCuxiaoI) {
+        this.isBnbCuxiaoI = isBnbCuxiaoI;
+    }
+    public int getIsBnbFirstOrderI() {
+        return isBnbFirstOrderI;
+    }
+    public void setIsBnbFirstOrderI(int isBnbFirstOrderI) {
+        this.isBnbFirstOrderI = isBnbFirstOrderI;
+    }
     public List<String> getDiscountRoomDatesSs() {
         return discountRoomDatesSs;
     }
@@ -1011,7 +1038,102 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setHsSpeedRoomI(int hsSpeedRoomI) {
         this.hsSpeedRoomI = hsSpeedRoomI;
     }
- 
-    
 
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id=" + id +
+                ", version=" + version +
+                ", text='" + text + '\'' +
+                ", created=" + created +
+                ", changed=" + changed +
+                ", uid=" + uid +
+                ", username='" + username + '\'' +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", status=" + status +
+                ", verified=" + verified +
+                ", roomPrice='" + roomPrice + '\'' +
+                ", intPrice=" + intPrice +
+                ", intPriceTW=" + intPriceTW +
+                ", zzkRank=" + zzkRank +
+                ", intPriceTwList='" + intPriceTwList + '\'' +
+                ", intPriceCnList='" + intPriceCnList + '\'' +
+                ", dateList='" + dateList + '\'' +
+                ", destId=" + destId +
+                ", breakfast=" + breakfast +
+                ", breakfastRemark='" + breakfastRemark + '\'' +
+                ", roomModel='" + roomModel + '\'' +
+                ", orderSucc=" + orderSucc +
+                ", speedRoom=" + speedRoom +
+                ", commentNum=" + commentNum +
+                ", locTypeId=" + locTypeId +
+                ", locTypeCode='" + locTypeCode + '\'' +
+                ", locTypeName='" + locTypeName + '\'' +
+                ", userpoiId=" + userpoiId +
+                ", userAddress='" + userAddress + '\'' +
+                ", userTelnum='" + userTelnum + '\'' +
+                ", userMail='" + userMail + '\'' +
+                ", imgId=" + imgId +
+                ", userPhotoId=" + userPhotoId +
+                ", roomThumImgFile='" + roomThumImgFile + '\'' +
+                ", userPhotoFile='" + userPhotoFile + '\'' +
+                ", sheshi='" + sheshi + '\'' +
+                ", roomSetting='" + roomSetting + '\'' +
+                ", chuangshu='" + chuangshu + '\'' +
+                ", chuangxing='" + chuangxing + '\'' +
+                ", weishengjian='" + weishengjian + '\'' +
+                ", fangjiashuoming='" + fangjiashuoming + '\'' +
+                ", mianji='" + mianji + '\'' +
+                ", addBedCheck='" + addBedCheck + '\'' +
+                ", addBedNum='" + addBedNum + '\'' +
+                ", addBedPrice='" + addBedPrice + '\'' +
+                ", slat=" + slat +
+                ", slng=" + slng +
+                ", userpoiTitle='" + userpoiTitle + '\'' +
+                ", userpoiAddress='" + userpoiAddress + '\'' +
+                ", userpoiPhone='" + userpoiPhone + '\'' +
+                ", userpoiUserName='" + userpoiUserName + '\'' +
+                ", hasStoryI=" + hasStoryI +
+                ", latestSuccessTimeS='" + latestSuccessTimeS + '\'' +
+                ", roomThumImgVersionI=" + roomThumImgVersionI +
+                ", soldoutRoomDatesSs=" + soldoutRoomDatesSs +
+                ", homestayDefaultImageS='" + homestayDefaultImageS + '\'' +
+                ", homestayImgVersionI=" + homestayImgVersionI +
+                ", latlngP0D=" + latlngP0D +
+                ", latlngP1D=" + latlngP1D +
+                ", userStatusI=" + userStatusI +
+                ", minimumStayI=" + minimumStayI +
+                ", roomPriceCountCheckI=" + roomPriceCountCheckI +
+                ", followLanguageS='" + followLanguageS + '\'' +
+                ", wifiI=" + wifiI +
+                ", pmUsersI=" + pmUsersI +
+                ", pmReplyI=" + pmReplyI +
+                ", pmReplyRateI=" + pmReplyRateI +
+                ", allOrderI=" + allOrderI +
+                ", orderSelfI=" + orderSelfI +
+                ", orderSelfRateI=" + orderSelfRateI +
+                ", orderHtRateI=" + orderHtRateI +
+                ", roomNightsI=" + roomNightsI +
+                ", pmHtRateI=" + pmHtRateI +
+                ", calLastUpdateI=" + calLastUpdateI +
+                ", hsRatingAvgI=" + hsRatingAvgI +
+                ", hsCommentsNumI=" + hsCommentsNumI +
+                ", roomRatingAvgI=" + roomRatingAvgI +
+                ", roomCommentsNumI=" + roomCommentsNumI +
+                ", jiesongServiceI=" + jiesongServiceI +
+                ", baocheServiceI=" + baocheServiceI +
+                ", otherServiceI=" + otherServiceI +
+                ", otherServiceTcn='" + otherServiceTcn + '\'' +
+                ", categoryTagsSs=" + categoryTagsSs +
+                ", categoryTagsS='" + categoryTagsS + '\'' +
+                ", scoreF=" + scoreF +
+                ", distance=" + distance +
+                ", hsSpeedRoomI=" + hsSpeedRoomI +
+                ", discountRoomDatesSs=" + discountRoomDatesSs +
+                ", isBnbCuxiaoI=" + isBnbCuxiaoI +
+                ", isBnbFirstOrderI=" + isBnbFirstOrderI +
+                '}';
+    }
+    
 }

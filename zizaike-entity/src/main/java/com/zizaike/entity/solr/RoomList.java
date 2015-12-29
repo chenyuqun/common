@@ -41,9 +41,48 @@ public class RoomList implements java.io.Serializable {
     private String userPoiName;
     private Double distance;
     private String currencyCode;
-    //是否促销
+    //是否商家优惠
+    /**
+     * 商家:惠
+     */
     private int isPromotion=0;
-    
+    /**
+     * 平台:减
+     */
+    private int isSubtract=0;
+    /**
+     * 平台:促
+     */
+    private int isSalesPromotion=0;
+    /**
+     * 促销消息
+     */
+    private String promotionInfo;
+    public int getIsSubtract() {
+        return isSubtract;
+    }
+
+    public void setIsSubtract(int isSubtract) {
+        this.isSubtract = isSubtract;
+    }
+
+    public int getIsSalesPromotion() {
+        return isSalesPromotion;
+    }
+
+    public void setIsSalesPromotion(int isSalesPromotion) {
+        this.isSalesPromotion = isSalesPromotion;
+    }
+
+    public String getPromotionInfo() {
+        return promotionInfo;
+    }
+
+    public void setPromotionInfo(String promotionInfo) {
+        this.promotionInfo = promotionInfo;
+    }
+
+
     public int getUid() {
         return uid;
     }
