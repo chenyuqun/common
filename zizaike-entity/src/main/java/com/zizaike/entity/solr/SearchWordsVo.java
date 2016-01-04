@@ -76,7 +76,10 @@ public class SearchWordsVo implements java.io.Serializable {
      */
     private int promotion = 0;
     
-    
+    /**
+     * 多语言
+     */
+    private int multilang;
 
     public ChannelType getChannel() {
         return channel;
@@ -198,6 +201,14 @@ public class SearchWordsVo implements java.io.Serializable {
 
     public void setMultiprice(int multiprice) {
         this.multiprice = multiprice;
+    }
+
+    public int getMultilang() {
+        return multilang;
+    }
+
+    public void setMultilang(int multilang) {
+        this.multilang = multilang;
     }
         
    
