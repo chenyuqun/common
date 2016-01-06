@@ -31,7 +31,7 @@
 		<!-- redis -->
 		<jedis.version>2.7.2</jedis.version>
 		<zizaike.core.version>1.0.4-SNAPSHOT</zizaike.core.version>
-		<zizaike.entity.version>1.0.4-RELEASE</zizaike.entity.version>
+		<zizaike.entity.version>1.0.5-RELEASE</zizaike.entity.version>
 		<zizaike.is.version>1.0.4-RELEASE</zizaike.is.version>
 	</properties>
 
@@ -390,5 +390,4 @@
 		</pluginManagement>
 		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
 	</build>
-
 </project>
