@@ -30,7 +30,7 @@
 		<springdata.commons>1.11.1.BUILD-SNAPSHOT</springdata.commons>
 		<!-- redis -->
 		<jedis.version>2.7.2</jedis.version>
-		<zizaike.core.version>1.0.3-RELEASE</zizaike.core.version>
+		<zizaike.core.version>1.0.4-SNAPSHOT</zizaike.core.version>
 		<zizaike.entity.version>1.0.4-RELEASE</zizaike.entity.version>
 		<zizaike.is.version>1.0.4-RELEASE</zizaike.is.version>
 	</properties>
@@ -273,6 +273,14 @@
 				<artifactId>commons-codec</artifactId>
 				<version>1.10</version>
 			</dependency>
+
+			<!-- spring rabbitmq -->
+			<dependency>
+		        <groupId>org.springframework.amqp</groupId>
+		        <artifactId>spring-rabbit</artifactId>
+		        <version>1.5.3.RELEASE</version>
+		    </dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
