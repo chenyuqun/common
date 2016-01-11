@@ -294,7 +294,6 @@
             <artifactId>amqp-client</artifactId>
             <version>${rabbitmq.version}</version>
         </dependency>
-
 		</dependencies>
 	</dependencyManagement>
 
