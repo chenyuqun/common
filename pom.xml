@@ -31,8 +31,8 @@
 		<!-- redis -->
 		<jedis.version>2.7.2</jedis.version>
 		<zizaike.core.version>1.0.3-RELEASE</zizaike.core.version>
-		<zizaike.entity.version>1.0.5-RELEASE</zizaike.entity.version>
-		<zizaike.is.version>1.0.4-RELEASE</zizaike.is.version>
+		<zizaike.entity.version>1.0.6-RELEASE</zizaike.entity.version>
+		<zizaike.is.version>1.0.5-RELEASE</zizaike.is.version>
 	</properties>
 
 

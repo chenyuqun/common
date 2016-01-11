@@ -8,6 +8,10 @@
 */  
   
 package com.zizaike.is.common;  
+
+import com.zizaike.core.framework.exception.ZZKServiceException;
+import com.zizaike.entity.common.Langue;
+
 /**  
  * ClassName:HanLPService <br/>  
  * Function: 简体转换服务. <br/>  
@@ -38,5 +42,16 @@ public interface  HanLPService{
      * @since JDK 1.7
      */
     String convertToSimplifiedChinese(String str);
+    /**
+     * 
+     * translate:翻译. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param langue
+     * @param content
+     * @return  
+     * @since JDK 1.7
+     */
+    String translate(Langue langue,String content)throws ZZKServiceException ; 
 }
   
