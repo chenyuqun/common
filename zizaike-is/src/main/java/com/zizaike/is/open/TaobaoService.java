@@ -9,6 +9,7 @@
 
 package com.zizaike.is.open;
 
+import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest;
 import com.zizaike.entity.open.alibaba.request.CancelRQRequest;
 import com.zizaike.entity.open.alibaba.request.QueryStatusRQRequest;
@@ -38,7 +39,7 @@ public interface TaobaoService {
      * @return
      * @since JDK 1.7
      */
-    ValidateRQResponse validateRQ(ValidateRQRequest validateRQRequest);
+    ValidateRQResponse validateRQ(ValidateRQRequest validateRQRequest)throws ZZKServiceException;
 
     /**
      * 
@@ -49,7 +50,7 @@ public interface TaobaoService {
      * @return
      * @since JDK 1.7
      */
-    BookRQResponse bookRQ(BookRQRequest bookRQRequest);
+    BookRQResponse bookRQ(BookRQRequest bookRQRequest)throws ZZKServiceException;
 
     /**
      * 
@@ -60,7 +61,7 @@ public interface TaobaoService {
      * @return
      * @since JDK 1.7
      */
-    QueryStatusRQResponse queryStatusRQ(QueryStatusRQRequest queryStatusRQRequest);
+    QueryStatusRQResponse queryStatusRQ(QueryStatusRQRequest queryStatusRQRequest)throws ZZKServiceException;
 
     /**
      * 
@@ -71,8 +72,8 @@ public interface TaobaoService {
      * @return
      * @since JDK 1.7
      */
-    CancelRQResponse cancelRQ(CancelRQRequest cancelRQRequest);
+    CancelRQResponse cancelRQ(CancelRQRequest cancelRQRequest)throws ZZKServiceException;
 
-    String  service (String request);
+    String  service (String request)throws ZZKServiceException;
 
 }
