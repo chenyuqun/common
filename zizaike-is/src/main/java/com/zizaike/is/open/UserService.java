@@ -9,6 +9,7 @@
   
 package com.zizaike.is.open;  
 
+import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.User;
 
 /**  
@@ -30,6 +31,6 @@ public interface UserService {
      * @return  
      * @since JDK 1.7
      */
-    boolean checkUser(User user);
+    void checkUser(User user) throws ZZKServiceException;
 }
   

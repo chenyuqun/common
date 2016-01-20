@@ -151,6 +151,10 @@
             <groupId>com.rabbitmq</groupId>
             <artifactId>amqp-client</artifactId>
         </dependency>
+        <dependency>  
+			    <groupId>com.thoughtworks.xstream</groupId>  
+			    <artifactId>xstream</artifactId>  
+			</dependency>
 	</dependencies>
 	<build>
 		<plugins>
