@@ -23,6 +23,10 @@ import java.util.Date;
  */
 public class Hotel {
     /**
+     * 动作
+     */
+    Action action;
+    /**
      * 卖家自己系统的id
      */
     private String outerId;
@@ -280,6 +284,12 @@ public class Hotel {
     }
     public void setUsedName(String usedName) {
         this.usedName = usedName;
+    }
+    public Action getAction() {
+        return action;
+    }
+    public void setAction(Action action) {
+        this.action = action;
     }
 
 }
