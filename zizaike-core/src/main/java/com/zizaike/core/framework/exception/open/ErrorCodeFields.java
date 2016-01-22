@@ -13,10 +13,18 @@ import com.zizaike.core.framework.exception.IErrorCode;
  * @since JDK 1.7
  */
 public enum ErrorCodeFields implements IErrorCode {
+    /**
+     * 系统异常
+     */
+    SYSTEM_ERROR("10000", "system error"),
+    
     /** 用户不存在 **/
     USER_NOT_FOUND_ERROR("10001", "user not found error"),
     /** 用户名或密码不存在 **/
-    USERNAME_OR_PASSWORD_ERROR("10002", "username or password error")
+    USERNAME_OR_PASSWORD_ERROR("10002", "username or password error"),
+    ROOM_FULL_NOT_BOOK_ERROR("-1", "表示满房（不可预定）"),
+    RP_ERROR("-2", "标识RP失效"),
+    OTHER_NOT_BOOK_ERROR("-3", "其他不可预定"),
     ;
 
     private String errorCode;

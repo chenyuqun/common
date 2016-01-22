@@ -10,6 +10,7 @@
 package com.zizaike.entity.open.alibaba.response;  
 
 import javax.print.attribute.ResolutionSyntax;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**  
@@ -34,6 +35,22 @@ public class QueryStatusRQResponse extends ResponseData{
     private OrderInfo orderInfo;
     @XStreamAlias("BillInfo")
     private BillInfo billInfo;
+    @XStreamAlias("Message")
+    private String message;
+    @XStreamAlias("ResultCode")
+    private String resultCode;
+    public String getMessage() {
+        return message;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public String getResultCode() {
+        return resultCode;
+    }
+    public void setResultCode(String resultCode) {
+        this.resultCode = resultCode;
+    }
     public Long getTaoBaoOrderId() {
         return taoBaoOrderId;
     }
@@ -68,7 +85,6 @@ public class QueryStatusRQResponse extends ResponseData{
     }
     public QueryStatusRQResponse(String message, String resultCode, Long taoBaoOrderId, String orderId, String status,
             OrderInfo orderInfo, BillInfo billInfo) {
-        super(message, resultCode);
         this.taoBaoOrderId = taoBaoOrderId;
         this.orderId = orderId;
         this.status = status;

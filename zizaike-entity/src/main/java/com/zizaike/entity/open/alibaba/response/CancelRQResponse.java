@@ -26,7 +26,23 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 public class CancelRQResponse extends ResponseData {
     @XStreamAlias("OrderId")
     private String orderId;
-
+    @XStreamAlias("Message")
+    private String message;
+    @XStreamAlias("ResultCode")
+    private String resultCode;
+    public String getMessage() {
+        return message;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public String getResultCode() {
+        return resultCode;
+    }
+    public void setResultCode(String resultCode) {
+        this.resultCode = resultCode;
+    }
+    
     public String getOrderId() {
         return orderId;
     }
@@ -36,10 +52,6 @@ public class CancelRQResponse extends ResponseData {
     }
 
     public CancelRQResponse() {
-    }
-    public CancelRQResponse(String message, String resultCode, String orderId) {
-        super(message, resultCode);
-        this.orderId = orderId;
     }
 
     @Override

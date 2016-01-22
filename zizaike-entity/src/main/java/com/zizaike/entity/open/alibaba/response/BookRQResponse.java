@@ -27,6 +27,22 @@ public class BookRQResponse extends ResponseData{
     private String orderId;
     @XStreamAlias("PmsResID")
     private String pmsResID;
+    @XStreamAlias("Message")
+    private String message;
+    @XStreamAlias("ResultCode")
+    private String resultCode;
+    public String getMessage() {
+        return message;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public String getResultCode() {
+        return resultCode;
+    }
+    public void setResultCode(String resultCode) {
+        this.resultCode = resultCode;
+    }
     public String getOrderId() {
         return orderId;
     }
@@ -40,11 +56,6 @@ public class BookRQResponse extends ResponseData{
         this.pmsResID = pmsResID;
     }
     public BookRQResponse() {
-    }
-    public BookRQResponse(String message, String resultCode, String orderId, String pmsResID) {
-        super(message, resultCode);
-        this.orderId = orderId;
-        this.pmsResID = pmsResID;
     }
     @Override
     public String toString() {

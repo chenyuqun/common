@@ -36,6 +36,22 @@ public class ValidateRQResponse extends ResponseData{
     private String cancelPolicyType;
     @XStreamAlias("CancelPolicyInfo")
     private String cancelPolicyInfo;
+    @XStreamAlias("Message")
+    private String message="成功";
+    @XStreamAlias("ResultCode")
+    private String resultCode="0";
+    public String getMessage() {
+        return message;
+    }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public String getResultCode() {
+        return resultCode;
+    }
+    public void setResultCode(String resultCode) {
+        this.resultCode = resultCode;
+    }
     public String getCreateOrderValidateKey() {
         return createOrderValidateKey;
     }
@@ -77,7 +93,6 @@ public class ValidateRQResponse extends ResponseData{
     }
     public ValidateRQResponse(String message, String resultCode, String createOrderValidateKey, String inventoryPrice,
             String guaranteeType, String guaranteeStartTime, String cancelPolicyType, String cancelPolicyInfo) {
-        super(message, resultCode);
         this.createOrderValidateKey = createOrderValidateKey;
         this.inventoryPrice = inventoryPrice;
         this.guaranteeType = guaranteeType;
