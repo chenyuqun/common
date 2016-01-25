@@ -523,7 +523,7 @@ public class BookRQRequest extends RequestData {
     }
 
     @XStreamAlias("OrderGuests")
-    private class OrderGuests {
+    public class OrderGuests {
         @XStreamImplicit(itemFieldName = "OrderGuest")
         private List<OrderGuest> orderGuests = new ArrayList<OrderGuest>();
 
@@ -538,7 +538,7 @@ public class BookRQRequest extends RequestData {
     }
 
     @XStreamAlias("OrderGuest")
-    private class OrderGuest {
+    public class OrderGuest {
         /*
          * 姓名
          */
