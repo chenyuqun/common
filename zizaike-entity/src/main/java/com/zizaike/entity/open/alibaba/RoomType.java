@@ -22,6 +22,10 @@ package com.zizaike.entity.open.alibaba;
  */
 public class RoomType {
     /**
+     * 动作
+     */
+    Action action;
+    /**
      * 卖家房型ID，不能重复建议格式是:酒店code_房型code
      */
     private String outerId;
@@ -209,4 +213,13 @@ public class RoomType {
     public String getApiMethodName() {
         return "taobao.xhotel.roomtype.add";
     }
+
+    public Action getAction() {
+        return action;
+    }
+
+    public void setAction(Action action) {
+        this.action = action;
+    }
+    
 }

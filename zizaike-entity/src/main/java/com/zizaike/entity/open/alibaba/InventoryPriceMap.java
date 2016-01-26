@@ -29,6 +29,7 @@ public class InventoryPriceMap implements Serializable{
      * @since JDK 1.7
      */
     private static final long serialVersionUID = -787759915965616080L;
+    Action action;
     /**
      * 房型编号
      */
@@ -45,6 +46,13 @@ public class InventoryPriceMap implements Serializable{
      * 价格data
      */
     private List<InventoryPrice> data;
+    
+    public Action getAction() {
+        return action;
+    }
+    public void setAction(Action action) {
+        this.action = action;
+    }
     public String getOutRid() {
         return outRid;
     }

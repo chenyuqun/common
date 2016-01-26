@@ -23,6 +23,10 @@ import java.util.Date;
  */
 public class RatePlan {
     /**
+     * 动作
+     */
+    Action action;
+    /**
      * 卖家自己系统的Code，简称RateCode
      */
     private String rateplanCode;
@@ -418,4 +422,12 @@ public class RatePlan {
         return "taobao.xhotel.rateplan.add";
     }
 
+    public Action getAction() {
+        return action;
+    }
+
+    public void setAction(Action action) {
+        this.action = action;
+    }
+    
 }
