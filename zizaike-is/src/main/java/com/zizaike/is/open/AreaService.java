@@ -10,7 +10,6 @@
 package com.zizaike.is.open;  
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
-import com.zizaike.entity.open.alibaba.Area;
 
 /**  
  * ClassName:UserService <br/>  
@@ -31,6 +30,6 @@ public interface AreaService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    Area queryByTypeCode(String typeCode) throws ZZKServiceException;
+    String getAreaCodeTypeCode(String typeCode) throws ZZKServiceException;
 }
   

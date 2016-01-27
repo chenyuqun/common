@@ -22,6 +22,10 @@ public enum ErrorCodeFields implements IErrorCode {
     USER_NOT_FOUND_ERROR("10001", "user not found error"),
     /** 用户名或密码不存在 **/
     USERNAME_OR_PASSWORD_ERROR("10002", "username or password error"),
+    /**
+     * 地址没有找到
+     */
+    AREA_NOT_FOUND_ERROR("10002", "area not found error"),
     ROOM_FULL_NOT_BOOK_ERROR("-1", "表示满房（不可预定）"),
     RP_ERROR("-2", "标识RP失效"),
     OTHER_NOT_BOOK_ERROR("-3", "其他不可预定"),
