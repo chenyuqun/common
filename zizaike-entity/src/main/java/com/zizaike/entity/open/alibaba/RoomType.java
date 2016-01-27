@@ -221,5 +221,14 @@ public class RoomType {
     public void setAction(Action action) {
         this.action = action;
     }
+
+    @Override
+    public String toString() {
+        return "RoomType [action=" + action + ", outerId=" + outerId + ", name=" + name + ", maxOccupancy="
+                + maxOccupancy + ", area=" + area + ", floor=" + floor + ", bedType=" + bedType + ", bedSize="
+                + bedSize + ", internet=" + internet + ", service=" + service + ", extend=" + extend + ", windowType="
+                + windowType + ", srid=" + srid + ", outHid=" + outHid + ", vendor=" + vendor + ", pics=" + pics + "]";
+    }
+    
     
 }
