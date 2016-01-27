@@ -291,6 +291,17 @@ public class Hotel {
     public void setAction(Action action) {
         this.action = action;
     }
+    @Override
+    public String toString() {
+        return "Hotel [action=" + action + ", outerId=" + outerId + ", name=" + name + ", usedName=" + usedName
+                + ", domestic=" + domestic + ", country=" + country + ", province=" + province + ", city=" + city
+                + ", district=" + district + ", business=" + business + ", address=" + address + ", longitude="
+                + longitude + ", latitude=" + latitude + ", positionType=" + positionType + ", tel=" + tel
+                + ", extend=" + extend + ", createdTime=" + createdTime + ", dataConfirmStr=" + dataConfirmStr
+                + ", errorInfo=" + errorInfo + ", hid=" + hid + ", matchStatus=" + matchStatus + ", modifiedTime="
+                + modifiedTime + ", status=" + status + "]";
+    }
+    
 
 }
   
