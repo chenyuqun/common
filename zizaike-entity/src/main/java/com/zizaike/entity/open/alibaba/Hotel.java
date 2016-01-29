@@ -45,6 +45,10 @@ public class Hotel {
      * 0:国内;1:国外
      */
     private Long domestic;
+    /**
+     *描述
+     */
+    private String description;
     
 
    
@@ -291,16 +295,25 @@ public class Hotel {
     public void setAction(Action action) {
         this.action = action;
     }
+    
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
     @Override
     public String toString() {
         return "Hotel [action=" + action + ", outerId=" + outerId + ", name=" + name + ", usedName=" + usedName
-                + ", domestic=" + domestic + ", country=" + country + ", province=" + province + ", city=" + city
-                + ", district=" + district + ", business=" + business + ", address=" + address + ", longitude="
-                + longitude + ", latitude=" + latitude + ", positionType=" + positionType + ", tel=" + tel
-                + ", extend=" + extend + ", createdTime=" + createdTime + ", dataConfirmStr=" + dataConfirmStr
-                + ", errorInfo=" + errorInfo + ", hid=" + hid + ", matchStatus=" + matchStatus + ", modifiedTime="
-                + modifiedTime + ", status=" + status + "]";
+                + ", domestic=" + domestic + ", description=" + description + ", country=" + country + ", province="
+                + province + ", city=" + city + ", district=" + district + ", business=" + business + ", address="
+                + address + ", longitude=" + longitude + ", latitude=" + latitude + ", positionType=" + positionType
+                + ", tel=" + tel + ", extend=" + extend + ", createdTime=" + createdTime + ", dataConfirmStr="
+                + dataConfirmStr + ", errorInfo=" + errorInfo + ", hid=" + hid + ", matchStatus=" + matchStatus
+                + ", modifiedTime=" + modifiedTime + ", status=" + status + "]";
     }
+   
+    
     
 
 }
