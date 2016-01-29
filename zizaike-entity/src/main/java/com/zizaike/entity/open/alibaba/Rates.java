@@ -5,34 +5,51 @@
  * Date:2016年1月27日下午4:22:15  <br/>
  * Copyright (c) 2016, zizaike.com All Rights Reserved.  
  *  
-*/  
-  
-package com.zizaike.entity.open.alibaba;  
-/**  
- * ClassName:RateInventoryPriceMap <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
- * Date:     2016年1月27日 下午4:22:15 <br/>  
- * @author   alex  
- * @version    
- * @since    JDK 1.7  
- * @see        
  */
-public class Rates {
+
+package com.zizaike.entity.open.alibaba;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * ClassName:RateInventoryPriceMap <br/>
+ * Function: TODO ADD FUNCTION. <br/>
+ * Reason: TODO ADD REASON. <br/>
+ * Date: 2016年1月27日 下午4:22:15 <br/>
+ * 
+ * @author alex
+ * @version
+ * @since JDK 1.7
+ * @see
+ */
+public class Rates implements Serializable{
+    private static final long serialVersionUID = -4170538856089366965L;
     Action action;
-    private String rateInventoryPrcie;
+    private List<RateInventoryPrice> rateInventoryPriceMap;
+
     public Action getAction() {
         return action;
     }
+
     public void setAction(Action action) {
         this.action = action;
     }
-    public String getRateInventoryPrcie() {
-        return rateInventoryPrcie;
+
+    public List<RateInventoryPrice> getRateInventoryPriceMap() {
+        return rateInventoryPriceMap;
     }
-    public void setRateInventoryPrcie(String rateInventoryPrcie) {
-        this.rateInventoryPrcie = rateInventoryPrcie;
+
+    public void setRateInventoryPriceMap(List<RateInventoryPrice> rateInventoryPriceMap) {
+        this.rateInventoryPriceMap = rateInventoryPriceMap;
     }
+
+    public Rates() {
+
+    }
+
+   
+
+
     
 }
-  
