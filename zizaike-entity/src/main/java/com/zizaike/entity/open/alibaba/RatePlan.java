@@ -429,5 +429,21 @@ public class RatePlan {
     public void setAction(Action action) {
         this.action = action;
     }
+
+    @Override
+    public String toString() {
+        return "RatePlan [action=" + action + ", rateplanCode=" + rateplanCode + ", name=" + name + ", paymentType="
+                + paymentType + ", breakfastCount=" + breakfastCount + ", minDays=" + minDays + ", maxDays=" + maxDays
+                + ", minAmount=" + minAmount + ", minAdvHours=" + minAdvHours + ", maxAdvHours=" + maxAdvHours
+                + ", startTime=" + startTime + ", endTime=" + endTime + ", cancelPolicy=" + cancelPolicy + ", extend="
+                + extend + ", status=" + status + ", englishName=" + englishName + ", guaranteeType=" + guaranteeType
+                + ", guaranteeStartTime=" + guaranteeStartTime + ", memberLevel=" + memberLevel + ", channel="
+                + channel + ", vendor=" + vendor + ", firstStay=" + firstStay + ", agreement=" + agreement
+                + ", breakfastCal=" + breakfastCal + ", cancelPolicyCal=" + cancelPolicyCal + ", guaranteeCal="
+                + guaranteeCal + ", effectiveTime=" + effectiveTime + ", deadlineTime=" + deadlineTime + ", rpType="
+                + rpType + ", hourage=" + hourage + ", canCheckinEnd=" + canCheckinEnd + ", canCheckinStart="
+                + canCheckinStart + "]";
+    }
+    
     
 }

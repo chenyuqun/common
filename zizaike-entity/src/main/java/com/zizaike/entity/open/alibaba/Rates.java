@@ -48,6 +48,11 @@ public class Rates implements Serializable{
 
     }
 
+    @Override
+    public String toString() {
+        return "Rates [action=" + action + ", rateInventoryPriceMap=" + rateInventoryPriceMap + "]";
+    }
+
    
 
 

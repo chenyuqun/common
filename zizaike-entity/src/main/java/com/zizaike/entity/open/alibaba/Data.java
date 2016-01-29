@@ -42,4 +42,10 @@ public class Data implements Serializable{
 
     }
 
+    @Override
+    public String toString() {
+        return "Data [inventoryPrice=" + inventoryPrice + ", userRoomInventory=" + userRoomInventory + "]";
+    }
+    
+
 }

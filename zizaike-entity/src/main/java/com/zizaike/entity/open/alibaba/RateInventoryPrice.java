@@ -50,4 +50,11 @@ import com.alibaba.fastjson.annotation.JSONField;
 
         public RateInventoryPrice() {
         }
+
+        @Override
+        public String toString() {
+            return "RateInventoryPrice [outRid=" + outRid + ", rateplanCode=" + rateplanCode + ", vendor=" + vendor
+                    + ", data=" + data + "]";
+        }
+        
     }

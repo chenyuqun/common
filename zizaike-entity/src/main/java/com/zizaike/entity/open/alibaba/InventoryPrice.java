@@ -53,4 +53,11 @@ public class InventoryPrice implements Serializable{
         public InventoryPrice() {
 
         }
+
+        @Override
+        public String toString() {
+            return "InventoryPrice [date=" + date + ", price=" + price + ", status=" + status + ", quota=" + quota
+                    + "]";
+        }
+        
     }
