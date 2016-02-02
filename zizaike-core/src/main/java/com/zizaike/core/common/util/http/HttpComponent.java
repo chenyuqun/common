@@ -152,6 +152,14 @@ public class HttpComponent {
         System.currentTimeMillis() - start);
     return result;
   }
+  public <T> T executeUriRequestWithLog(HttpUriRequest httpUriRequest, ResponseHandler<T> handler)
+          throws IOException {
+      long start = System.currentTimeMillis();
+      T result = httpClient.execute(httpUriRequest, handler, new BasicHttpContext());
+      LOG.info("send request to: {}, execute time: {}ms", httpUriRequest.getURI(),
+              System.currentTimeMillis() - start);
+      return result;
+  }
 
 
   public <T> T execute(HttpRequest<T> request) throws IOException {

@@ -85,6 +85,28 @@ public class HttpProxyUtil {
     return result;
 
   }
+  /**
+   * 
+   * httpPostXml:post xml. <br/>  
+   *  
+   * @author snow.zhang  
+   * @param url
+   * @param xml
+   * @return
+   * @throws IOException
+   * @throws Exception  
+   * @since JDK 1.7
+   */
+  public String httpPostXml(String url, String xml) throws IOException, Exception {
+      StringEntity input = new StringEntity(xml);
+      input.setContentType("text/xml;charset=UTF-8");
+      HttpPost post = new HttpPost(url);
+      post.setEntity(input);
+      post.setHeader(new BasicHeader(HTTP.CONTENT_TYPE, "text/xml;charset=UTF-8"));
+      String result = (String)httpComponent.executeUriRequestWithLog(post, new StringResponseHandler());
+      return result;
+      
+  }
 
   public JSONObject httpPut(String url, Map<String, String> params) throws IOException {
 
@@ -153,5 +175,24 @@ public class HttpProxyUtil {
     public JSONObject handle(HttpEntity entity) throws IOException {
       return JSON.parseObject(EntityUtils.toString(entity));
     }
+  }
+  private class StringResponseHandler implements ResponseHandler<String> {
+      
+      public static final int HTTP_UNSUCCESS_CODE = 200;
+      
+      @Override
+      public String handleResponse(HttpResponse response) throws IOException {
+          StatusLine statusLine = response.getStatusLine();
+          HttpEntity entity = response.getEntity();
+          if (statusLine.getStatusCode() > HTTP_UNSUCCESS_CODE) {
+              String errMsg = EntityUtils.toString(entity);
+              throw new HttpResponseException(statusLine.getStatusCode(), errMsg);
+          }
+          return EntityUtils.toString(entity);
+      }
+      
+      public JSONObject handle(HttpEntity entity) throws IOException {
+          return JSON.parseObject(EntityUtils.toString(entity));
+      }
   }
 }
