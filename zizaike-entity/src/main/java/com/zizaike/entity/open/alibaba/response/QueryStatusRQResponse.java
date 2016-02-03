@@ -9,9 +9,8 @@
   
 package com.zizaike.entity.open.alibaba.response;  
 
-import javax.print.attribute.ResolutionSyntax;
-
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.zizaike.entity.open.ResponseData;
 
 /**  
  * ClassName:QueryStatusRQResponse <br/>  

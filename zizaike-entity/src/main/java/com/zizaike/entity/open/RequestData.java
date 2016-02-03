@@ -1,4 +1,4 @@
-package com.zizaike.entity.open.alibaba.request;
+package com.zizaike.entity.open;
 /**
  * 
  * ClassName: RequestData <br/>  

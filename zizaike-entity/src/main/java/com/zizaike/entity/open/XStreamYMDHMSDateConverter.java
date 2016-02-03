@@ -1,4 +1,4 @@
-package com.zizaike.entity.open.alibaba;
+package com.zizaike.entity.open;
 
 import java.text.DateFormat;
 import java.text.ParseException;

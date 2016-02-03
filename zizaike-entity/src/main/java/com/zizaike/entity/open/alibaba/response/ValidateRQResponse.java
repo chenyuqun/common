@@ -10,6 +10,7 @@
 package com.zizaike.entity.open.alibaba.response;  
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.zizaike.entity.open.ResponseData;
 
 /**  
  * ClassName:ValidateRQResponse <br/>  

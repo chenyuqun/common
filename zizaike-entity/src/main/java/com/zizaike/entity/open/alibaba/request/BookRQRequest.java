@@ -16,8 +16,9 @@ import java.util.List;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
-import com.zizaike.entity.open.alibaba.XStreamYMDDateConverter;
-import com.zizaike.entity.open.alibaba.XStreamYMDHMSDateConverter;
+import com.zizaike.entity.open.RequestData;
+import com.zizaike.entity.open.XStreamYMDDateConverter;
+import com.zizaike.entity.open.XStreamYMDHMSDateConverter;
 
 /**
  * ClassName:BookRQ <br/>

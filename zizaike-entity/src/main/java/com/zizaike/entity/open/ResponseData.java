@@ -1,4 +1,4 @@
-package com.zizaike.entity.open.alibaba.response;
+package com.zizaike.entity.open;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 

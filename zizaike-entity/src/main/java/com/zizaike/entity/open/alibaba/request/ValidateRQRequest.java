@@ -14,7 +14,8 @@ import java.util.Date;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.zizaike.entity.open.alibaba.XStreamYMDDateConverter;
+import com.zizaike.entity.open.RequestData;
+import com.zizaike.entity.open.XStreamYMDDateConverter;
 
 /**  
  * ClassName:ValidateRQ <br/>  
