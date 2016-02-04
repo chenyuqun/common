@@ -9,17 +9,15 @@
 
 package com.zizaike.entity.open.ctrip.request;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.zizaike.entity.open.RequestData;
 import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
 import com.zizaike.entity.open.ctrip.BalanceType;
+import com.zizaike.entity.open.ctrip.RoomPrices;
 
 /**
  * ClassName:DomesticCheckRoomAvailRequest <br/>
@@ -62,99 +60,7 @@ public class DomesticCheckRoomAvailRequest extends RequestData {
 
 
 
-    @XStreamAlias("RoomPrice")
-    public class RoomPrice {
-        /**
-         * 入住日期
-         */
-        @XStreamAlias("EffectDate")
-        @XStreamConverter(value = XStreamYMDTHMSDateConverter.class)
-        private Date effectDate;
-        /**
-         * 价格
-         */
-        @XStreamAlias("Price")
-        private Float price;
-        /**
-         * 汇率后的卖价
-         */
-        @XStreamAlias("CNYPrice")
-        private Float CNYPrice;
-        /**
-         * 汇率后的卖价
-         */
-        @XStreamAlias("Cost")
-        private Float cost;
-        /**
-         * 汇率后的底价
-         */
-        @XStreamAlias("CNYCost")
-        private Float CNYCost;
-        /**
-         * 早餐数量
-         */
-        @XStreamAlias("BreakFast")
-        private Integer breakFast;
-        
-        public RoomPrice() {
-            
-        }
-
-        public Date getEffectDate() {
-            return effectDate;
-        }
-
-        public void setEffectDate(Date effectDate) {
-            this.effectDate = effectDate;
-        }
-
-        public Float getPrice() {
-            return price;
-        }
-
-        public void setPrice(Float price) {
-            this.price = price;
-        }
-
-        public Float getCNYPrice() {
-            return CNYPrice;
-        }
-
-        public void setCNYPrice(Float cNYPrice) {
-            CNYPrice = cNYPrice;
-        }
-
-        public Float getCost() {
-            return cost;
-        }
-
-        public void setCost(Float cost) {
-            this.cost = cost;
-        }
-
-        public Float getCNYCost() {
-            return CNYCost;
-        }
-
-        public void setCNYCost(Float cNYCost) {
-            CNYCost = cNYCost;
-        }
-
-        public Integer getBreakFast() {
-            return breakFast;
-        }
-
-        public void setBreakFast(Integer breakFast) {
-            this.breakFast = breakFast;
-        }
-
-        @Override
-        public String toString() {
-            return "RoomPrice [effectDate=" + effectDate + ", price=" + price + ", CNYPrice=" + CNYPrice + ", cost="
-                    + cost + ", CNYCost=" + CNYCost + ", breakFast=" + breakFast + "]";
-        }
-
-    }
+  
 
     @XStreamAlias("DomesticCheckRoomAvailRequest")
     public class DomesticCheckRoomAvail {
@@ -299,31 +205,7 @@ public class DomesticCheckRoomAvailRequest extends RequestData {
 
 
     }
-    @XStreamAlias("RoomPrices")
-    public class RoomPrices {
-    @XStreamImplicit(itemFieldName = "RoomPrice")
-    private List<RoomPrice> roomPrices = new ArrayList<RoomPrice>();
-
-    public List<RoomPrice> getRoomPrices() {
-        return roomPrices;
-    }
-
-    public void setRoomPrices(List<RoomPrice> roomPrices) {
-        this.roomPrices = roomPrices;
-    }
-
-    public RoomPrices() {
-        
-    }
-
-    @Override
-    public String toString() {
-        return "RoomPrices [roomPrices=" + roomPrices + "]";
-    }
-    
-        
-    
-    }
+   
     public static void main(String[] args) {
        String xml = "<Request>"
                 + "<HeaderInfo UserID='25' RequestorId='Ctrip.com' AsyncRequest='false' TimeStamp='2012-8-6 3:54:24'>"
