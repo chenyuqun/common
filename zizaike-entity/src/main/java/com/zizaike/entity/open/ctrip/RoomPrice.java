@@ -19,6 +19,11 @@ import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
         @XStreamAlias("Price")
         private Float price;
         /**
+         * 上个订单卖价金额(原币种),预付一般不传或者传0
+         */
+        @XStreamAlias("OldPrice")
+        private Float oldPrice;
+        /**
          * 汇率后的卖价
          */
         @XStreamAlias("CNYPrice")
@@ -41,6 +46,14 @@ import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
         
         public RoomPrice() {
             
+        }
+        
+        public Float getOldPrice() {
+            return oldPrice;
+        }
+
+        public void setOldPrice(Float oldPrice) {
+            this.oldPrice = oldPrice;
         }
 
         public Date getEffectDate() {
@@ -93,8 +106,10 @@ import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
 
         @Override
         public String toString() {
-            return "RoomPrice [effectDate=" + effectDate + ", price=" + price + ", CNYPrice=" + CNYPrice + ", cost="
-                    + cost + ", CNYCost=" + CNYCost + ", breakFast=" + breakFast + "]";
+            return "RoomPrice [effectDate=" + effectDate + ", price=" + price + ", oldPrice=" + oldPrice
+                    + ", CNYPrice=" + CNYPrice + ", cost=" + cost + ", CNYCost=" + CNYCost + ", breakFast=" + breakFast
+                    + "]";
         }
+        
 
     }
