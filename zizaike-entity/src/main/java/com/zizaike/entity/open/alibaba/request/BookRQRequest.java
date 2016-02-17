@@ -78,13 +78,13 @@ public class BookRQRequest extends RequestData {
      * 入住时间
      */
     @XStreamAlias("CheckIn")
-    @XStreamConverter(value = XStreamYMDHMSDateConverter.class)
+    @XStreamConverter(value = XStreamYMDDateConverter.class)
     private Date checkIn;
     /*
      * 离店时间
      */
     @XStreamAlias("CheckOut")
-    @XStreamConverter(value = XStreamYMDHMSDateConverter.class)
+    @XStreamConverter(value = XStreamYMDDateConverter.class)
     private Date checkOut;
     /*
      * 小时房（时间取Checkin/Checkout对应的具体时间）默认：false
