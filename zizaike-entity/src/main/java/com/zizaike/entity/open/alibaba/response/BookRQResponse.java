@@ -56,6 +56,8 @@ public class BookRQResponse extends ResponseData{
         this.pmsResID = pmsResID;
     }
     public BookRQResponse() {
+        this.resultCode="0";
+        this.message="创建订单成功";
     }
     @Override
     public String toString() {

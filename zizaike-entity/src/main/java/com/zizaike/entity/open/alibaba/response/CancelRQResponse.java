@@ -52,6 +52,8 @@ public class CancelRQResponse extends ResponseData {
     }
 
     public CancelRQResponse() {
+        this.resultCode="0";
+        this.message="成功";
     }
 
     @Override

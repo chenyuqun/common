@@ -82,6 +82,8 @@ public class QueryStatusRQResponse extends ResponseData{
         this.billInfo = billInfo;
     }
     public QueryStatusRQResponse() {
+        this.resultCode="0";
+        this.message="处理成功";
     }
     public QueryStatusRQResponse(String message, String resultCode, Long taoBaoOrderId, String orderId, String status,
             OrderInfo orderInfo, BillInfo billInfo) {

@@ -90,6 +90,8 @@ public class ValidateRQResponse extends ResponseData{
     }
    
     public ValidateRQResponse() {
+        this.resultCode="0";
+        this.message="";
     }
     public ValidateRQResponse(String message, String resultCode, String createOrderValidateKey, String inventoryPrice,
             String guaranteeType, String guaranteeStartTime, String cancelPolicyType, String cancelPolicyInfo) {
