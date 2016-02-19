@@ -183,6 +183,20 @@ public class BookRQRequest extends RequestData {
      */
     @XStreamAlias("Extensions")
     private String extensions;
+    /**
+     * 支付宝交易号
+     */
+    @XStreamAlias("AlipayTradeNo")
+    private String alipayTradeNo;
+    
+
+    public String getAlipayTradeNo() {
+        return alipayTradeNo;
+    }
+
+    public void setAlipayTradeNo(String alipayTradeNo) {
+        this.alipayTradeNo = alipayTradeNo;
+    }
 
     public AuthenticationToken getAuthenticationToken() {
         return authenticationToken;
