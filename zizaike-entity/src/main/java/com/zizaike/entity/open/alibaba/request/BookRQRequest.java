@@ -374,7 +374,7 @@ public class BookRQRequest extends RequestData {
         this.guaranteeType = guaranteeType;
     }
 
-    public Object getReceiptInfo() {
+    public ReceiptInfo getReceiptInfo() {
         return receiptInfo;
     }
 
@@ -483,7 +483,7 @@ public class BookRQRequest extends RequestData {
     }
 
     @XStreamAlias("DailyInfos")
-    private class DailyInfos {
+    public class DailyInfos {
         @XStreamImplicit(itemFieldName = "DailyInfo")
         private List<DailyInfo> dailyInfos = new ArrayList<DailyInfo>();
 
@@ -498,7 +498,7 @@ public class BookRQRequest extends RequestData {
     }
 
     @XStreamAlias("DailyInfo")
-    private class DailyInfo {
+    public class DailyInfo {
         @XStreamConverter(value = XStreamYMDDateConverter.class)
         @XStreamAlias("Day")
         private Date day;
@@ -607,7 +607,7 @@ public class BookRQRequest extends RequestData {
  * @see        
  */
 @XStreamAlias("ReceiptInfo")
-private class ReceiptInfo {
+public class ReceiptInfo {
     /**
      * 发票抬头
      */
