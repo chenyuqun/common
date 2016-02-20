@@ -12,6 +12,8 @@ package com.zizaike.entity.order.response;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**  
  * ClassName:InventoryPrice <br/>  
  * Function: 价格日历. <br/>  
@@ -27,6 +29,7 @@ public class InventoryPrice implements Serializable{
     /**
      * 日期()
      */
+    @JSONField(format = "yyyy-MM-dd")
     private Date date;
     /**
      * 价格(分)
