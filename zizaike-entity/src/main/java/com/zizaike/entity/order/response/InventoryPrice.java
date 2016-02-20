@@ -22,6 +22,8 @@ import java.util.Date;
  * @see        
  */
 public class InventoryPrice implements Serializable{
+    
+    private static final long serialVersionUID = -2763486167812492564L;
     /**
      * 日期()
      */
@@ -34,5 +36,28 @@ public class InventoryPrice implements Serializable{
      * 库存
      */
     private Integer quota;
+    public Date getDate() {
+        return date;
+    }
+    public void setDate(Date date) {
+        this.date = date;
+    }
+    public Integer getPrice() {
+        return price;
+    }
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+    public Integer getQuota() {
+        return quota;
+    }
+    public void setQuota(Integer quota) {
+        this.quota = quota;
+    }
+    @Override
+    public String toString() {
+        return "InventoryPrice [date=" + date + ", price=" + price + ", quota=" + quota + "]";
+    }
+    
 }
   

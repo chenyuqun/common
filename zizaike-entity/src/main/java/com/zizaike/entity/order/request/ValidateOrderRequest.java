@@ -27,7 +27,7 @@ public class ValidateOrderRequest implements Serializable{
     /**
      * open酒店id
      */
-    private Long openHotelId;
+    private String openHotelId;
     /**
      * OTA酒店id，即第三方系统中的酒店id
      */
@@ -51,7 +51,7 @@ public class ValidateOrderRequest implements Serializable{
     /**
      * open酒店商品id
      */
-    private Long openGid;
+    private String openGid;
     /**
      * 入住时间
      */
@@ -72,10 +72,10 @@ public class ValidateOrderRequest implements Serializable{
      * 扩展字段json，用于处理特殊OTA个性需求添加的扩展字段 {"key":"value"}
      */
     private String extensions;
-    public Long getOpenHotelId() {
+    public String getOpenHotelId() {
         return openHotelId;
     }
-    public void setOpenHotelId(Long openHotelId) {
+    public void setOpenHotelId(String openHotelId) {
         this.openHotelId = openHotelId;
     }
     public String getHotelId() {
@@ -108,10 +108,10 @@ public class ValidateOrderRequest implements Serializable{
     public void setRatePlanCode(String ratePlanCode) {
         this.ratePlanCode = ratePlanCode;
     }
-    public Long getOpenGid() {
+    public String getOpenGid() {
         return openGid;
     }
-    public void setOpenGid(Long openGid) {
+    public void setOpenGid(String openGid) {
         this.openGid = openGid;
     }
     public Date getCheckIn() {
