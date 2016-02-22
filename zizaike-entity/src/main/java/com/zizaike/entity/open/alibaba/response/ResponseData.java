@@ -1,4 +1,4 @@
-package com.zizaike.entity.open;
+package com.zizaike.entity.open.alibaba.response;
 
 /**
  * 

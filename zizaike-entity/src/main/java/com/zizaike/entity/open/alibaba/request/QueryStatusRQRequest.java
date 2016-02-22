@@ -10,7 +10,6 @@
 package com.zizaike.entity.open.alibaba.request;  
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.zizaike.entity.open.RequestData;
 
 /**  
  * ClassName:BookRQ <br/>  

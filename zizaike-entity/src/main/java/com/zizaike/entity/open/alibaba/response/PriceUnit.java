@@ -24,7 +24,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  * @see        
  */
 @XStreamAlias("Unit")
-public class Unit {
+public class PriceUnit {
     /**
      * 日期
      */

@@ -1,3 +1,4 @@
+
 /**  
  * Project Name:open-api  <br/>
  * File Name:CancelRQ.java  <br/>
@@ -10,7 +11,6 @@
 package com.zizaike.entity.open.alibaba.response;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.zizaike.entity.open.ResponseData;
 
 /**
  * ClassName:CancelRQ <br/>
@@ -53,6 +53,8 @@ public class CancelRQResponse extends ResponseData {
     }
 
     public CancelRQResponse() {
+        this.resultCode="0";
+        this.message="成功";
     }
 
     @Override
@@ -61,3 +63,4 @@ public class CancelRQResponse extends ResponseData {
     }
 
 }
+

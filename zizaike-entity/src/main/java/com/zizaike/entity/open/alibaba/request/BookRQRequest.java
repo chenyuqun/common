@@ -1,3 +1,4 @@
+
 /**  
  * Project Name:open-api  <br/>
  * File Name:BookRQ.java  <br/>
@@ -16,7 +17,6 @@ import java.util.List;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
-import com.zizaike.entity.open.RequestData;
 import com.zizaike.entity.open.XStreamYMDDateConverter;
 import com.zizaike.entity.open.XStreamYMDHMSDateConverter;
 
@@ -79,13 +79,13 @@ public class BookRQRequest extends RequestData {
      * 入住时间
      */
     @XStreamAlias("CheckIn")
-    @XStreamConverter(value = XStreamYMDHMSDateConverter.class)
+    @XStreamConverter(value = XStreamYMDDateConverter.class)
     private Date checkIn;
     /*
      * 离店时间
      */
     @XStreamAlias("CheckOut")
-    @XStreamConverter(value = XStreamYMDHMSDateConverter.class)
+    @XStreamConverter(value = XStreamYMDDateConverter.class)
     private Date checkOut;
     /*
      * 小时房（时间取Checkin/Checkout对应的具体时间）默认：false
@@ -184,6 +184,20 @@ public class BookRQRequest extends RequestData {
      */
     @XStreamAlias("Extensions")
     private String extensions;
+    /**
+     * 支付宝交易号
+     */
+    @XStreamAlias("AlipayTradeNo")
+    private String alipayTradeNo;
+    
+
+    public String getAlipayTradeNo() {
+        return alipayTradeNo;
+    }
+
+    public void setAlipayTradeNo(String alipayTradeNo) {
+        this.alipayTradeNo = alipayTradeNo;
+    }
 
     public AuthenticationToken getAuthenticationToken() {
         return authenticationToken;
@@ -361,7 +375,7 @@ public class BookRQRequest extends RequestData {
         this.guaranteeType = guaranteeType;
     }
 
-    public Object getReceiptInfo() {
+    public ReceiptInfo getReceiptInfo() {
         return receiptInfo;
     }
 
@@ -470,7 +484,7 @@ public class BookRQRequest extends RequestData {
     }
 
     @XStreamAlias("DailyInfos")
-    private class DailyInfos {
+    public class DailyInfos {
         @XStreamImplicit(itemFieldName = "DailyInfo")
         private List<DailyInfo> dailyInfos = new ArrayList<DailyInfo>();
 
@@ -485,7 +499,7 @@ public class BookRQRequest extends RequestData {
     }
 
     @XStreamAlias("DailyInfo")
-    private class DailyInfo {
+    public class DailyInfo {
         @XStreamConverter(value = XStreamYMDDateConverter.class)
         @XStreamAlias("Day")
         private Date day;
@@ -594,7 +608,7 @@ public class BookRQRequest extends RequestData {
  * @see        
  */
 @XStreamAlias("ReceiptInfo")
-private class ReceiptInfo {
+public class ReceiptInfo {
     /**
      * 发票抬头
      */

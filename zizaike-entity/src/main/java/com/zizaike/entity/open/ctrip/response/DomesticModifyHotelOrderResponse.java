@@ -11,7 +11,7 @@ package com.zizaike.entity.open.ctrip.response;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.zizaike.entity.open.ResponseData;
+import com.zizaike.entity.open.alibaba.response.ResponseData;
 
 /**
  * ClassName:DomesticSubmitNewHotelOrderResponse <br/>

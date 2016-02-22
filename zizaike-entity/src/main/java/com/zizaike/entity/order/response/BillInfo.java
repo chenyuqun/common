@@ -7,7 +7,7 @@
  *  
 */  
   
-package com.zizaike.entity.open.alibaba.response;  
+package com.zizaike.entity.order.response;  
 
 import java.util.List;
 
