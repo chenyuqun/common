@@ -10,7 +10,7 @@
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>zizaike-entity</artifactId>
-	<version>1.0.6-RELEASE</version>
+	<version>1.0.7-RELEASE</version>
 	<name>zizaike-entity</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -52,6 +52,10 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 			</dependency>
+			<dependency>  
+			    <groupId>com.thoughtworks.xstream</groupId>  
+			    <artifactId>xstream</artifactId>  
+			</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -91,3 +95,4 @@
 		</profile> 
 	</profiles>
 </project>
+
