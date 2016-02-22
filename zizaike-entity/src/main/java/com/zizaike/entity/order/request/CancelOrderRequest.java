@@ -12,6 +12,7 @@ package com.zizaike.entity.order.request;
 import java.io.Serializable;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.zizaike.entity.open.OpenChannelType;
 import com.zizaike.entity.open.alibaba.request.AuthenticationToken;
 
 /**  
@@ -26,10 +27,14 @@ import com.zizaike.entity.open.alibaba.request.AuthenticationToken;
  */
 public class CancelOrderRequest implements Serializable{
     private static final long serialVersionUID = -3271701824293798918L;
+    /**
+     * 来源
+     */
+    private OpenChannelType openChannelType;
     /*
      * 淘宝订单号
      */  
-    private long openOrderId;
+    private String openOrderId;
     /*
      * 外部订单号（如果已获取）
      */
@@ -49,11 +54,11 @@ public class CancelOrderRequest implements Serializable{
     
     private String cancelId;
 
-    public long getOpenOrderId() {
+    public String getOpenOrderId() {
         return openOrderId;
     }
 
-    public void setOpenOrderId(long openOrderId) {
+    public void setOpenOrderId(String openOrderId) {
         this.openOrderId = openOrderId;
     }
 
@@ -96,6 +101,15 @@ public class CancelOrderRequest implements Serializable{
     public void setCancelId(String cancelId) {
         this.cancelId = cancelId;
     }
+
+    public OpenChannelType getOpenChannelType() {
+        return openChannelType;
+    }
+
+    public void setOpenChannelType(OpenChannelType openChannelType) {
+        this.openChannelType = openChannelType;
+    }
+    
     
 
 }

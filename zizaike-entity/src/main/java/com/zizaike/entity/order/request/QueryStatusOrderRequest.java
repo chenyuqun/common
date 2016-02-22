@@ -11,6 +11,8 @@ package com.zizaike.entity.order.request;
 
 import java.io.Serializable;
 
+import com.zizaike.entity.open.OpenChannelType;
+
 /**  
  * ClassName:BookRQ <br/>  
  * Function: 酒店查询订单请求. <br/>  
@@ -22,6 +24,10 @@ import java.io.Serializable;
  */
 public class QueryStatusOrderRequest implements Serializable {
     private static final long serialVersionUID = 1630470494020361646L;
+    /**
+     * 来源
+     */
+    private OpenChannelType openChannelType;
     /*
 	 * OTA订单id，即第三方系统中的订单id
 	 * 备注：当OrderId为空时，表示本次查询为异步下单后发起的查询请求；OrderId非空时表示普通的查询请求。
@@ -53,10 +59,12 @@ public class QueryStatusOrderRequest implements Serializable {
     public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
     }
-    @Override
-    public String toString() {
-        return "QueryStatusOrderRequest [orderId=" + orderId + ", openOrderId=" + openOrderId + ", hotelId=" + hotelId
-                + "]";
+    
+    public OpenChannelType getOpenChannelType() {
+        return openChannelType;
+    }
+    public void setOpenChannelType(OpenChannelType openChannelType) {
+        this.openChannelType = openChannelType;
     }
 	
 	

@@ -12,6 +12,7 @@ package com.zizaike.entity.order.request;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.zizaike.entity.open.OpenChannelType;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest.DailyInfos;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest.OrderGuests;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest.ReceiptInfo;
@@ -28,11 +29,16 @@ import com.zizaike.entity.open.alibaba.request.BookRQRequest.ReceiptInfo;
  */
 public class BookOrderRequest implements Serializable{
     private static final long serialVersionUID = 3314171808492661434L;
-    private long openOrderId;
+    /**
+     * 来源
+     */
+    private OpenChannelType openChannelType;
+    
+    private String openOrderId;
     /*
      * 淘宝酒店id
      */
-    private long openHotelId;
+    private String openHotelId;
     /*
      * OTA酒店id，即第三方系统中的酒店id
      */
@@ -145,18 +151,6 @@ public class BookOrderRequest implements Serializable{
      * 支付宝交易号
      */
     private String alipayTradeNo;
-    public long getOpenOrderId() {
-        return openOrderId;
-    }
-    public void setOpenOrderId(long openOrderId) {
-        this.openOrderId = openOrderId;
-    }
-    public long getOpenHotelId() {
-        return openHotelId;
-    }
-    public void setOpenHotelId(long openHotelId) {
-        this.openHotelId = openHotelId;
-    }
     public String getHotelId() {
         return hotelId;
     }
@@ -325,7 +319,25 @@ public class BookOrderRequest implements Serializable{
     public void setAlipayTradeNo(String alipayTradeNo) {
         this.alipayTradeNo = alipayTradeNo;
     }
-        
+    public OpenChannelType getOpenChannelType() {
+        return openChannelType;
+    }
+    public void setOpenChannelType(OpenChannelType openChannelType) {
+        this.openChannelType = openChannelType;
+    }
+    public String getOpenOrderId() {
+        return openOrderId;
+    }
+    public void setOpenOrderId(String openOrderId) {
+        this.openOrderId = openOrderId;
+    }
+    public String getOpenHotelId() {
+        return openHotelId;
+    }
+    public void setOpenHotelId(String openHotelId) {
+        this.openHotelId = openHotelId;
+    }
+    
 
 
 }
