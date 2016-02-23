@@ -36,4 +36,6 @@ public interface CtripService {
      */
     DomesticCheckRoomAvailResponse domesticCheckRoomAvail(DomesticCheckRoomAvailRequest domesticCheckRoomAvailRequest)
             throws ZZKServiceException;
+    
+    String  service (String request)throws ZZKServiceException;
 }
