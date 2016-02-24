@@ -12,10 +12,12 @@ package com.zizaike.is.open;
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest;
 import com.zizaike.entity.open.alibaba.request.CancelRQRequest;
+import com.zizaike.entity.open.alibaba.request.OrderRefundRQRequest;
 import com.zizaike.entity.open.alibaba.request.QueryStatusRQRequest;
 import com.zizaike.entity.open.alibaba.request.ValidateRQRequest;
 import com.zizaike.entity.open.alibaba.response.BookRQResponse;
 import com.zizaike.entity.open.alibaba.response.CancelRQResponse;
+import com.zizaike.entity.open.alibaba.response.OrderRefundRQResponse;
 import com.zizaike.entity.open.alibaba.response.QueryStatusRQResponse;
 import com.zizaike.entity.open.alibaba.response.ValidateRQResponse;
 
@@ -73,6 +75,17 @@ public interface TaobaoService {
      * @since JDK 1.7
      */
     CancelRQResponse cancelRQ(CancelRQRequest cancelRQRequest)throws ZZKServiceException;
+    /**
+     * 
+     * orderRefundRQ:取消订单,付款. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param orderRefundRQRequest
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    OrderRefundRQResponse orderRefundRQ(OrderRefundRQRequest orderRefundRQRequest)throws ZZKServiceException;
 
     String  service (String request)throws ZZKServiceException;
 
