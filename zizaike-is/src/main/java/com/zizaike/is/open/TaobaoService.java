@@ -10,6 +10,7 @@
 package com.zizaike.is.open;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
+import com.zizaike.entity.open.alibaba.RoomType;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest;
 import com.zizaike.entity.open.alibaba.request.CancelRQRequest;
 import com.zizaike.entity.open.alibaba.request.OrderRefundRQRequest;
@@ -32,61 +33,24 @@ import com.zizaike.entity.open.alibaba.response.ValidateRQResponse;
  * @see
  */
 public interface TaobaoService {
-    /**
-     * 
-     * validateRQ:验证价格库存接口. <br/>
-     * 
-     * @author snow.zhang
-     * @param validateRQRequest
-     * @return
-     * @since JDK 1.7
-     */
-    ValidateRQResponse validateRQ(ValidateRQRequest validateRQRequest)throws ZZKServiceException;
-
-    /**
-     * 
-     * bookRQ:预定接口. <br/>
-     * 
-     * @author snow.zhang
-     * @param bookRQRequest
-     * @return
-     * @since JDK 1.7
-     */
-    BookRQResponse bookRQ(BookRQRequest bookRQRequest)throws ZZKServiceException;
-
-    /**
-     * 
-     * queryStatusRQ:查询订单. <br/>
-     * 
-     * @author snow.zhang
-     * @param queryStatusRQRequest
-     * @return
-     * @since JDK 1.7
-     */
-    QueryStatusRQResponse queryStatusRQ(QueryStatusRQRequest queryStatusRQRequest)throws ZZKServiceException;
-
-    /**
-     * 
-     * cancelRQ:取消订单. <br/>
-     * 
-     * @author snow.zhang
-     * @param cancelRQRequest
-     * @return
-     * @since JDK 1.7
-     */
-    CancelRQResponse cancelRQ(CancelRQRequest cancelRQRequest)throws ZZKServiceException;
-    /**
-     * 
-     * orderRefundRQ:取消订单,付款. <br/>  
-     *  
-     * @author snow.zhang  
-     * @param orderRefundRQRequest
-     * @return
-     * @throws ZZKServiceException  
-     * @since JDK 1.7
-     */
-    OrderRefundRQResponse orderRefundRQ(OrderRefundRQRequest orderRefundRQRequest)throws ZZKServiceException;
 
     String  service (String request)throws ZZKServiceException;
-
+    /**
+     * 
+     * updateRoomType:更新房型. <br/>  
+     *  
+     * @author snow.zhang
+     * @param object  
+     * @since JDK 1.7
+     */
+    void updateRoomType(RoomType object);
+    /**
+     * 
+     * addRoomType:添加房型. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param object  
+     * @since JDK 1.7
+     */
+    void addRoomType(RoomType object);
 }
