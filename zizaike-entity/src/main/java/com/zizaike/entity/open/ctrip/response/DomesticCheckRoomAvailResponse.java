@@ -38,7 +38,7 @@ public class DomesticCheckRoomAvailResponse extends ResponseData {
     @XStreamAlias("ResultCode")
     private String resultCode;
     @XStreamAlias("DomesticCheckRoomAvailResponse")
-    private DomesticCheckRoomAvail domesticCheckRoomAvail;
+    private DomesticCheckRoomAvailResp domesticCheckRoomAvail;
     public String getMessage() {
         return message;
     }
@@ -51,14 +51,16 @@ public class DomesticCheckRoomAvailResponse extends ResponseData {
     public void setResultCode(String resultCode) {
         this.resultCode = resultCode;
     }
-    public DomesticCheckRoomAvail getDomesticCheckRoomAvail() {
+    public DomesticCheckRoomAvailResp getDomesticCheckRoomAvail() {
         return domesticCheckRoomAvail;
     }
-    public void setDomesticCheckRoomAvail(DomesticCheckRoomAvail domesticCheckRoomAvail) {
+    public void setDomesticCheckRoomAvail(DomesticCheckRoomAvailResp domesticCheckRoomAvail) {
         this.domesticCheckRoomAvail = domesticCheckRoomAvail;
     }
     
     public DomesticCheckRoomAvailResponse() {
+       this.resultCode="0";
+       this.message="成功";
     }
     
   
@@ -83,124 +85,7 @@ public class DomesticCheckRoomAvailResponse extends ResponseData {
 
 
 
-@XStreamAlias("DomesticCheckRoomAvailResponse")
-public class DomesticCheckRoomAvail {
-    /**
-     * 是否能预订(1:可订;0:不可预订)
-     */
-    @XStreamAlias("IsBookable")
-    private Integer isBookable;
-    /**
-     * Ctrip房型编号
-     */
-    @XStreamAlias("Room")
-    private String room;
-    /**
-     * 接口订单金额
-     */
-    @XStreamAlias("InterFaceAmount")
-    private Float interFaceAmount;
-    /**
-     * 错误描述
-     */
-    @XStreamAlias("ReturnDescript")
-    private String returnDescript;
 
-    @XStreamAlias("RoomPrices")
-    private RoomPrices roomPrices;
-    @XStreamAlias("AvailRoomQuantitys")
-    private AvailRoomQuantitys availRoomQuantitys;
-    
-    public AvailRoomQuantitys getAvailRoomQuantitys() {
-        return availRoomQuantitys;
-    }
-    public void setAvailRoomQuantitys(AvailRoomQuantitys availRoomQuantitys) {
-        this.availRoomQuantitys = availRoomQuantitys;
-    }
-    public void setRoomPrices(RoomPrices roomPrices) {
-        this.roomPrices = roomPrices;
-    }
-
-    public DomesticCheckRoomAvail() {
-    }
-
-    @Override
-    public String toString() {
-        return "DomesticCheckRoomAvail [isBookable=" + isBookable + ", room=" + room + ", interFaceAmount="
-                + interFaceAmount + ", returnDescript=" + returnDescript + ", roomPrices=" + roomPrices
-                + ", availRoomQuantitys=" + availRoomQuantitys + "]";
-    }
-
-    @XStreamAlias("AvailRoomQuantity")
-    public class AvailRoomQuantity {
-        /**
-         * 入住日期
-         */
-        @XStreamAlias("EffectDate")
-        @XStreamConverter(value = XStreamYMDTHMSDateConverter.class)
-        private Date effectDate;
-        /**
-         * 可预定数量
-         */
-        @XStreamAlias("AvailQuantity")
-        private Integer availQuantity;
-
-        public Date getEffectDate() {
-            return effectDate;
-        }
-
-        public void setEffectDate(Date effectDate) {
-            this.effectDate = effectDate;
-        }
-
-        public Integer getAvailQuantity() {
-            return availQuantity;
-        }
-
-        public void setAvailQuantity(Integer availQuantity) {
-            this.availQuantity = availQuantity;
-        }
-
-        public AvailRoomQuantity() {
-
-            super();
-            // TODO Auto-generated constructor stub
-
-        }
-
-        @Override
-        public String toString() {
-            return "AvailRoomQuantity [effectDate=" + effectDate + ", availQuantity=" + availQuantity + "]";
-        }
-
-    }
-    @XStreamAlias("AvailRoomQuantitys")
-    public class AvailRoomQuantitys {
-        @XStreamImplicit(itemFieldName = "AvailRoomQuantity")
-        private List<AvailRoomQuantity> availRoomQuantitys = new ArrayList<AvailRoomQuantity>();
-
-        public List<AvailRoomQuantity> getAvailRoomQuantitys() {
-            return availRoomQuantitys;
-        }
-
-        public void setAvailRoomQuantitys(List<AvailRoomQuantity> availRoomQuantitys) {
-            this.availRoomQuantitys = availRoomQuantitys;
-        }
-        
-        public AvailRoomQuantitys() {
-              
-            super();  
-            // TODO Auto-generated constructor stub  
-            
-        }
-
-        @Override
-        public String toString() {
-            return "AvailRoomQuantitys [availRoomQuantitys=" + availRoomQuantitys + "]";
-        }
-        
-    }
-}
 public static void main(String[] args) {
      String xml = "<RequestResult>"
         +"<Message>string</Message>"
