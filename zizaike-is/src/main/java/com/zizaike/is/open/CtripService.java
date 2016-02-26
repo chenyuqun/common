@@ -10,6 +10,7 @@
 package com.zizaike.is.open;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
+import com.zizaike.entity.open.alibaba.Rates;
 import com.zizaike.entity.open.ctrip.request.DomesticCheckRoomAvailRequest;
 import com.zizaike.entity.open.ctrip.response.DomesticCheckRoomAvailResponse;
 
@@ -38,4 +39,14 @@ public interface CtripService {
             throws ZZKServiceException;
     
     String  service (String request)throws ZZKServiceException;
+    /**
+     * 
+     * updateRates:更新价格. <br/>    
+     *  
+     * @author alex 
+     * @param object  
+     * @since JDK 1.7
+     */
+    void updateRates(Rates object);
+    
 }
