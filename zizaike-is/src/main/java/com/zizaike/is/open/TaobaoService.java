@@ -10,17 +10,10 @@
 package com.zizaike.is.open;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
+import com.zizaike.entity.open.alibaba.Hotel;
+import com.zizaike.entity.open.alibaba.RatePlan;
+import com.zizaike.entity.open.alibaba.Rates;
 import com.zizaike.entity.open.alibaba.RoomType;
-import com.zizaike.entity.open.alibaba.request.BookRQRequest;
-import com.zizaike.entity.open.alibaba.request.CancelRQRequest;
-import com.zizaike.entity.open.alibaba.request.OrderRefundRQRequest;
-import com.zizaike.entity.open.alibaba.request.QueryStatusRQRequest;
-import com.zizaike.entity.open.alibaba.request.ValidateRQRequest;
-import com.zizaike.entity.open.alibaba.response.BookRQResponse;
-import com.zizaike.entity.open.alibaba.response.CancelRQResponse;
-import com.zizaike.entity.open.alibaba.response.OrderRefundRQResponse;
-import com.zizaike.entity.open.alibaba.response.QueryStatusRQResponse;
-import com.zizaike.entity.open.alibaba.response.ValidateRQResponse;
 
 /**
  * ClassName:TaobaoService <br/>
@@ -35,6 +28,22 @@ import com.zizaike.entity.open.alibaba.response.ValidateRQResponse;
 public interface TaobaoService {
 
     String  service (String request)throws ZZKServiceException;
+    /**
+     * 
+     * addHotel:添加房间. <br/>  
+     * @author alex 
+     * @param hotel  
+     * @since JDK 1.7
+     */
+    void addHotel(Hotel hotel);
+    /**
+     * 
+     * updateHotel:  
+     * @author alex 
+     * @param hotel  
+     * @since JDK 1.7  
+     */
+    void updateHotel(Hotel hotel);
     /**
      * 
      * updateRoomType:更新房型. <br/>  
@@ -53,4 +62,31 @@ public interface TaobaoService {
      * @since JDK 1.7
      */
     void addRoomType(RoomType object);
+    /**
+     * 
+     * addRatePlan:添加价格计划
+     * @author alex 
+     * @param object  
+     * @since JDK 1.7
+     */
+    void addRatePlan(RatePlan object);
+    /**
+     * 
+     * updateRatePlan:更新价格计划. <br/>  
+     * @author alex 
+     * @param object  
+     * @since JDK 1.7
+     */
+    void updateRatePlan(RatePlan object);
+    /**
+     * 
+     * updateRates:更新房态房价. <br/>  
+     *  
+     * @author alex 
+     * @param object  
+     * @since JDK 1.7
+     */
+    void updateRates(Rates object);
+    
+    
 }
