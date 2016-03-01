@@ -9,6 +9,8 @@
 
 package com.zizaike.is.open;
 
+import java.util.Map;
+
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.alibaba.Rates;
 import com.zizaike.entity.open.ctrip.request.DomesticCheckRoomAvailRequest;
@@ -48,5 +50,15 @@ public interface CtripService {
      * @since JDK 1.7
      */
     void updateRates(Rates object) throws ZZKServiceException;
+    /**
+     * 
+     * setMappingInfo:设置mappingInfo. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param map
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    void setMappingInfo(Map<String,String> map )throws ZZKServiceException;
     
 }
