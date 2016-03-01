@@ -47,6 +47,6 @@ public interface CtripService {
      * @param object  
      * @since JDK 1.7
      */
-    void updateRates(Rates object);
+    void updateRates(Rates object) throws ZZKServiceException;
     
 }
