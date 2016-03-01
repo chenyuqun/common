@@ -15,6 +15,7 @@ import java.util.List;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
+import com.zizaike.entity.open.alibaba.request.RequestData;
 
 /**
  * 
@@ -27,7 +28,7 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
  * @since JDK 1.7
  */
 @XStreamAlias("GetHotelInfoResponse")
-public class GetHotelInfoResponse {
+public class GetHotelInfoResponse extends RequestData{
     /**
      * 
      */
