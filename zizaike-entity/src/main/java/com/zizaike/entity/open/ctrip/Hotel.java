@@ -1,9 +1,12 @@
 package com.zizaike.entity.open.ctrip;
 
+import java.io.Serializable;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 @XStreamAlias("HotelList")
-    public class Hotel {
+    public class Hotel implements Serializable{
+    private static final long serialVersionUID = -2528228305091600265L;
         /**
          * hotel
          */

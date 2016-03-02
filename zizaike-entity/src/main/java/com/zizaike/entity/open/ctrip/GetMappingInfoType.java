@@ -22,11 +22,11 @@ import com.zizaike.core.framework.ienum.IEnum;
  */
 public enum GetMappingInfoType implements IEnum{
     /**
-     * 现付
+     * 获取未对接的信息
      */
     UnMapping(1),
     /**
-     * 预付
+     * 获取指定信息
      */
     Appoint(2),
     ;

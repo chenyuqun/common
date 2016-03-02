@@ -9,6 +9,7 @@
   
 package com.zizaike.entity.open.ctrip;  
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,8 @@ import com.zizaike.entity.open.alibaba.request.RequestData;
  * @since JDK 1.7
  */
 @XStreamAlias("GetHotelInfoResponse")
-public class GetHotelInfoResponse extends RequestData{
+public class GetHotelInfoResponse extends RequestData implements Serializable{
+    private static final long serialVersionUID = -1330202513269208829L;
     /**
      * 
      */

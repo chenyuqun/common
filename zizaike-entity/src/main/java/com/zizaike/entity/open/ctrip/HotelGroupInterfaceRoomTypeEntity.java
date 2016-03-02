@@ -9,6 +9,8 @@
   
 package com.zizaike.entity.open.ctrip;  
 
+import java.io.Serializable;
+
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.zizaike.entity.open.alibaba.request.RequestData;
@@ -24,7 +26,12 @@ import com.zizaike.entity.open.alibaba.request.RequestData;
  * @since JDK 1.7
  */
 @XStreamAlias("HotelGroupInterfaceRoomTypeEntity")
-public class HotelGroupInterfaceRoomTypeEntity extends RequestData{
+public class HotelGroupInterfaceRoomTypeEntity extends RequestData implements Serializable{
+    /**  
+     * serialVersionUID:TODO(用一句话描述这个变量表示什么).  
+     * @since JDK 1.7
+     */
+    private static final long serialVersionUID = -5398169163895706471L;
     /**
      * 房型匹配流水号
      */
