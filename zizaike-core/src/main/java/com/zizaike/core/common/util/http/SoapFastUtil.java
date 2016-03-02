@@ -49,6 +49,7 @@ public class SoapFastUtil {
     String filePath = VelocityUtils.class.getClassLoader().getResource("").getFile();
     filePath += template + date;
     String xmlReqeust = VelocityUtils.getSOAPRequest(model, filePath, templatePath);
+    System.err.println(xmlReqeust);
     logger.debug("xmlReqeust:" + xmlReqeust);
    String result =  httpProxy.httpPostXml(url, xmlReqeust);
     return result;
