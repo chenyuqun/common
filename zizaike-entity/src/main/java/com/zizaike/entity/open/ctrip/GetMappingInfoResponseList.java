@@ -47,6 +47,12 @@ public class GetMappingInfoResponseList extends RequestData{
         this.supplierName = supplierName;
     }
     
+    @Override
+    public String toString() {
+        return "GetMappingInfoResponseList [supplierID=" + supplierID + ", supplierName=" + supplierName
+                + ", hotelResponseItem=" + hotelResponseItem + "]";
+    }
+
     @XStreamAlias("HotelResponseItem")
     public class HotelResponseItem{
         @XStreamAlias("MasterHotel")
@@ -58,6 +64,11 @@ public class GetMappingInfoResponseList extends RequestData{
 
         public void setMasterHotel(MasterHotel masterHotel) {
             this.masterHotel = masterHotel;
+        }
+
+        @Override
+        public String toString() {
+            return "HotelResponseItem [masterHotel=" + masterHotel + "]";
         }
         
     }
@@ -111,6 +122,12 @@ public class GetMappingInfoResponseList extends RequestData{
         public void setChildHotel(ChildHotel childHotel) {
             this.childHotel = childHotel;
         }
+        @Override
+        public String toString() {
+            return "MasterHotel [hotel=" + hotel + ", hotelName=" + hotelName + ", city=" + city + ", cityName="
+                    + cityName + ", roomResponseItem=" + roomResponseItem + ", childHotel=" + childHotel + "]";
+        }
+        
         
     }
     
@@ -131,6 +148,10 @@ public class GetMappingInfoResponseList extends RequestData{
         }
         public void setRoomResponseItem(List<RoomResponseItem> roomResponseItem) {
             this.roomResponseItem = roomResponseItem;
+        }
+        @Override
+        public String toString() {
+            return "ChildHotel [hotel=" + hotel + ", roomResponseItem=" + roomResponseItem + "]";
         }
         
     }
@@ -256,6 +277,15 @@ public class GetMappingInfoResponseList extends RequestData{
         }
         public void setHotelGroupRatePlanCode(String hotelGroupRatePlanCode) {
             this.hotelGroupRatePlanCode = hotelGroupRatePlanCode;
+        }
+        @Override
+        public String toString() {
+            return "RoomResponseItem [masterRoom=" + masterRoom + ", room=" + room + ", roomName=" + roomName
+                    + ", breakfast=" + breakfast + ", twinBed=" + twinBed + ", kingSize=" + kingSize + ", person="
+                    + person + ", allowAddBed=" + allowAddBed + ", balanceType=" + balanceType + ", ratePlanCode="
+                    + ratePlanCode + ", hotelGroupHotelCode=" + hotelGroupHotelCode + ", hotelGroupRoomTypeCode="
+                    + hotelGroupRoomTypeCode + ", hotelGroupRoomName=" + hotelGroupRoomName + ", hotelGroupBrand="
+                    + hotelGroupBrand + ", hotelGroupRatePlanCode=" + hotelGroupRatePlanCode + "]";
         }
         
         
