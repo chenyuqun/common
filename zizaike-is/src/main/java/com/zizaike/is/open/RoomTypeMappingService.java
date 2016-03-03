@@ -10,6 +10,7 @@
 package com.zizaike.is.open;  
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
+import com.zizaike.entity.open.OpenChannelType;
 import com.zizaike.entity.open.RoomTypeMapping;
 
 public interface RoomTypeMappingService {
@@ -24,7 +25,7 @@ public interface RoomTypeMappingService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    RoomTypeMapping queryByHotelIdAndOpenRoomTypeId(String openHotelId,String openRoomTypeId) throws ZZKServiceException;
+    RoomTypeMapping queryByHotelIdAndOpenRoomTypeId(String openHotelId,String openRoomTypeId,OpenChannelType openChannelType) throws ZZKServiceException;
     /**
      * 
      * queryByRoomTypeId. <br/>
@@ -35,5 +36,15 @@ public interface RoomTypeMappingService {
      * @since JDK 1.7
      */
     RoomTypeMapping queryByRoomTypeId(String roomTypeId) throws ZZKServiceException;
+    /**
+     * 
+     * addOrUpdate:添加更新 <br/>  
+     *  
+     * @author snow.zhang  
+     * @param roomTypeMapping
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    void addOrUpdate(RoomTypeMapping roomTypeMapping) throws ZZKServiceException;
 }
   

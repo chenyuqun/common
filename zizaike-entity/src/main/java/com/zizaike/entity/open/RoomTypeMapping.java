@@ -26,8 +26,10 @@ public class RoomTypeMapping implements Serializable{
     private String roomTypeId;
 
     private String roomName;
+    
+    private String openRoomName;
 
-    private Integer channel;
+    private OpenChannelType channel;
 
     private Integer active;
 
@@ -82,12 +84,13 @@ public class RoomTypeMapping implements Serializable{
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
+    
 
-    public Integer getChannel() {
+    public OpenChannelType getChannel() {
         return channel;
     }
 
-    public void setChannel(Integer channel) {
+    public void setChannel(OpenChannelType channel) {
         this.channel = channel;
     }
 
@@ -114,12 +117,22 @@ public class RoomTypeMapping implements Serializable{
     public void setUpdateAt(Date updateAt) {
         this.updateAt = updateAt;
     }
+    
+    public String getOpenRoomName() {
+        return openRoomName;
+    }
+
+    public void setOpenRoomName(String openRoomName) {
+        this.openRoomName = openRoomName;
+    }
 
     @Override
     public String toString() {
         return "RoomTypeMapping [id=" + id + ", openHotelId=" + openHotelId + ", openRoomTypeId=" + openRoomTypeId
-                + ", hotelId=" + hotelId + ", roomTypeId=" + roomTypeId + ", roomName=" + roomName + ", channel="
-                + channel + ", active=" + active + ", createAt=" + createAt + ", updateAt=" + updateAt + "]";
+                + ", hotelId=" + hotelId + ", roomTypeId=" + roomTypeId + ", roomName=" + roomName + ", openRoomName="
+                + openRoomName + ", channel=" + channel + ", active=" + active + ", createAt=" + createAt
+                + ", updateAt=" + updateAt + "]";
     }
+
     
 }
