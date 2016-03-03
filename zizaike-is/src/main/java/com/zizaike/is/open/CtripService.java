@@ -20,6 +20,7 @@ import com.zizaike.entity.open.ctrip.request.DomesticCheckRoomAvailRequest;
 import com.zizaike.entity.open.ctrip.response.DomesticCheckRoomAvailResponse;
 import com.zizaike.entity.open.ctrip.vo.HotelGroupInterfaceRoomTypeVo;
 import com.zizaike.entity.open.ctrip.vo.MappingInfoVo;
+import com.zizaike.entity.open.ctrip.vo.SetMappingInfoVo;
 
 /**
  * ClassName:CtripService <br/>
@@ -32,18 +33,6 @@ import com.zizaike.entity.open.ctrip.vo.MappingInfoVo;
  * @see
  */
 public interface CtripService {
-    /**
-     * 
-     * domesticCheckRoomAvail:可定检查. <br/>
-     * 
-     * @author snow.zhang
-     * @param domesticCheckRoomAvailRequest
-     * @return
-     * @throws ZZKServiceException
-     * @since JDK 1.7
-     */
-    DomesticCheckRoomAvailResponse domesticCheckRoomAvail(DomesticCheckRoomAvailRequest domesticCheckRoomAvailRequest)
-            throws ZZKServiceException;
     
     String  service (String request)throws ZZKServiceException;
     /**
@@ -64,7 +53,7 @@ public interface CtripService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    void setMappingInfo(Map<String,String> map )throws ZZKServiceException;
+    void setMappingInfo(SetMappingInfoVo setMappingInfoVo )throws ZZKServiceException;
     /**
      * 
      * getHotelInfo:得到酒店信息. <br/>  

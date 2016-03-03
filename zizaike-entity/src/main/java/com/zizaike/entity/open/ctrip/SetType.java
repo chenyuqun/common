@@ -13,7 +13,7 @@ import com.zizaike.core.framework.ienum.IEnum;
 
 /**
  * ClassName:BalanceType <br/>
- * Function: 价格类型. <br/>
+ * Function: 设置类型. <br/>
  * Date: 2016年2月3日 下午4:29:58 <br/>
  * 
  * @author snow.zhang
