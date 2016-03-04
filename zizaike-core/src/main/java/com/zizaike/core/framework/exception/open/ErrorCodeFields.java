@@ -18,6 +18,10 @@ public enum ErrorCodeFields implements IErrorCode {
      */
     SYSTEM_ERROR("10000", "system error"),
     /**
+     *返回异常
+     */
+    OPEN_RETURN_ERROR("10001", "返回异常"),
+    /**
      * 通信错误
      */
     NETWORK_ERROR("10004","network error"),
