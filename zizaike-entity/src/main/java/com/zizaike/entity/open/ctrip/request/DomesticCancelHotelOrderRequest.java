@@ -2,13 +2,16 @@ package com.zizaike.entity.open.ctrip.request;
 
 import java.util.Date;
 
+import org.apache.solr.client.solrj.impl.LBHttpSolrServer.Req;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
+import com.zizaike.entity.open.alibaba.request.RequestData;
 import com.zizaike.entity.open.ctrip.RoomPrices;
 
 @XStreamAlias("DomesticCancelHotelOrderRequest")
-public class DomesticCancelHotelOrderRequest {
+public class DomesticCancelHotelOrderRequest extends RequestData{
     /**
      * Ctrip酒店编号
      */

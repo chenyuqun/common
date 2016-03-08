@@ -5,11 +5,12 @@ import java.util.Date;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
+import com.zizaike.entity.open.alibaba.request.RequestData;
 import com.zizaike.entity.open.ctrip.BalanceType;
 import com.zizaike.entity.open.ctrip.RoomPrices;
 
 @XStreamAlias("DomesticCheckRoomAvailRequest")
-public class DomesticCheckRoomAvailRequest {
+public class DomesticCheckRoomAvailRequest extends RequestData{
     /**
      * Ctrip酒店编号
      */
