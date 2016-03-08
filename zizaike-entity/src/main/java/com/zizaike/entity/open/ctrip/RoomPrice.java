@@ -9,7 +9,7 @@ import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
 
 @XStreamAlias("RoomPrice")
 public class RoomPrice implements Serializable{
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 8478148148826844701L;
     /**
      * 入住日期
      */
@@ -20,27 +20,27 @@ public class RoomPrice implements Serializable{
      * 价格
      */
     @XStreamAlias("Price")
-    private Float price;
+    private Integer price;
     /**
      * 上个订单卖价金额(原币种),预付一般不传或者传0
      */
     @XStreamAlias("OldPrice")
-    private Float oldPrice;
+    private Integer oldPrice;
     /**
      * 汇率后的卖价
      */
     @XStreamAlias("CNYPrice")
-    private Float CNYPrice;
+    private Integer CNYPrice;
     /**
      * 汇率后的卖价
      */
     @XStreamAlias("Cost")
-    private Float cost;
+    private Integer cost;
     /**
      * 汇率后的底价
      */
     @XStreamAlias("CNYCost")
-    private Float CNYCost;
+    private Integer CNYCost;
     /**
      * 早餐数量
      */
@@ -51,11 +51,11 @@ public class RoomPrice implements Serializable{
         
     }
 
-    public Float getOldPrice() {
+    public Integer getOldPrice() {
         return oldPrice;
     }
 
-    public void setOldPrice(Float oldPrice) {
+    public void setOldPrice(Integer oldPrice) {
         this.oldPrice = oldPrice;
     }
 
@@ -67,35 +67,35 @@ public class RoomPrice implements Serializable{
         this.effectDate = effectDate;
     }
 
-    public Float getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
-    public Float getCNYPrice() {
+    public Integer getCNYPrice() {
         return CNYPrice;
     }
 
-    public void setCNYPrice(Float cNYPrice) {
+    public void setCNYPrice(Integer cNYPrice) {
         CNYPrice = cNYPrice;
     }
 
-    public Float getCost() {
+    public Integer getCost() {
         return cost;
     }
 
-    public void setCost(Float cost) {
+    public void setCost(Integer cost) {
         this.cost = cost;
     }
 
-    public Float getCNYCost() {
+    public Integer getCNYCost() {
         return CNYCost;
     }
 
-    public void setCNYCost(Float cNYCost) {
+    public void setCNYCost(Integer cNYCost) {
         CNYCost = cNYCost;
     }
 

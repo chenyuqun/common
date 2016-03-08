@@ -126,12 +126,12 @@ public class DomesticSubmitNewHotelOrderRequest {
      * 订单底价金额(原币种),现付一般不传或者传0
      */
     @XStreamAlias("CostAmount")
-    private Float costAmount;
+    private Long costAmount;
     /**
      * 订单底价金额(人民币),现付一般不传或者传0
      */
     @XStreamAlias("CNYCostAmount")
-    private Float CNYCostAmount;
+    private Long CNYCostAmount;
     
     @XStreamAlias("RoomPrices")
     private RoomPrices roomPrices;
@@ -266,16 +266,16 @@ public class DomesticSubmitNewHotelOrderRequest {
     public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
-    public Float getCostAmount() {
+    public Long getCostAmount() {
         return costAmount;
     }
-    public void setCostAmount(Float costAmount) {
+    public void setCostAmount(Long costAmount) {
         this.costAmount = costAmount;
     }
-    public Float getCNYCostAmount() {
+    public Long getCNYCostAmount() {
         return CNYCostAmount;
     }
-    public void setCNYCostAmount(Float cNYCostAmount) {
+    public void setCNYCostAmount(Long cNYCostAmount) {
         CNYCostAmount = cNYCostAmount;
     }
     public RoomPrices getRoomPrices() {
