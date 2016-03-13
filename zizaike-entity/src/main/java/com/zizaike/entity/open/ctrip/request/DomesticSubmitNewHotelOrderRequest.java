@@ -141,6 +141,25 @@ public class DomesticSubmitNewHotelOrderRequest   extends RequestData{
      */
     @XStreamAlias("RemarkInfo")
     private String remarkInfo;
+    
+    @XStreamAlias("IsHoldRoom")
+    private String IsHoldRoom;
+    @XStreamAlias("AddOptionals")
+    private String addOptionals;
+    
+    
+    public String getAddOptionals() {
+        return addOptionals;
+    }
+    public void setAddOptionals(String addOptionals) {
+        this.addOptionals = addOptionals;
+    }
+    public String getIsHoldRoom() {
+        return IsHoldRoom;
+    }
+    public void setIsHoldRoom(String isHoldRoom) {
+        IsHoldRoom = isHoldRoom;
+    }
     public String getOrderID() {
         return orderID;
     }
@@ -293,15 +312,15 @@ public class DomesticSubmitNewHotelOrderRequest   extends RequestData{
     }
     @Override
     public String toString() {
-        return "DomesticSubmitNewHotelOrder [orderID=" + orderID + ", interFaceSendID=" + interFaceSendID
-                + ", hotel=" + hotel + ", hotelName=" + hotelName + ", arrival=" + arrival + ", departure="
-                + departure + ", earlyArrivalTime=" + earlyArrivalTime + ", lastArrivalTime=" + lastArrivalTime
-                + ", person=" + person + ", notice=" + notice + ", guests=" + guests + ", mobilePhone="
-                + mobilePhone + ", currency=" + currency + ", amount=" + amount + ", CNYAmount=" + CNYAmount
-                + ", guaranteeType=" + guaranteeType + ", balanceType=" + balanceType + ", room=" + room
-                + ", roomPerson=" + roomPerson + ", roomName=" + roomName + ", quantity=" + quantity
-                + ", costAmount=" + costAmount + ", CNYCostAmount=" + CNYCostAmount + ", roomPrices=" + roomPrices
-                + ", remarkInfo=" + remarkInfo + "]";
+        return "DomesticSubmitNewHotelOrderRequest [orderID=" + orderID + ", interFaceSendID=" + interFaceSendID
+                + ", hotel=" + hotel + ", hotelName=" + hotelName + ", arrival=" + arrival + ", departure=" + departure
+                + ", earlyArrivalTime=" + earlyArrivalTime + ", lastArrivalTime=" + lastArrivalTime + ", person="
+                + person + ", notice=" + notice + ", guests=" + guests + ", mobilePhone=" + mobilePhone + ", currency="
+                + currency + ", amount=" + amount + ", CNYAmount=" + CNYAmount + ", guaranteeType=" + guaranteeType
+                + ", balanceType=" + balanceType + ", room=" + room + ", roomPerson=" + roomPerson + ", roomName="
+                + roomName + ", quantity=" + quantity + ", costAmount=" + costAmount + ", CNYCostAmount="
+                + CNYCostAmount + ", roomPrices=" + roomPrices + ", remarkInfo=" + remarkInfo + ", IsHoldRoom="
+                + IsHoldRoom + "]";
     }
     
 
