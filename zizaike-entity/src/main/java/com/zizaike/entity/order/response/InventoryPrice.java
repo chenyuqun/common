@@ -39,6 +39,29 @@ public class InventoryPrice implements Serializable{
      * 库存
      */
     private Integer quota;
+    
+    /**
+     * 最大入住人数
+     */
+    private Integer maxPerson;
+    /**
+     * 是否有早
+     */
+    private Boolean breakFast;
+    
+    
+    public Integer getMaxPerson() {
+        return maxPerson;
+    }
+    public void setMaxPerson(Integer maxPerson) {
+        this.maxPerson = maxPerson;
+    }
+    public Boolean getBreakFast() {
+        return breakFast;
+    }
+    public void setBreakFast(Boolean breakFast) {
+        this.breakFast = breakFast;
+    }
     public Date getDate() {
         return date;
     }
@@ -59,8 +82,10 @@ public class InventoryPrice implements Serializable{
     }
     @Override
     public String toString() {
-        return "InventoryPrice [date=" + date + ", price=" + price + ", quota=" + quota + "]";
+        return "InventoryPrice [date=" + date + ", price=" + price + ", quota=" + quota + ", maxPerson=" + maxPerson
+                + ", breakFast=" + breakFast + "]";
     }
+    
     
 }
   

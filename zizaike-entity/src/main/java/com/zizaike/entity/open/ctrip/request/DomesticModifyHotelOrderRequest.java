@@ -9,14 +9,11 @@
 
 package com.zizaike.entity.open.ctrip.request;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.zizaike.entity.open.XStreamYMDTHMSDateConverter;
 import com.zizaike.entity.open.alibaba.request.RequestData;
 import com.zizaike.entity.open.ctrip.BalanceType;
@@ -395,60 +392,6 @@ public class DomesticModifyHotelOrderRequest extends RequestData {
         }
          
 
-    }
-    
-    @XStreamAlias("Guests")
-    public class Guests {
-        @XStreamImplicit(itemFieldName = "GuestEntity")
-        private List<GuestEntity> guests = new ArrayList<GuestEntity>();
-
-        public List<GuestEntity> getGuests() {
-            return guests;
-        }
-
-        public void setGuests(List<GuestEntity> guests) {
-            this.guests = guests;
-        }
-
-        @Override
-        public String toString() {
-            return "Guests [guests=" + guests + "]";
-        }
-        
-    }
-    
-    @XStreamAlias("GuestEntity")
-    public class GuestEntity {
-        @XStreamAlias("FirstName")
-        private String firstName;
-        @XStreamAlias("LastName")
-        private String lastName;
-        @XStreamAlias("ChinesName")
-        private String chinesName;
-        public String getFirstName() {
-            return firstName;
-        }
-        public void setFirstName(String firstName) {
-            this.firstName = firstName;
-        }
-        public String getLastName() {
-            return lastName;
-        }
-        public void setLastName(String lastName) {
-            this.lastName = lastName;
-        }
-        public String getChinesName() {
-            return chinesName;
-        }
-        public void setChinesName(String chinesName) {
-            this.chinesName = chinesName;
-        }
-        @Override
-        public String toString() {
-            return "GuestEntity [firstName=" + firstName + ", lastName=" + lastName + ", chinesName=" + chinesName
-                    + "]";
-        }
-        
     }
 
     public static void main(String[] args) {

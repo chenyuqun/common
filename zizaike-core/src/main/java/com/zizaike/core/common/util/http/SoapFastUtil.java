@@ -1,3 +1,4 @@
+
 package com.zizaike.core.common.util.http;
 
 import java.io.ByteArrayOutputStream;
@@ -49,24 +50,7 @@ public class SoapFastUtil {
     String filePath = VelocityUtils.class.getClassLoader().getResource("").getFile();
     filePath += template + date;
     String xmlReqeust = VelocityUtils.getSOAPRequest(model, filePath, templatePath);
-    logger.debug("xmlReqeust:" + xmlReqeust);
-    System.err.println(xmlReqeust);
-//    HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
-//    byte[] buf = xmlReqeust.getBytes();
-//    httpConn.setRequestProperty("Content-Length", String.valueOf(buf.length));
-//    httpConn.setRequestProperty("Content-Type", "text/xml; charset=utf-8");
-//   // httpConn.setRequestProperty("soapActionString", SOAPAction);
-//    httpConn.setRequestMethod("POST");
-//    httpConn.setDoOutput(true);
-//    httpConn.setDoInput(true);
-//    OutputStream out = httpConn.getOutputStream();
-//    out.write(buf);
-//    out.close();
-//    byte[] datas = readInputStream(httpConn.getInputStream());
-//    String result = new String(datas);
-//    httpConn.disconnect();
-//    logger.debug("result:" + result);
-    
+    logger.info("xmlReqeust:" + xmlReqeust);
    String result =  httpProxy.httpPostXml(url, xmlReqeust);
     return result;
   }

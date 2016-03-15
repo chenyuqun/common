@@ -14,13 +14,13 @@ import com.zizaike.core.framework.ienum.IEnum;
  */
 public enum OpenChannelType implements IEnum{
     /**
-     * alitrip
-     */
-    ALITRIP(0),
-    /**
      * ctrip
      */
-    CTRIP(1),
+    CTRIP(0),
+    /**
+     * alitrip
+     */
+    ALITRIP(1),
     ;
     private int value;
 
@@ -35,9 +35,9 @@ public enum OpenChannelType implements IEnum{
 
     public static OpenChannelType findByValue(int value) {
         if (value == 0) {
-            return ALITRIP;
-        } else if (value == 1) {
             return CTRIP;
+        } else if (value == 1) {
+            return ALITRIP;
         }  else {
             return null;
         }

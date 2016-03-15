@@ -98,8 +98,8 @@ public class HttpProxyUtil {
    * @since JDK 1.7
    */
   public String httpPostXml(String url, String xml) throws IOException, Exception {
-      StringEntity input = new StringEntity(xml);
-      input.setContentType("text/xml;charset=UTF-8");
+      StringEntity input = new StringEntity(xml, "UTF-8");
+      //input.setContentType("text/xml; charset=UTF-8");
       HttpPost post = new HttpPost(url);
       post.setEntity(input);
       post.setHeader(new BasicHeader(HTTP.CONTENT_TYPE, "text/xml;charset=UTF-8"));
