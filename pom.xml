@@ -35,9 +35,9 @@
 		<rabbitmq.version>3.1.1</rabbitmq.version>
 		<httpclient.version>4.2.6</httpclient.version>
 		
-		<zizaike.core.version>1.0.5-RELEASE</zizaike.core.version>
-		<zizaike.entity.version>1.0.9-RELEASE</zizaike.entity.version>
-		<zizaike.is.version>1.0.8-RELEASE</zizaike.is.version>
+		<zizaike.core.version>1.0.6-RELEASE</zizaike.core.version>
+		<zizaike.entity.version>1.0.10-RELEASE</zizaike.entity.version>
+		<zizaike.is.version>1.0.9-RELEASE</zizaike.is.version>
 	</properties>
 
 
