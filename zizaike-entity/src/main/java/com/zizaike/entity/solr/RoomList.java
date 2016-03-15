@@ -62,6 +62,10 @@ public class RoomList implements java.io.Serializable {
      * 民宿学院
      */
     private int isTeacherShare;
+    /**
+     * 特色服务
+     */
+    private int otherServiceI;
     public int getIsSubtract() {
         return isSubtract;
     }
@@ -208,5 +212,14 @@ public class RoomList implements java.io.Serializable {
     public void setIsTeacherShare(int isTeacherShare) {
         this.isTeacherShare = isTeacherShare;
     }
+
+    public int getOtherServiceI() {
+        return otherServiceI;
+    }
+
+    public void setOtherServiceI(int otherServiceI) {
+        this.otherServiceI = otherServiceI;
+    }
+    
 }
   
