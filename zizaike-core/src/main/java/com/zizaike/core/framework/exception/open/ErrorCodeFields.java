@@ -18,6 +18,10 @@ public enum ErrorCodeFields implements IErrorCode {
      */
     SYSTEM_ERROR("10000", "system error"),
     /**
+     *返回异常
+     */
+    OPEN_RETURN_ERROR("10001", "返回异常"),
+    /**
      * 通信错误
      */
     NETWORK_ERROR("10004","network error"),
@@ -29,6 +33,10 @@ public enum ErrorCodeFields implements IErrorCode {
      * 地址没有找到
      */
     AREA_NOT_FOUND_ERROR("10003", "area not found error"),
+    /**
+     * 户型映射不存在
+     */
+    ROOM_TYPE_NOT_MAPPING_ERROR("10004", "room type not mapping error"),
     ROOM_FULL_NOT_BOOK_ERROR("-1", "表示满房（不可预定）"),
     RP_ERROR("-2", "标识RP失效"),
     OTHER_NOT_BOOK_ERROR("-3", "其他不可预定"),

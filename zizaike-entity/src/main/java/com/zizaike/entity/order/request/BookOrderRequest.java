@@ -11,10 +11,10 @@ package com.zizaike.entity.order.request;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import com.zizaike.entity.open.OpenChannelType;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest.DailyInfos;
-import com.zizaike.entity.open.alibaba.request.BookRQRequest.OrderGuests;
 import com.zizaike.entity.open.alibaba.request.BookRQRequest.ReceiptInfo;
 
 
@@ -46,7 +46,7 @@ public class BookOrderRequest implements Serializable{
     /*
      * 淘宝房型id
      */
-    private long openRoomTypeId;
+    private String openRoomTypeId;
     /*
      * OTA房型id，即第三方系统中的房型id
      */
@@ -98,7 +98,7 @@ public class BookOrderRequest implements Serializable{
     /*
      * 去啊平台提供的优惠金额，总价（分）
      */
-    private long alitripDiscount;
+    private long openDiscount;
     /*
      * 货币类型（现在只支持一种）
      */
@@ -122,11 +122,11 @@ public class BookOrderRequest implements Serializable{
     /*
      * 每日价格
      */
-    private DailyInfos dailyInfos;
+    private List<DailyInfo> dailyInfos;
     /*
      * 入住人信息
      */
-    private OrderGuests orderGuests;
+    private List<OrderGuest> orderGuests;
     /*
      * 备注、特殊需求
      */
@@ -150,17 +150,17 @@ public class BookOrderRequest implements Serializable{
     /**
      * 支付宝交易号
      */
-    private String alipayTradeNo;
+    private String openTradeNo;
     public String getHotelId() {
         return hotelId;
     }
     public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
     }
-    public long getOpenRoomTypeId() {
+    public String getOpenRoomTypeId() {
         return openRoomTypeId;
     }
-    public void setOpenRoomTypeId(long openRoomTypeId) {
+    public void setOpenRoomTypeId(String openRoomTypeId) {
         this.openRoomTypeId = openRoomTypeId;
     }
     public String getRoomTypeId() {
@@ -235,12 +235,6 @@ public class BookOrderRequest implements Serializable{
     public void setSellerDiscount(long sellerDiscount) {
         this.sellerDiscount = sellerDiscount;
     }
-    public long getAlitripDiscount() {
-        return alitripDiscount;
-    }
-    public void setAlitripDiscount(long alitripDiscount) {
-        this.alitripDiscount = alitripDiscount;
-    }
     public String getCurrency() {
         return currency;
     }
@@ -271,17 +265,12 @@ public class BookOrderRequest implements Serializable{
     public void setContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
     }
-    public DailyInfos getDailyInfos() {
+    
+    public List<DailyInfo> getDailyInfos() {
         return dailyInfos;
     }
-    public void setDailyInfos(DailyInfos dailyInfos) {
+    public void setDailyInfos(List<DailyInfo> dailyInfos) {
         this.dailyInfos = dailyInfos;
-    }
-    public OrderGuests getOrderGuests() {
-        return orderGuests;
-    }
-    public void setOrderGuests(OrderGuests orderGuests) {
-        this.orderGuests = orderGuests;
     }
     public String getComment() {
         return comment;
@@ -313,12 +302,6 @@ public class BookOrderRequest implements Serializable{
     public void setExtensions(String extensions) {
         this.extensions = extensions;
     }
-    public String getAlipayTradeNo() {
-        return alipayTradeNo;
-    }
-    public void setAlipayTradeNo(String alipayTradeNo) {
-        this.alipayTradeNo = alipayTradeNo;
-    }
     public OpenChannelType getOpenChannelType() {
         return openChannelType;
     }
@@ -336,6 +319,24 @@ public class BookOrderRequest implements Serializable{
     }
     public void setOpenHotelId(String openHotelId) {
         this.openHotelId = openHotelId;
+    }
+    public long getOpenDiscount() {
+        return openDiscount;
+    }
+    public void setOpenDiscount(long openDiscount) {
+        this.openDiscount = openDiscount;
+    }
+    public String getOpenTradeNo() {
+        return openTradeNo;
+    }
+    public void setOpenTradeNo(String openTradeNo) {
+        this.openTradeNo = openTradeNo;
+    }
+    public List<OrderGuest> getOrderGuests() {
+        return orderGuests;
+    }
+    public void setOrderGuests(List<OrderGuest> orderGuests) {
+        this.orderGuests = orderGuests;
     }
     
 
