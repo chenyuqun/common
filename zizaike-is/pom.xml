@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.zizaike</groupId>
@@ -8,7 +8,7 @@
 	</parent>
 	<artifactId>zizaike-is</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.8-SNAPSHOT</version>
+	<version>1.0.10-SNAPSHOT</version>
 	<name>zizaike-is</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -39,7 +39,7 @@
 				<sonar.jdbc.password>sonar</sonar.jdbc.password>
 				<sonar.host.url>http://192.168.8.17:9000</sonar.host.url>
 			</properties>
-		</profile> 
+		</profile>
 	</profiles>
 	<dependencies>
 		<dependency>
@@ -66,3 +66,4 @@
 		<!-- solr end -->
 	</dependencies>
 </project>
+

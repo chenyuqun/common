@@ -9,9 +9,18 @@
 
 package com.zizaike.is.open;
 
+import java.util.Map;
+
 import com.zizaike.core.framework.exception.ZZKServiceException;
+import com.zizaike.entity.open.alibaba.Rates;
+import com.zizaike.entity.open.ctrip.GetHotelInfoResponse;
+import com.zizaike.entity.open.ctrip.GetMappingInfoResponseList;
+import com.zizaike.entity.open.ctrip.HotelGroupInterfaceRoomTypeEntity;
 import com.zizaike.entity.open.ctrip.request.DomesticCheckRoomAvailRequest;
 import com.zizaike.entity.open.ctrip.response.DomesticCheckRoomAvailResponse;
+import com.zizaike.entity.open.ctrip.vo.HotelGroupInterfaceRoomTypeVo;
+import com.zizaike.entity.open.ctrip.vo.MappingInfoVo;
+import com.zizaike.entity.open.ctrip.vo.SetMappingInfoVo;
 
 /**
  * ClassName:CtripService <br/>
@@ -24,16 +33,57 @@ import com.zizaike.entity.open.ctrip.response.DomesticCheckRoomAvailResponse;
  * @see
  */
 public interface CtripService {
+    
+    String  service (String request)throws ZZKServiceException;
     /**
      * 
-     * domesticCheckRoomAvail:可定检查. <br/>
-     * 
-     * @author snow.zhang
-     * @param domesticCheckRoomAvailRequest
-     * @return
-     * @throws ZZKServiceException
+     * updateRates:更新价格. <br/>    
+     *  
+     * @author alex 
+     * @param object  
      * @since JDK 1.7
      */
-    DomesticCheckRoomAvailResponse domesticCheckRoomAvail(DomesticCheckRoomAvailRequest domesticCheckRoomAvailRequest)
-            throws ZZKServiceException;
+    void updateRates(Rates object) throws ZZKServiceException;
+    /**
+     * 
+     * setMappingInfo:设置mappingInfo. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param map
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    void setMappingInfo(SetMappingInfoVo setMappingInfoVo )throws ZZKServiceException;
+    /**
+     * 
+     * getHotelInfo:得到酒店信息. <br/>  
+     *  
+     * @author snow.zhang  
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    GetHotelInfoResponse getHotelInfo( )throws ZZKServiceException;
+    /**
+     * 
+     * getMappingInfo:得到mappinfo. <br/>  
+     *  
+     * @author snow.zhang  
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    GetMappingInfoResponseList getMappingInfo(MappingInfoVo mappingInfoEntity)throws ZZKServiceException;
+    /**
+     * 
+     * getCtripRoomTypeInfo:户型对照表. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param hotelGroupInterfaceRoomTypeVo
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    public HotelGroupInterfaceRoomTypeEntity getCtripRoomTypeInfo(HotelGroupInterfaceRoomTypeVo hotelGroupInterfaceRoomTypeVo)throws ZZKServiceException;
+    
 }
