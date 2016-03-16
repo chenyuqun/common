@@ -2,6 +2,8 @@ package com.zizaike.entity.commodity;
 
 import java.util.Date;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * 
  * ClassName: RoomPrice <br/>  
@@ -22,7 +24,8 @@ public class RoomPrice {
      * 房型id
      */
     private Integer roomTypeId;
-
+    
+    @JSONField(format = "yyyy-MM-dd")
     private Date date;
     /**
      * 价格
