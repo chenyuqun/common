@@ -27,14 +27,15 @@ import com.zizaike.entity.commodity.RoomPrice;
 public interface RoomPriceService {
     /**
      * 
-     * add:更新. <br/>
+     * add:增加房价. <br/>
      * 
      * @author snow.zhang
-     * @param list
+     * @param roomPrice
      * @throws ZZKServiceException
      * @since JDK 1.7
      */
-    void updateBatch(List<RoomPrice> list) throws ZZKServiceException;
+    void insertOrUpdate(List<RoomPrice> list) throws ZZKServiceException;
+
     /**
      *
      * function:转移所有当天的. <br/>
@@ -44,4 +45,5 @@ public interface RoomPriceService {
      * @since JDK 1.7
      */
     void priceHistoryTransfer() throws ZZKServiceException;
+    void insertOrUpdate(List<RoomPrice> list) throws ZZKServiceException;
 }
