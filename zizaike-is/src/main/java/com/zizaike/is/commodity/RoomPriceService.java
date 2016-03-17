@@ -34,5 +34,5 @@ public interface RoomPriceService {
      * @throws ZZKServiceException
      * @since JDK 1.7
      */
-    void updateBatch(List<RoomPrice> list) throws ZZKServiceException;
+    void insertOrUpdate(List<RoomPrice> list) throws ZZKServiceException;
 }
