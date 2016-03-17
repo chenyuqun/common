@@ -45,5 +45,4 @@ public interface RoomPriceService {
      * @since JDK 1.7
      */
     void priceHistoryTransfer() throws ZZKServiceException;
-    void insertOrUpdate(List<RoomPrice> list) throws ZZKServiceException;
 }
