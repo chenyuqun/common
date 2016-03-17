@@ -9,6 +9,7 @@
 
 package com.zizaike.is.commodity;
 
+import java.util.Date;
 import java.util.List;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
@@ -45,4 +46,18 @@ public interface RoomPriceService {
      * @since JDK 1.7
      */
     void priceHistoryTransfer() throws ZZKServiceException;
+    /**
+     * 
+     * queryByRoomTypeAndDate:查询房间型日期相关. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param userId
+     * @param roomTypeId
+     * @param start
+     * @param end
+     * @return
+     * @throws ZZKServiceException 
+     * @since JDK 1.7
+     */
+    List<RoomPrice> queryByRoomTypeAndDate(Integer userId,Integer roomTypeId,String start,String end) throws ZZKServiceException;
 }
