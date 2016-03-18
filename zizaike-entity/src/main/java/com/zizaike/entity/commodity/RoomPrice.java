@@ -1,8 +1,10 @@
 package com.zizaike.entity.commodity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.alibaba.fastjson.annotation.JSONType;
 
 /**
  * 
@@ -14,7 +16,9 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @version   
  * @since JDK 1.7
  */
-public class RoomPrice {
+@JSONType(ignores={"id","active","createAt","createUId","updateUId","updateAt"})
+public class RoomPrice implements Serializable{
+    private static final long serialVersionUID = 3468382060761082908L;
     private Integer id;
     /**
      * 民宿舍id
