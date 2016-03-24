@@ -32,6 +32,8 @@ public class Area {
 
     private Date updateAt;
 
+    private String countryCode;
+
     public Integer getId() {
         return id;
     }
@@ -88,10 +90,26 @@ public class Area {
         this.updateAt = updateAt;
     }
 
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
     @Override
     public String toString() {
-        return "Area [id=" + id + ", areaCode=" + areaCode + ", areaName=" + areaName + ", typeCode=" + typeCode
-                + ", active=" + active + ", createAt=" + createAt + ", updateAt=" + updateAt + "]";
+        return "Area{" +
+                "id=" + id +
+                ", areaCode='" + areaCode + '\'' +
+                ", areaName='" + areaName + '\'' +
+                ", typeCode='" + typeCode + '\'' +
+                ", active=" + active +
+                ", createAt=" + createAt +
+                ", updateAt=" + updateAt +
+                ", countryCode='" + countryCode + '\'' +
+                '}';
     }
-    
+
 }
