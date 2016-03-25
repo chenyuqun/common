@@ -37,7 +37,8 @@
 		
 		<zizaike.core.version>1.0.5-RELEASE</zizaike.core.version>
 		<zizaike.entity.version>1.0.11-SNAPSHOT</zizaike.entity.version>
-		<zizaike.is.version>1.0.11-SNAPSHOT</zizaike.is.version>
+		<zizaike.is.version>1.0.12-SNAPSHOT</zizaike.is.version>
+
 	</properties>
 
 
