@@ -4,6 +4,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 import com.zizaike.entity.open.alibaba.response.ResponseData;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -15,7 +16,9 @@ import java.util.List;
  * @since JDK 1.7
  */
 @XStreamAlias("list")
-public class HotelList extends ResponseData{
+public class HotelList extends ResponseData implements Serializable {
+
+    private static final long serialVersionUID = 4140780902934280823L;
     @XStreamImplicit(itemFieldName = "hotel")
     private List<Hotel> hotel;
 
@@ -38,5 +41,8 @@ public class HotelList extends ResponseData{
 
     public HotelList(List<Hotel> hotel) {
         this.hotel = hotel;
+    }
+
+    public HotelList() {
     }
 }

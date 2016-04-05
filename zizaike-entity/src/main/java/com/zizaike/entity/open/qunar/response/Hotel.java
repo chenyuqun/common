@@ -3,6 +3,8 @@ package com.zizaike.entity.open.qunar.response;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
+import java.io.Serializable;
+
 /**
  * Project Name: code <br/>
  * Function:Hotel. <br/>
@@ -12,7 +14,9 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
  * @since JDK 1.7
  */
 @XStreamAlias("hotel")
-public class Hotel{
+public class Hotel implements Serializable{
+
+    private static final long serialVersionUID = -8099739528599863588L;
     @XStreamAsAttribute
     @XStreamAlias("id")
     private String id;
@@ -90,5 +94,8 @@ public class Hotel{
         this.name = name;
         this.address = address;
         this.tel = tel;
+    }
+
+    public Hotel() {
     }
 }
