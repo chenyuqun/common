@@ -28,7 +28,6 @@ public class PriceRequest extends RequestData {
     @XStreamAlias("roomId")
     private String roomId;
 
-    @XStreamAsAttribute
     @XStreamAlias("numberOfRooms")
     private Integer numberOfRooms;
 

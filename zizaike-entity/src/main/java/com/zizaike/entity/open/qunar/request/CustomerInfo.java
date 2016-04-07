@@ -1,5 +1,7 @@
 package com.zizaike.entity.open.qunar.request;
 
+import java.util.List;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -31,7 +33,29 @@ public class CustomerInfo {
 
     @XStreamAsAttribute
     @XStreamAlias("childrenAges")
+    
     private String childrenAges;
+
+    @XStreamAlias("customer")
+    private List<Customer> customer;
+    
+    public Integer getNumberOfRooms() {
+        return numberOfRooms;
+    }
+
+    public void setNumberOfRooms(Integer numberOfRooms) {
+        this.numberOfRooms = numberOfRooms;
+    }
+
+
+
+    public List<Customer> getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(List<Customer> customer) {
+        this.customer = customer;
+    }
 
     public String getChildrenAges() {
         return childrenAges;
