@@ -118,6 +118,7 @@ public class Room {
     /**
      *promotionRules是room的可选节点。促销信息
      */
+    @XStreamAlias("promotionRules")
     private PromotionRules promotionRules;
 
     /**

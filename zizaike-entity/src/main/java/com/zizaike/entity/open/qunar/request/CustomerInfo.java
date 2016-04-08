@@ -15,6 +15,10 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
  */
 @XStreamAlias("customerInfo")
 public class CustomerInfo {
+    
+    
+    private List<Customer> customer;
+
     @XStreamAsAttribute
     @XStreamAlias("seq")
     private Integer seq;
@@ -36,18 +40,27 @@ public class CustomerInfo {
     
     private String childrenAges;
 
-    @XStreamAlias("customer")
-    private List<Customer> customer;
+    /**  
+     * Creates a new instance of CustomerInfo.  
+     *  
+     * @param customer
+     * @param seq
+     * @param numberOfAdults
+     * @param numberOfRooms
+     * @param numberOfChildren
+     * @param childrenAges  
+     */  
     
-    public Integer getNumberOfRooms() {
-        return numberOfRooms;
-    }
-
-    public void setNumberOfRooms(Integer numberOfRooms) {
+    public CustomerInfo(List<Customer> customer, Integer seq, Integer numberOfAdults, Integer numberOfRooms,
+            Integer numberOfChildren, String childrenAges) {
+        super();
+        this.customer = customer;
+        this.seq = seq;
+        this.numberOfAdults = numberOfAdults;
         this.numberOfRooms = numberOfRooms;
+        this.numberOfChildren = numberOfChildren;
+        this.childrenAges = childrenAges;
     }
-
-
 
     public List<Customer> getCustomer() {
         return customer;
@@ -55,6 +68,14 @@ public class CustomerInfo {
 
     public void setCustomer(List<Customer> customer) {
         this.customer = customer;
+    }
+
+    public Integer getNumberOfRooms() {
+        return numberOfRooms;
+    }
+
+    public void setNumberOfRooms(Integer numberOfRooms) {
+        this.numberOfRooms = numberOfRooms;
     }
 
     public String getChildrenAges() {

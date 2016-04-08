@@ -29,6 +29,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
  * @version   
  * @since JDK 1.7  
  */
+@XStreamAlias("qunarOrderInfo")
 public class QunarOrderInfo {
 
     @XStreamAlias("orderNum")

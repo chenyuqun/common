@@ -30,19 +30,34 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
  * @version   
  * @since JDK 1.7  
  */
+@XStreamAlias("customer")
 public class Customer {
+    /**  
+     * Creates a new instance of Customer.  
+     *  
+     * @param firstname
+     * @param lastName
+     * @param nationality
+     * @param gender  
+     */  
+    
+
     @XStreamAsAttribute()
     @XStreamAlias("firstName")
     private String firstname;
+    
     @XStreamAsAttribute()
     @XStreamAlias("lastName")
     private String lastName;
+    
     @XStreamAsAttribute()
     @XStreamAlias("nationality")
     private String nationality;
+    
     @XStreamAsAttribute()
     @XStreamAlias("gender")
     private String gender;
+    
     public String getFirstname() {
         return firstname;
     }
@@ -67,7 +82,13 @@ public class Customer {
     public void setGender(String gender) {
         this.gender = gender;
     }
-
+    public Customer(String firstname, String lastName, String nationality, String gender) {
+        super();
+        this.firstname = firstname;
+        this.lastName = lastName;
+        this.nationality = nationality;
+        this.gender = gender;
+    }
     
     
 }

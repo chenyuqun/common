@@ -14,6 +14,7 @@ import java.util.List;
  */
 @XStreamAlias("promotionRules")
 public class PromotionRules {
+    @XStreamAlias("promotionRule")
     private List<PromotionRule> promotionRules;
 
     public List<PromotionRule> getPromotionRules() {

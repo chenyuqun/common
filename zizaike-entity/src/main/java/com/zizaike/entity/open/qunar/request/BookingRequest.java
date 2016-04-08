@@ -20,7 +20,7 @@ package com.zizaike.entity.open.qunar.request;
 import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.zizaike.entity.open.alibaba.request.RequestData;
 import com.zizaike.entity.open.qunar.response.Room;
 
 /**  
@@ -33,8 +33,8 @@ import com.zizaike.entity.open.qunar.response.Room;
  * @version   
  * @since JDK 1.7  
  */
-@XStreamAlias("BookingRequest")
-public class BookingRequest {
+@XStreamAlias("bookingRequest")
+public class BookingRequest extends RequestData{
 
     @XStreamAlias("hotelId")
     private Integer hotelId;
@@ -72,10 +72,10 @@ public class BookingRequest {
     @XStreamAlias("requiredAction")
     private String requiredAction;
     
-    @XStreamAlias("rooms")
-    private List<Room> room;
+    @XStreamAlias("room")
+    private Room room;
     
-    @XStreamAlias("customerInfos")
+   @XStreamAlias("customerInfos")
     private List<CustomerInfo> customerinfo;
     
     @XStreamAlias("qunarOrderInfo")
@@ -178,21 +178,21 @@ public class BookingRequest {
     }
 
 
-    public List<Room> getRoom() {
+    public Room getRoom() {
         return room;
     }
 
-    public void setRoom(List<Room> room) {
+    public void setRoom(Room room) {
         this.room = room;
     }
 
-    public List<CustomerInfo> getCustomerinfo() {
+/*    public List<CustomerInfo> getCustomerinfo() {
         return customerinfo;
     }
 
     public void setCustomerinfo(List<CustomerInfo> customerinfo) {
         this.customerinfo = customerinfo;
-    }
+    }*/
 
     public QunarOrderInfo getQunarOrderInfo() {
         return qunarOrderInfo;
