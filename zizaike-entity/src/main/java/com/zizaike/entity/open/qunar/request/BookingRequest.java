@@ -70,7 +70,7 @@ public class BookingRequest extends RequestData{
     private Boolean instantConfirm;
     
     @XStreamAlias("requiredAction")
-    private requiredAction requiredAction;
+    private requiredActionCode requiredAction;
     
     @XStreamAlias("room")
     private Room room;
@@ -137,11 +137,11 @@ public class BookingRequest extends RequestData{
         this.currencyCode = currencyCode;
     }
     
-    public requiredAction getRequiredAction() {
+    public requiredActionCode getRequiredAction() {
         return requiredAction;
     }
 
-    public void setRequiredAction(requiredAction requiredAction) {
+    public void setRequiredAction(requiredActionCode requiredAction) {
         this.requiredAction = requiredAction;
     }
 
@@ -193,14 +193,6 @@ public class BookingRequest extends RequestData{
     public void setRoom(Room room) {
         this.room = room;
     }
-
-/*    public List<CustomerInfo> getCustomerinfo() {
-        return customerinfo;
-    }
-
-    public void setCustomerinfo(List<CustomerInfo> customerinfo) {
-        this.customerinfo = customerinfo;
-    }*/
 
     public QunarOrderInfo getQunarOrderInfo() {
         return qunarOrderInfo;
