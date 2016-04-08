@@ -67,10 +67,10 @@ public class BookingRequest extends RequestData{
     private String bedChoice;
     
     @XStreamAlias("instantConfirm")
-    private String instantConfirm;
+    private Boolean instantConfirm;
     
     @XStreamAlias("requiredAction")
-    private String requiredAction;
+    private requiredAction requiredAction;
     
     @XStreamAlias("room")
     private Room room;
@@ -113,6 +113,22 @@ public class BookingRequest extends RequestData{
         this.totalPrice = totalPrice;
     }
 
+    public String getRmbPrice() {
+        return rmbPrice;
+    }
+
+    public void setRmbPrice(String rmbPrice) {
+        this.rmbPrice = rmbPrice;
+    }
+
+    public List<CustomerInfo> getCustomerinfo() {
+        return customerinfo;
+    }
+
+    public void setCustomerinfo(List<CustomerInfo> customerinfo) {
+        this.customerinfo = customerinfo;
+    }
+
     public String getCurrencyCode() {
         return currencyCode;
     }
@@ -120,13 +136,13 @@ public class BookingRequest extends RequestData{
     public void setCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
     }
-
-    public String getRmbPrice() {
-        return rmbPrice;
+    
+    public requiredAction getRequiredAction() {
+        return requiredAction;
     }
 
-    public void setRmbPrice(String rmbPrice) {
-        this.rmbPrice = rmbPrice;
+    public void setRequiredAction(requiredAction requiredAction) {
+        this.requiredAction = requiredAction;
     }
 
     public String getCustomerArriveTime() {
@@ -161,20 +177,12 @@ public class BookingRequest extends RequestData{
         this.bedChoice = bedChoice;
     }
 
-    public String getInstantConfirm() {
+    public Boolean getInstantConfirm() {
         return instantConfirm;
     }
 
-    public void setInstantConfirm(String instantConfirm) {
+    public void setInstantConfirm(Boolean instantConfirm) {
         this.instantConfirm = instantConfirm;
-    }
-
-    public String getRequiredAction() {
-        return requiredAction;
-    }
-
-    public void setRequiredAction(String requiredAction) {
-        this.requiredAction = requiredAction;
     }
 
 
