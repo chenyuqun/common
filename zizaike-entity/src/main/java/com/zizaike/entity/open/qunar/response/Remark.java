@@ -20,6 +20,7 @@ public class Remark{
     @XStreamAlias("value")
     private String value;
 
+
     public Integer getSeq() {
         return seq;
     }

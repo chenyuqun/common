@@ -1,5 +1,7 @@
 package com.zizaike.entity.open.qunar.response;
 
+import java.util.List;
+
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
@@ -108,26 +110,22 @@ public class Room {
     /**
      * remarks是room的可选节点。一些提示消费者的信息。
      */
-    private Remarks remarks;
+    private List<Remark> remarks;
 
     /**
      *optionRules是room的可选节点。 设施等等
      */
-    private OptionRules optionRules;
+    private List<OptionRule> optionRules;
 
     /**
      *promotionRules是room的可选节点。促销信息
      */
-    @XStreamAlias("promotionRules")
-    private PromotionRules promotionRules;
+    private List<PromotionRule> promotionRules;
 
     /**
      *  有时代理商需要在<room>节点附加额外的信息，在预订( <bookingRequest>中)时可回传此信息。
      */
-    private Extras extras;
-
-
-
+    private List<Extra> extras;
     public String getId() {
         return id;
     }
@@ -295,36 +293,37 @@ public class Room {
     public void setRefund(Refund refund) {
         this.refund = refund;
     }
-
-    public Remarks getRemarks() {
+    
+    public List<Remark> getRemarks() {
         return remarks;
     }
 
-    public void setRemarks(Remarks remarks) {
+    public void setRemarks(List<Remark> remarks) {
         this.remarks = remarks;
     }
 
-    public OptionRules getOptionRules() {
+    public List<OptionRule> getOptionRules() {
         return optionRules;
     }
 
-    public void setOptionRules(OptionRules optionRules) {
+    public void setOptionRules(List<OptionRule> optionRules) {
         this.optionRules = optionRules;
     }
 
-    public PromotionRules getPromotionRules() {
+    public List<PromotionRule> getPromotionRules() {
         return promotionRules;
     }
 
-    public void setPromotionRules(PromotionRules promotionRules) {
+    public void setPromotionRules(List<PromotionRule> promotionRules) {
         this.promotionRules = promotionRules;
     }
 
-    public Extras getExtras() {
+    public List<Extra> getExtras() {
         return extras;
     }
 
-    public void setExtras(Extras extras) {
+    public void setExtras(List<Extra> extras) {
         this.extras = extras;
     }
+    
 }
