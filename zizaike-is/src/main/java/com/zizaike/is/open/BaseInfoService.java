@@ -9,6 +9,7 @@
   
 package com.zizaike.is.open;  
 
+import com.alibaba.fastjson.JSONObject;
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.RoomInfoDto;
 
@@ -34,5 +35,12 @@ public interface BaseInfoService {
      * @since JDK 1.7
      */
     RoomInfoDto getRefundAndBreakfast(int nid)throws ZZKServiceException;
+
+    /**
+     * 自在客房价房态
+     * @return
+     * @throws ZZKServiceException
+     */
+    JSONObject getZizaikePrice(String roomId);
 }
   
