@@ -19,6 +19,8 @@ public class QunarRoomInfoDto extends RoomInfoDto{
 
     private String checkoutAt;
 
+    private Integer wifi;
+
     public Integer getFieldChuangxingTid() {
         return fieldChuangxingTid;
     }
@@ -57,5 +59,13 @@ public class QunarRoomInfoDto extends RoomInfoDto{
 
     public void setCheckoutAt(String checkoutAt) {
         this.checkoutAt = checkoutAt;
+    }
+
+    public Integer getWifi() {
+        return wifi;
+    }
+
+    public void setWifi(Integer wifi) {
+        this.wifi = wifi;
     }
 }
