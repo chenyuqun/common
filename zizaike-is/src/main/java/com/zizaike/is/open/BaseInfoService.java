@@ -42,7 +42,7 @@ public interface BaseInfoService {
      * @return
      * @throws ZZKServiceException
      */
-    JSONObject getZizaikePrice(String roomId);
+    JSONObject getZizaikePrice(String roomId,String checkIn,String checkOut);
 
     /**
      * getQunarRoomInfo

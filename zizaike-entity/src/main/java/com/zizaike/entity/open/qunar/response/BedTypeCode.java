@@ -12,6 +12,14 @@ public enum BedTypeCode {
     SINGLE("SINGLE", "单人床"),
     DOUBLE("DOUBLE", "大床"),
     BUNK("BUNK", "上下铺"),
+    DORM_BED("DORM_BED","通铺"),
+    TATAMI("TATAMI","榻榻米"),
+    WATER_BED("WATER_BED","水床"),
+    ROUND_BED("ROUND_BED","圆床"),
+    FOLDING_BED("FOLDING_BED","折叠床"),
+    BABY_COT("BABY_COT","婴儿床"),
+    CONNECTED_BED("CONNECTED_BED","拼床"),
+    TWIN("TWIN","双人床"),
     OTHER("OTHERS", "其他");
 
     private final String code;
