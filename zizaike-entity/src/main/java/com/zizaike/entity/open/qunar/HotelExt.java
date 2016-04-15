@@ -12,6 +12,14 @@ import com.zizaike.entity.open.qunar.response.Hotel;
  */
 public class HotelExt extends Hotel{
     private String rids;
+    private Integer dest_id;
+    public Integer getDest_id() {
+        return dest_id;
+    }
+
+    public void setDest_id(Integer dest_id) {
+        this.dest_id = dest_id;
+    }
 
     public String getRids() {
         return rids;
