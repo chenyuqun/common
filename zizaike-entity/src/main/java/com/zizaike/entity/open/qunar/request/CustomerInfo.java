@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 /**
  * Project Name: code <br/>
@@ -16,7 +17,7 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 @XStreamAlias("customerInfo")
 public class CustomerInfo {
     
-    
+    @XStreamImplicit(itemFieldName = "customer")
     private List<Customer> customer;
 
     @XStreamAsAttribute

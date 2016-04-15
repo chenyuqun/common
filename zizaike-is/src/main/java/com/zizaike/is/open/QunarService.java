@@ -1,5 +1,6 @@
 package com.zizaike.is.open;
 
+import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.HomestayDocking;
 
 import java.util.List;
@@ -36,5 +37,12 @@ public interface QunarService {
      * @since JDK 1.7
      */
     String getPriceResponse(String xml);
+
+    /**
+     *qunar预定
+     */
+    String  book(String xml);
+
+
 
 }

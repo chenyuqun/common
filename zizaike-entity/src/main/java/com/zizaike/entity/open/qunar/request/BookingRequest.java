@@ -37,7 +37,7 @@ import com.zizaike.entity.open.qunar.response.Room;
 public class BookingRequest extends RequestData{
 
     @XStreamAlias("hotelId")
-    private Integer hotelId;
+    private String hotelId;
 
     @XStreamAlias("checkin")
     private String checkin;
@@ -81,11 +81,11 @@ public class BookingRequest extends RequestData{
     @XStreamAlias("qunarOrderInfo")
     private QunarOrderInfo qunarOrderInfo;
 
-    public Integer getHotelId() {
+    public String getHotelId() {
         return hotelId;
     }
 
-    public void setHotelId(Integer hotelId) {
+    public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
     }
 
@@ -200,6 +200,27 @@ public class BookingRequest extends RequestData{
 
     public void setQunarOrderInfo(QunarOrderInfo qunarOrderInfo) {
         this.qunarOrderInfo = qunarOrderInfo;
+    }
+
+    @Override
+    public String toString() {
+        return "BookingRequest{" +
+                "hotelId='" + hotelId + '\'' +
+                ", checkin='" + checkin + '\'' +
+                ", checkout='" + checkout + '\'' +
+                ", totalPrice='" + totalPrice + '\'' +
+                ", currencyCode='" + currencyCode + '\'' +
+                ", rmbPrice='" + rmbPrice + '\'' +
+                ", customerArriveTime='" + customerArriveTime + '\'' +
+                ", specialRemarks='" + specialRemarks + '\'' +
+                ", numberOfRooms='" + numberOfRooms + '\'' +
+                ", bedChoice='" + bedChoice + '\'' +
+                ", instantConfirm=" + instantConfirm +
+                ", requiredAction=" + requiredAction +
+                ", room=" + room +
+                ", customerinfo=" + customerinfo +
+                ", qunarOrderInfo=" + qunarOrderInfo +
+                '}';
     }
 }
   
