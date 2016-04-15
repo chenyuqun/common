@@ -15,12 +15,12 @@
  *  
  */  
   
-package com.zizaike.entity.open.qunar.response;  
-
-import java.util.List;
+package com.zizaike.entity.open.qunar.response;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.zizaike.entity.open.alibaba.response.ResponseData;
+
+import java.util.List;
 
 /**  
  * ClassName: BookingResponse <br/>  
@@ -42,7 +42,7 @@ public class BookingResponse extends ResponseData{
     private String orderId;
     
     @XStreamAlias("result")
-    private ResultCode result;
+    private QunarResultCode result;
     
     @XStreamAlias("msg")
     private String msg;
@@ -68,11 +68,11 @@ public class BookingResponse extends ResponseData{
         this.orderId = orderId;
     }
     
-    public ResultCode getResult() {
+    public QunarResultCode getResult() {
         return result;
     }
 
-    public void setResult(ResultCode result) {
+    public void setResult(QunarResultCode result) {
         this.result = result;
     }
 
