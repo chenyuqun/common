@@ -43,6 +43,16 @@ public interface QunarService {
      */
     String  book(String xml);
 
-
+    /**
+     * 
+     * cancelBooking: 取消预订<br/>  
+     *  
+     * @author lin  
+     * @param xml
+     * @return  
+     * @throws ZZKServiceException 
+     * @since JDK 1.7
+     */
+    String cancelBooking(String xml) throws ZZKServiceException;
 
 }
