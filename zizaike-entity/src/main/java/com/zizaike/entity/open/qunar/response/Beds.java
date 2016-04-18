@@ -77,4 +77,10 @@ public class Beds {
     public void setSize(String size) {
         this.size = size;
     }
+
+    @Override
+    public String toString() {
+        return "Beds [seq=" + seq + ", code=" + code + ", desc=" + desc + ", count=" + count + ", size=" + size + "]";
+    }
+    
 }
