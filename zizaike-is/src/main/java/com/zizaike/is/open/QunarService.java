@@ -39,10 +39,19 @@ public interface QunarService {
     String getPriceResponse(String xml);
 
     /**
-     *qunar预定
+     *qunar订单预定
      */
     String  book(String xml);
 
+    /**
+     * qunar订单取消
+     */
+    String cancel(String xml);
+
+    /**
+     * qunar订单查询
+     */
+    String query(String xml);
 
 
 }

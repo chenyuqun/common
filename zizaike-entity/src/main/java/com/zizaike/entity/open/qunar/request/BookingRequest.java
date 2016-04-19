@@ -70,7 +70,7 @@ public class BookingRequest extends RequestData{
     private Boolean instantConfirm;
     
     @XStreamAlias("requiredAction")
-    private requiredActionCode requiredAction;
+    private RequiredActionCode requiredAction;
     
     @XStreamAlias("room")
     private Room room;
@@ -137,11 +137,11 @@ public class BookingRequest extends RequestData{
         this.currencyCode = currencyCode;
     }
     
-    public requiredActionCode getRequiredAction() {
+    public RequiredActionCode getRequiredAction() {
         return requiredAction;
     }
 
-    public void setRequiredAction(requiredActionCode requiredAction) {
+    public void setRequiredAction(RequiredActionCode requiredAction) {
         this.requiredAction = requiredAction;
     }
 

@@ -1,6 +1,6 @@
 /**  
  * Project Name:zizaike-entity  <br/>
- * File Name:requiredActionCode.java  <br/>
+ * File Name:RequiredActionCode.java  <br/>
  * Package Name:com.zizaike.entity.open.qunar.request  <br/>
  * Date:2016年4月8日上午10:17:23  <br/>
  * Copyright (c) 2016, zizaike.com All Rights Reserved.  
@@ -8,7 +8,7 @@
 */  
 /**  
  * Project Name:zizaike-entity <br/> 
- * File Name:requiredActionCode.java  <br/>
+ * File Name:RequiredActionCode.java  <br/>
  * Package Name:com.zizaike.entity.open.qunar.request  <br/>
  * Date:2016年4月8日上午10:17:23  <br/>
  * Copyright (c) 2016, zizaike.com All Rights Reserved. 
@@ -27,7 +27,7 @@ package com.zizaike.entity.open.qunar.request;
  * @version   
  * @since JDK 1.7  
  */
-public enum requiredActionCode {
+public enum RequiredActionCode {
     CONFIRM_ROOM_SUCCESS("CONFIRM_ROOM_SUCCESS","确认成功"),
     CONFIRM_ROOM_FAILURE("CONFIRM_ROOM_FAILURE","确认失败");
     private final String code;
@@ -44,12 +44,12 @@ public enum requiredActionCode {
      * @param desc  
      */  
     
-    private requiredActionCode(String code, String desc) {
+    private RequiredActionCode(String code, String desc) {
         this.code = code;
         this.desc = desc;
     }
     public static String getByCode(String code){
-        for(requiredActionCode req: values()){
+        for(RequiredActionCode req: values()){
             if(req.getCode().equals(code))
                 return req.desc;
         }
