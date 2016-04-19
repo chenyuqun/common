@@ -28,7 +28,8 @@ package com.zizaike.entity.open.qunar.response;
  */
 public enum QunarResultCode {
     SUCCESS("SUCCESS"),
-    FAILURE("FAILURE")
+    FAILURE("FAILURE"),
+    PROCESSING("PROCESSING")
 
     ;
     private final String code;

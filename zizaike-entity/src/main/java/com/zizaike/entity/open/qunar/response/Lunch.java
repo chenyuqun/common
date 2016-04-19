@@ -41,5 +41,11 @@ public class Lunch{
         this.count = count;
         this.desc = desc;
     }
+
+    @Override
+    public String toString() {
+        return "Lunch [count=" + count + ", desc=" + desc + "]";
+    }
+    
 }
 

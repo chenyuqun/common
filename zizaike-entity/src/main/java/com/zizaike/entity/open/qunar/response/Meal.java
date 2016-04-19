@@ -44,5 +44,10 @@ public class Meal {
         this.dinner = dinner;
     }
 
+    @Override
+    public String toString() {
+        return "Meal [breakfast=" + breakfast + ", lunch=" + lunch + ", dinner=" + dinner + "]";
+    }
+
 
 }

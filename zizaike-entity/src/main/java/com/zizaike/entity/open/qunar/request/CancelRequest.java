@@ -66,4 +66,12 @@ public class CancelRequest extends RequestData {
     public void setExtras(List<Extra> extras) {
         this.extras = extras;
     }
+
+    @Override
+    public String toString() {
+        return "CancelRequest [qunarOrderNum=" + qunarOrderNum + ", orderId=" + orderId + ", requiredAction="
+                + requiredAction + ", reason=" + reason + ", extras=" + extras + "]";
+    }
+
 }
+

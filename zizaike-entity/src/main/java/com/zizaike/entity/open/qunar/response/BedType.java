@@ -37,4 +37,10 @@ public class BedType {
     public void setBeds(List<Beds> beds) {
         this.beds = beds;
     }
+
+    @Override
+    public String toString() {
+        return "BedType [relation=" + relation + ", beds=" + beds + "]";
+    }
+    
 }

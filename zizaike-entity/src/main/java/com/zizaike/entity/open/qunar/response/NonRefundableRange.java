@@ -41,4 +41,10 @@ public class NonRefundableRange {
         this.fromDate = fromDate;
         this.toDate = toDate;
     }
+
+    @Override
+    public String toString() {
+        return "NonRefundableRange [fromDate=" + fromDate + ", toDate=" + toDate + "]";
+    }
+    
 }

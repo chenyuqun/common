@@ -40,4 +40,10 @@ public class Extra {
         this.key = key;
         this.value = value;
     }
+
+    @Override
+    public String toString() {
+        return "Extra [key=" + key + ", value=" + value + "]";
+    }
+    
 }
