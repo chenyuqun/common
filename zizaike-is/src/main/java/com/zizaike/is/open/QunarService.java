@@ -1,7 +1,10 @@
 package com.zizaike.is.open;
 
+import com.alibaba.fastjson.JSONObject;
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.HomestayDocking;
+import com.zizaike.entity.open.qunar.OrderQueryVO;
+import com.zizaike.entity.open.qunar.OtaOptVO;
 
 import java.util.List;
 
@@ -38,8 +41,12 @@ public interface QunarService {
      */
     String getPriceResponse(String xml);
 
+
     /**
-     *qunar订单预定
+     * 预订
+     * @author alex
+     * @param xml
+     * @return
      */
     String  book(String xml);
 
@@ -54,5 +61,24 @@ public interface QunarService {
      * @since JDK 1.7
      */
     String cancelBooking(String xml) throws ZZKServiceException;
+
+    /**
+     * 查询
+     * @author alex
+     * @param xml
+     * @return
+     */
+    String query(String xml);
+
+    /**
+     *查询qunar的订单信息
+     * @return
+     */
+    String qunarOrderQuery(String orderNums);
+
+    /**
+     * 操作qunar订单
+     */
+    JSONObject qunarOrderOpt(OtaOptVO otaOptVO);
 
 }

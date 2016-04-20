@@ -90,6 +90,7 @@ public abstract class MD5Encrypt {
     
     public static void main(String[] args) {
         MD5Encrypt.encrypt("6cd0f0bd288704f76711ff404f82c06c1060515淡水888888");
+        System.out.println(MD5Encrypt.encrypt("QunarZTtourtest0127191351"));
     }
 
 }
