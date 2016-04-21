@@ -18,6 +18,7 @@
 package com.zizaike.entity.open.qunar.request;  
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.zizaike.entity.open.qunar.response.PayType;
 
 /**  
  * ClassName: QunarOrderInfo <br/>  
@@ -63,7 +64,7 @@ public class QunarOrderInfo {
     private String contactEmail;
     
     @XStreamAlias("payType")
-    private String payType;
+    private PayType payType;
     
     @XStreamAlias("customerIp")
     private String customerIp;
@@ -151,11 +152,11 @@ public class QunarOrderInfo {
         this.contactEmail = contactEmail;
     }
 
-    public String getPayType() {
+    public PayType getPayType() {
         return payType;
     }
 
-    public void setPayType(String payType) {
+    public void setPayType(PayType payType) {
         this.payType = payType;
     }
 
