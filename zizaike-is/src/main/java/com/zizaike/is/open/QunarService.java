@@ -60,7 +60,7 @@ public interface QunarService {
      * @throws ZZKServiceException
      * @since JDK 1.7
      */
-    String cancelBooking(String xml) throws ZZKServiceException;
+    String cancel(String xml) throws ZZKServiceException;
 
     /**
      * 查询
