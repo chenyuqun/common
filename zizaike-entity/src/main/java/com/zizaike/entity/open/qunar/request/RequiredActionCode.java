@@ -29,7 +29,9 @@ package com.zizaike.entity.open.qunar.request;
  */
 public enum RequiredActionCode {
     CONFIRM_ROOM_SUCCESS("CONFIRM_ROOM_SUCCESS","确认成功"),
-    CONFIRM_ROOM_FAILURE("CONFIRM_ROOM_FAILURE","确认失败");
+    CONFIRM_ROOM_FAILURE("CONFIRM_ROOM_FAILURE","确认失败"),
+    AGREE_UNSUBSCRIBE("AGREE_UNSUBSCRIBE","确认取消预订"),
+    REFUSE_UNSUBSCRIBE("REFUSE_UNSUBSCRIBE","拒绝取消预订");
     private final String code;
     private final String desc;
     public String getCode() {
