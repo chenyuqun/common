@@ -90,11 +90,13 @@ public class SearchableUser {
     public static final String LOCATION_TYPEID_FIELD = "location_typeid";
     public static final String LOCATION_TYPECODE_FIELD = "location_typecode";
     public static final String LOCATION_TYPENAME_FIELD = "location_typename";
+    public static final String HS_COMMENTS_NUM_I_FIELD = "hs_comments_num_i";
     public static final String HUWAI_SERVICE_I_FIELD = "huwai_service_i";
     public static final String ZAOCAN_SERVICE_I_FIELD = "zaocan_service_i";
     public static final String DAIDING_SERVICE_I_FIELD = "daiding_service_i";
     public static final String BAOCHE_SERVICE_I_FIELD = "baoche_service_i";
     public static final String JIESONG_SERVICE_I_FIELD = "jiesong_service_i";
     public static final String OTHER_SERVICE_I_FIELD = "other_service_i";
+    public static final String ALL_SERVICE_LIST_S_FIELD = "all_service_list_s";
    
 }

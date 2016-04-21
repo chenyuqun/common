@@ -346,6 +346,11 @@ public class User extends SearchableUser implements java.io.Serializable {
     @Field(PM_USERS_I_FIELD)
     private Integer pmUsersI;
     /**
+     * 评论数
+     */
+    @Field(HS_COMMENTS_NUM_I_FIELD)
+    private Integer hsCommentsNumI;
+    /**
      * 是否速订
      */
     @Field(HS_SPEED_ROOM_I_FIELD)
@@ -380,6 +385,60 @@ public class User extends SearchableUser implements java.io.Serializable {
      */
     @Field(OTHER_SERVICE_I_FIELD)
     private Integer otherServiceI;
+    /**
+     * 所有的服务  json格式
+     */
+    @Field(ALL_SERVICE_LIST_S_FIELD)
+    private String allServiceListS;
+    
+    public Integer getHsCommentsNumI() {
+        return hsCommentsNumI;
+    }
+    public void setHsCommentsNumI(Integer hsCommentsNumI) {
+        this.hsCommentsNumI = hsCommentsNumI;
+    }
+    public Integer getHuwaiServiceI() {
+        return huwaiServiceI;
+    }
+    public void setHuwaiServiceI(Integer huwaiServiceI) {
+        this.huwaiServiceI = huwaiServiceI;
+    }
+    public Integer getZaocanServiceI() {
+        return zaocanServiceI;
+    }
+    public void setZaocanServiceI(Integer zaocanServiceI) {
+        this.zaocanServiceI = zaocanServiceI;
+    }
+    public Integer getDaidingServiceI() {
+        return daidingServiceI;
+    }
+    public void setDaidingServiceI(Integer daidingServiceI) {
+        this.daidingServiceI = daidingServiceI;
+    }
+    public Integer getJiesongServiceI() {
+        return jiesongServiceI;
+    }
+    public void setJiesongServiceI(Integer jiesongServiceI) {
+        this.jiesongServiceI = jiesongServiceI;
+    }
+    public Integer getBaocheServiceI() {
+        return baocheServiceI;
+    }
+    public void setBaocheServiceI(Integer baocheServiceI) {
+        this.baocheServiceI = baocheServiceI;
+    }
+    public Integer getOtherServiceI() {
+        return otherServiceI;
+    }
+    public void setOtherServiceI(Integer otherServiceI) {
+        this.otherServiceI = otherServiceI;
+    }
+    public String getAllServiceListS() {
+        return allServiceListS;
+    }
+    public void setAllServiceListS(String allServiceListS) {
+        this.allServiceListS = allServiceListS;
+    }
     public Integer getId() {
         return id;
     }

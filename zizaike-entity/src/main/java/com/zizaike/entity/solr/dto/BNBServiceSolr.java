@@ -13,33 +13,33 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.zizaike.core.common.ranslator.Translate;
-import com.zizaike.entity.solr.BNBServiceType;
 
 /**
  * 
- * ClassName: BNBServiceDTO <br/>  
- * Function:BNB服务. <br/>  
+ * ClassName: BNBServiceSolr版本 <br/>  
+ * Function:BNB服务solr解析. <br/>  
  * date: 2016年4月20日 下午3:35:38 <br/>  
  *  
  * @author snow.zhang  
  * @version   
  * @since JDK 1.7
  */
-public class BNBService implements Serializable {
+public class BNBServiceSolr implements Serializable {
     private static final long serialVersionUID = 996459845931830226L;
     /**
      * 服务id
      */
     private int id;
     /**
-     * 服务名称
+     * 服务类型名称
      */
+    @JSONField(name="service_name")
     private String serviceName;
     /**
      * 服务类型
      */
-    private BNBServiceType serviceType;
+    @JSONField(name="service_category")
+    private String serviceCategory;
     /**
      * 服务内容
      */
@@ -52,7 +52,10 @@ public class BNBService implements Serializable {
      * 价格
      */
     private Integer price;
-    
+    /**
+     * 服务名
+     */
+    private String title;
     public int getId() {
         return id;
     }
@@ -65,11 +68,11 @@ public class BNBService implements Serializable {
     public void setServiceName(String serviceName) {
         this.serviceName = serviceName;
     }
-    public BNBServiceType getServiceType() {
-        return serviceType;
+    public String getServiceCategory() {
+        return serviceCategory;
     }
-    public void setServiceType(BNBServiceType serviceType) {
-        this.serviceType = serviceType;
+    public void setServiceCategory(String serviceCategory) {
+        this.serviceCategory = serviceCategory;
     }
     public String getContent() {
         return content;
@@ -89,11 +92,13 @@ public class BNBService implements Serializable {
     public void setPrice(Integer price) {
         this.price = price;
     }
-    @Override
-    public String toString() {
-        return "BNBService [id=" + id + ", serviceName=" + serviceName + ", serviceType=" + serviceType + ", content="
-                + content + ", images=" + images + ", price=" + price + "]";
+    public String getTitle() {
+        return title;
     }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    
     
 
 }

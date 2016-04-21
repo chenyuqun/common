@@ -73,6 +73,51 @@ public enum BNBServiceType implements IEnum {
         } else {
             return null;
         }
+    }
+
+    public static String findSolrServiceName(BNBServiceType bnbServiceType) {
+        if (bnbServiceType == OUTDOORS) {
+            return "huwai";
+        } else if (bnbServiceType == FOOD) {
+            return "zaocan";
+        } else if (bnbServiceType == BOOKING) {
+            return "daiding";
+        } else if (bnbServiceType == TRANSFER) {
+            return "jiesong";
+        } else if (bnbServiceType == BUS_SERVICE) {
+            return "baoche";
+        } else if (bnbServiceType == OTHER) {
+            return "other";
+        } else {
+            return null;
+        }
+    }
+
+    public static BNBServiceType findBySolrStr(String value) {
+        BNBServiceType type = null;
+        switch (value) {
+        case "huwai":
+            type = BNBServiceType.OUTDOORS;
+            break;
+        case "zaocan":
+            type = BNBServiceType.FOOD;
+            break;
+        case "daiding":
+            type = BNBServiceType.BOOKING;
+            break;
+        case "jiesong":
+            type = BNBServiceType.TRANSFER;
+            break;
+        case "baoche":
+            type = BNBServiceType.BUS_SERVICE;
+            break;
+        case "other":
+            type = BNBServiceType.OTHER;
+            break;
+        default:
+            break;
+        }
+        return type;
 
     }
 }
