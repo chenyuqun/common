@@ -1,7 +1,5 @@
 package com.zizaike.entity.solr;
 
-import java.util.List;
-
 import org.apache.solr.client.solrj.beans.Field;
 
 import com.zizaike.entity.solr.model.SearchableUser;
@@ -353,20 +351,35 @@ public class User extends SearchableUser implements java.io.Serializable {
     @Field(HS_SPEED_ROOM_I_FIELD)
     private Integer hsSpeedRoomI;
     /**
-     * 新字段 多值
+     * 户外服务
      */
-    @Field(LOCATION_TYPEID_FIELD)
-    private List<Integer> locationTypeid;
+    @Field(HUWAI_SERVICE_I_FIELD)
+    private Integer huwaiServiceI;
     /**
-     * 新字段
+     * 餐饮美食
      */
-    @Field(LOCATION_TYPECODE_FIELD)
-    private String locationTypecode;
+    @Field(ZAOCAN_SERVICE_I_FIELD)
+    private Integer zaocanServiceI;
     /**
-     * 新字段 多值
+     * 代订服务
      */
-    @Field(LOCATION_TYPENAME_FIELD)
-    private List<String> locationTypename;
+    @Field(DAIDING_SERVICE_I_FIELD)
+    private Integer daidingServiceI;
+    /**
+     * 接送服务
+     */
+    @Field(JIESONG_SERVICE_I_FIELD)
+    private Integer jiesongServiceI;
+    /**
+     * 包车服务
+     */
+    @Field(BAOCHE_SERVICE_I_FIELD)
+    private Integer baocheServiceI;
+    /**
+     * 其他服务
+     */
+    @Field(OTHER_SERVICE_I_FIELD)
+    private Integer otherServiceI;
     public Integer getId() {
         return id;
     }
@@ -798,24 +811,6 @@ public class User extends SearchableUser implements java.io.Serializable {
     }
     public void setHsSpeedRoomI(Integer hsSpeedRoomI) {
         this.hsSpeedRoomI = hsSpeedRoomI;
-    }
-    public List<Integer> getLocationTypeid() {
-        return locationTypeid;
-    }
-    public void setLocationTypeid(List<Integer> locationTypeid) {
-        this.locationTypeid = locationTypeid;
-    }
-    public String getLocationTypecode() {
-        return locationTypecode;
-    }
-    public void setLocationTypecode(String locationTypecode) {
-        this.locationTypecode = locationTypecode;
-    }
-    public List<String> getLocationTypename() {
-        return locationTypename;
-    }
-    public void setLocationTypename(List<String> locationTypename) {
-        this.locationTypename = locationTypename;
     }
     
     
