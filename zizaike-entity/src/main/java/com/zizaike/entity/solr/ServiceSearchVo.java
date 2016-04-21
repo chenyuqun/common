@@ -46,7 +46,44 @@ public class ServiceSearchVo implements java.io.Serializable {
      * 当前页
      */
     private int page;
+    /**
+     * 查询类型
+     */
+    private SearchType searchType;
+    /*
+     * 要变成location_type_id/poi_id
+     */
+    private Integer searchid;
     
+    /**
+     * 搜索半径
+     */
+    private Float searchRadius;
+    
+    public Float getSearchRadius() {
+        return searchRadius;
+    }
+
+    public void setSearchRadius(Float searchRadius) {
+        this.searchRadius = searchRadius;
+    }
+    
+    public Integer getSearchid() {
+        return searchid;
+    }
+
+    public void setSearchid(Integer searchid) {
+        this.searchid = searchid;
+    }
+
+    public SearchType getSearchType() {
+        return searchType;
+    }
+
+    public void setSearchType(SearchType searchType) {
+        this.searchType = searchType;
+    }
+
     public int getPage() {
         return page;
     }
