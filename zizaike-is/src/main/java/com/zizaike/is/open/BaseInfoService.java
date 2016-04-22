@@ -27,7 +27,7 @@ import com.zizaike.entity.open.RoomInfoDto;
 public interface BaseInfoService {
     /**
      * 
-     * getRefundAndBreakfast: <br/> 
+     * 获取退款政策和早餐信息: <br/>
      *  
      * @author alex 
      * @param nid
@@ -45,7 +45,7 @@ public interface BaseInfoService {
     JSONObject getZizaikePrice(String roomId,String checkIn,String checkOut);
 
     /**
-     * getQunarRoomInfo
+     * 获取qunar专用的RoomInfo
      * @param nid
      * @return
      * @throws ZZKServiceException
