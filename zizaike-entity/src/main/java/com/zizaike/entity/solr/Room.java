@@ -431,21 +431,6 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     @Field(ROOM_COMMENTS_NUM_I_FIELD)
     private int roomCommentsNumI;
     /**
-     * 接送服务 drupal_users. jiesong_service
-     */
-    @Field(JIESONG_SERVICE_I_FIELD)
-    private int jiesongServiceI;
-    /**
-     * 包车服务 drupal_users. baoche_service
-     */
-    @Field(BAOCHE_SERVICE_I_FIELD)
-    private int baocheServiceI;
-    /**
-     * 其他服务 drupal_users. other_service
-     */
-    @Field(OTHER_SERVICE_I_FIELD)
-    private int otherServiceI;
-    /**
      * 其他服务描述drupal_users. pm_ht_rate
      */
     @Field(OTHER_SERVICE_TCN_FIELD)
@@ -488,9 +473,45 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      */
     @Field(IS_BNB_FIRST_ORDER_I_FIELD)
     private int isBnbFirstOrderI;
+    /**
+     * 户外服务
+     */
+    @Field(HUWAI_SERVICE_I_FIELD)
+    private int huwaiServiceI;
+    /**
+     * 餐饮美食
+     */
+    @Field(ZAOCAN_SERVICE_I_FIELD)
+    private int zaocanServiceI;
+    /**
+     * 代订服务
+     */
+    @Field(DAIDING_SERVICE_I_FIELD)
+    private int daidingServiceI;
+    /**
+     * 接送服务
+     */
+    @Field(JIESONG_SERVICE_I_FIELD)
+    private int jiesongServiceI;
+    /**
+     * 包车服务
+     */
+    @Field(BAOCHE_SERVICE_I_FIELD)
+    private int baocheServiceI;
+    /**
+     * 其他服务
+     */
+    @Field(OTHER_SERVICE_I_FIELD)
+    private int otherServiceI;
     
     
     
+    public List<String> getDiscountRoomDatesSs() {
+        return discountRoomDatesSs;
+    }
+    public void setDiscountRoomDatesSs(List<String> discountRoomDatesSs) {
+        this.discountRoomDatesSs = discountRoomDatesSs;
+    }
     public int getIsBnbCuxiaoI() {
         return isBnbCuxiaoI;
     }
@@ -503,11 +524,41 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setIsBnbFirstOrderI(int isBnbFirstOrderI) {
         this.isBnbFirstOrderI = isBnbFirstOrderI;
     }
-    public List<String> getDiscountRoomDatesSs() {
-        return discountRoomDatesSs;
+    public int getHuwaiServiceI() {
+        return huwaiServiceI;
     }
-    public void setDiscountRoomDatesSs(List<String> discountRoomDatesSs) {
-        this.discountRoomDatesSs = discountRoomDatesSs;
+    public void setHuwaiServiceI(int huwaiServiceI) {
+        this.huwaiServiceI = huwaiServiceI;
+    }
+    public int getZaocanServiceI() {
+        return zaocanServiceI;
+    }
+    public void setZaocanServiceI(int zaocanServiceI) {
+        this.zaocanServiceI = zaocanServiceI;
+    }
+    public int getDaidingServiceI() {
+        return daidingServiceI;
+    }
+    public void setDaidingServiceI(int daidingServiceI) {
+        this.daidingServiceI = daidingServiceI;
+    }
+    public int getJiesongServiceI() {
+        return jiesongServiceI;
+    }
+    public void setJiesongServiceI(int jiesongServiceI) {
+        this.jiesongServiceI = jiesongServiceI;
+    }
+    public int getBaocheServiceI() {
+        return baocheServiceI;
+    }
+    public void setBaocheServiceI(int baocheServiceI) {
+        this.baocheServiceI = baocheServiceI;
+    }
+    public int getOtherServiceI() {
+        return otherServiceI;
+    }
+    public void setOtherServiceI(int otherServiceI) {
+        this.otherServiceI = otherServiceI;
     }
     public int getId() {
         return id;
@@ -983,24 +1034,6 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setRoomCommentsNumI(int roomCommentsNumI) {
         this.roomCommentsNumI = roomCommentsNumI;
     }
-    public int getJiesongServiceI() {
-        return jiesongServiceI;
-    }
-    public void setJiesongServiceI(int jiesongServiceI) {
-        this.jiesongServiceI = jiesongServiceI;
-    }
-    public int getBaocheServiceI() {
-        return baocheServiceI;
-    }
-    public void setBaocheServiceI(int baocheServiceI) {
-        this.baocheServiceI = baocheServiceI;
-    }
-    public int getOtherServiceI() {
-        return otherServiceI;
-    }
-    public void setOtherServiceI(int otherServiceI) {
-        this.otherServiceI = otherServiceI;
-    }
     public String getOtherServiceTcn() {
         return otherServiceTcn;
     }
@@ -1038,102 +1071,41 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setHsSpeedRoomI(int hsSpeedRoomI) {
         this.hsSpeedRoomI = hsSpeedRoomI;
     }
-
     @Override
     public String toString() {
-        return "Room{" +
-                "id=" + id +
-                ", version=" + version +
-                ", text='" + text + '\'' +
-                ", created=" + created +
-                ", changed=" + changed +
-                ", uid=" + uid +
-                ", username='" + username + '\'' +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", status=" + status +
-                ", verified=" + verified +
-                ", roomPrice='" + roomPrice + '\'' +
-                ", intPrice=" + intPrice +
-                ", intPriceTW=" + intPriceTW +
-                ", zzkRank=" + zzkRank +
-                ", intPriceTwList='" + intPriceTwList + '\'' +
-                ", intPriceCnList='" + intPriceCnList + '\'' +
-                ", dateList='" + dateList + '\'' +
-                ", destId=" + destId +
-                ", breakfast=" + breakfast +
-                ", breakfastRemark='" + breakfastRemark + '\'' +
-                ", roomModel='" + roomModel + '\'' +
-                ", orderSucc=" + orderSucc +
-                ", speedRoom=" + speedRoom +
-                ", commentNum=" + commentNum +
-                ", locTypeId=" + locTypeId +
-                ", locTypeCode='" + locTypeCode + '\'' +
-                ", locTypeName='" + locTypeName + '\'' +
-                ", userpoiId=" + userpoiId +
-                ", userAddress='" + userAddress + '\'' +
-                ", userTelnum='" + userTelnum + '\'' +
-                ", userMail='" + userMail + '\'' +
-                ", imgId=" + imgId +
-                ", userPhotoId=" + userPhotoId +
-                ", roomThumImgFile='" + roomThumImgFile + '\'' +
-                ", userPhotoFile='" + userPhotoFile + '\'' +
-                ", sheshi='" + sheshi + '\'' +
-                ", roomSetting='" + roomSetting + '\'' +
-                ", chuangshu='" + chuangshu + '\'' +
-                ", chuangxing='" + chuangxing + '\'' +
-                ", weishengjian='" + weishengjian + '\'' +
-                ", fangjiashuoming='" + fangjiashuoming + '\'' +
-                ", mianji='" + mianji + '\'' +
-                ", addBedCheck='" + addBedCheck + '\'' +
-                ", addBedNum='" + addBedNum + '\'' +
-                ", addBedPrice='" + addBedPrice + '\'' +
-                ", slat=" + slat +
-                ", slng=" + slng +
-                ", userpoiTitle='" + userpoiTitle + '\'' +
-                ", userpoiAddress='" + userpoiAddress + '\'' +
-                ", userpoiPhone='" + userpoiPhone + '\'' +
-                ", userpoiUserName='" + userpoiUserName + '\'' +
-                ", hasStoryI=" + hasStoryI +
-                ", latestSuccessTimeS='" + latestSuccessTimeS + '\'' +
-                ", roomThumImgVersionI=" + roomThumImgVersionI +
-                ", soldoutRoomDatesSs=" + soldoutRoomDatesSs +
-                ", homestayDefaultImageS='" + homestayDefaultImageS + '\'' +
-                ", homestayImgVersionI=" + homestayImgVersionI +
-                ", latlngP0D=" + latlngP0D +
-                ", latlngP1D=" + latlngP1D +
-                ", userStatusI=" + userStatusI +
-                ", minimumStayI=" + minimumStayI +
-                ", roomPriceCountCheckI=" + roomPriceCountCheckI +
-                ", followLanguageS='" + followLanguageS + '\'' +
-                ", wifiI=" + wifiI +
-                ", pmUsersI=" + pmUsersI +
-                ", pmReplyI=" + pmReplyI +
-                ", pmReplyRateI=" + pmReplyRateI +
-                ", allOrderI=" + allOrderI +
-                ", orderSelfI=" + orderSelfI +
-                ", orderSelfRateI=" + orderSelfRateI +
-                ", orderHtRateI=" + orderHtRateI +
-                ", roomNightsI=" + roomNightsI +
-                ", pmHtRateI=" + pmHtRateI +
-                ", calLastUpdateI=" + calLastUpdateI +
-                ", hsRatingAvgI=" + hsRatingAvgI +
-                ", hsCommentsNumI=" + hsCommentsNumI +
-                ", roomRatingAvgI=" + roomRatingAvgI +
-                ", roomCommentsNumI=" + roomCommentsNumI +
-                ", jiesongServiceI=" + jiesongServiceI +
-                ", baocheServiceI=" + baocheServiceI +
-                ", otherServiceI=" + otherServiceI +
-                ", otherServiceTcn='" + otherServiceTcn + '\'' +
-                ", categoryTagsSs=" + categoryTagsSs +
-                ", categoryTagsS='" + categoryTagsS + '\'' +
-                ", scoreF=" + scoreF +
-                ", distance=" + distance +
-                ", hsSpeedRoomI=" + hsSpeedRoomI +
-                ", discountRoomDatesSs=" + discountRoomDatesSs +
-                ", isBnbCuxiaoI=" + isBnbCuxiaoI +
-                ", isBnbFirstOrderI=" + isBnbFirstOrderI +
-                '}';
+        return "Room [id=" + id + ", version=" + version + ", text=" + text + ", created=" + created + ", changed="
+                + changed + ", uid=" + uid + ", username=" + username + ", title=" + title + ", content=" + content
+                + ", status=" + status + ", verified=" + verified + ", roomPrice=" + roomPrice + ", intPrice="
+                + intPrice + ", intPriceTW=" + intPriceTW + ", zzkRank=" + zzkRank + ", intPriceTwList="
+                + intPriceTwList + ", intPriceCnList=" + intPriceCnList + ", dateList=" + dateList + ", destId="
+                + destId + ", breakfast=" + breakfast + ", breakfastRemark=" + breakfastRemark + ", roomModel="
+                + roomModel + ", orderSucc=" + orderSucc + ", speedRoom=" + speedRoom + ", commentNum=" + commentNum
+                + ", locTypeId=" + locTypeId + ", locTypeCode=" + locTypeCode + ", locTypeName=" + locTypeName
+                + ", userpoiId=" + userpoiId + ", userAddress=" + userAddress + ", userTelnum=" + userTelnum
+                + ", userMail=" + userMail + ", imgId=" + imgId + ", userPhotoId=" + userPhotoId + ", roomThumImgFile="
+                + roomThumImgFile + ", userPhotoFile=" + userPhotoFile + ", sheshi=" + sheshi + ", roomSetting="
+                + roomSetting + ", chuangshu=" + chuangshu + ", chuangxing=" + chuangxing + ", weishengjian="
+                + weishengjian + ", fangjiashuoming=" + fangjiashuoming + ", mianji=" + mianji + ", addBedCheck="
+                + addBedCheck + ", addBedNum=" + addBedNum + ", addBedPrice=" + addBedPrice + ", slat=" + slat
+                + ", slng=" + slng + ", userpoiTitle=" + userpoiTitle + ", userpoiAddress=" + userpoiAddress
+                + ", userpoiPhone=" + userpoiPhone + ", userpoiUserName=" + userpoiUserName + ", hasStoryI="
+                + hasStoryI + ", latestSuccessTimeS=" + latestSuccessTimeS + ", roomThumImgVersionI="
+                + roomThumImgVersionI + ", soldoutRoomDatesSs=" + soldoutRoomDatesSs + ", homestayDefaultImageS="
+                + homestayDefaultImageS + ", homestayImgVersionI=" + homestayImgVersionI + ", latlngP0D=" + latlngP0D
+                + ", latlngP1D=" + latlngP1D + ", userStatusI=" + userStatusI + ", minimumStayI=" + minimumStayI
+                + ", roomPriceCountCheckI=" + roomPriceCountCheckI + ", followLanguageS=" + followLanguageS
+                + ", wifiI=" + wifiI + ", pmUsersI=" + pmUsersI + ", pmReplyI=" + pmReplyI + ", pmReplyRateI="
+                + pmReplyRateI + ", allOrderI=" + allOrderI + ", orderSelfI=" + orderSelfI + ", orderSelfRateI="
+                + orderSelfRateI + ", orderHtRateI=" + orderHtRateI + ", roomNightsI=" + roomNightsI + ", pmHtRateI="
+                + pmHtRateI + ", calLastUpdateI=" + calLastUpdateI + ", hsRatingAvgI=" + hsRatingAvgI
+                + ", hsCommentsNumI=" + hsCommentsNumI + ", roomRatingAvgI=" + roomRatingAvgI + ", roomCommentsNumI="
+                + roomCommentsNumI + ", otherServiceTcn=" + otherServiceTcn + ", categoryTagsSs=" + categoryTagsSs
+                + ", categoryTagsS=" + categoryTagsS + ", scoreF=" + scoreF + ", distance=" + distance
+                + ", hsSpeedRoomI=" + hsSpeedRoomI + ", discountRoomDatesSs=" + discountRoomDatesSs + ", isBnbCuxiaoI="
+                + isBnbCuxiaoI + ", isBnbFirstOrderI=" + isBnbFirstOrderI + ", huwaiServiceI=" + huwaiServiceI
+                + ", zaocanServiceI=" + zaocanServiceI + ", daidingServiceI=" + daidingServiceI + ", jiesongServiceI="
+                + jiesongServiceI + ", baocheServiceI=" + baocheServiceI + ", otherServiceI=" + otherServiceI + "]";
     }
+
     
 }
