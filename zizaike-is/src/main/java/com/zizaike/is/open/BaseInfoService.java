@@ -16,8 +16,7 @@ import com.zizaike.entity.open.RoomInfoDto;
 
 /**  
  * ClassName:BaseInfoService <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
+ * Function: 基础信息服务. <br/>
  * Date:     2016年3月7日 下午5:57:25 <br/>  
  * @author   alex  
  * @version    
