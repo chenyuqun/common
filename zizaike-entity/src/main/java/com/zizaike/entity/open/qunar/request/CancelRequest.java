@@ -21,7 +21,7 @@ public class CancelRequest extends RequestData {
     @XStreamAlias("orderId")
     private String orderId;
     @XStreamAlias("requiredAction")
-    private RequiredActionCode requiredAction;
+    private String requiredAction;
     @XStreamAlias("reason")
     private String reason;
 
@@ -43,11 +43,11 @@ public class CancelRequest extends RequestData {
         this.orderId = orderId;
     }
 
-    public RequiredActionCode getRequiredAction() {
+    public String getRequiredAction() {
         return requiredAction;
     }
 
-    public void setRequiredAction(RequiredActionCode requiredAction) {
+    public void setRequiredAction(String requiredAction) {
         this.requiredAction = requiredAction;
     }
 

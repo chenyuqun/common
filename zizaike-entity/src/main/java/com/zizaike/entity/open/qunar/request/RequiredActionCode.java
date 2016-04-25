@@ -44,7 +44,7 @@ public enum RequiredActionCode {
      * Creates a new instance of requiredAction.  
      * @param code
      * @param desc  
-     */  
+     */
     
     private RequiredActionCode(String code, String desc) {
         this.code = code;
