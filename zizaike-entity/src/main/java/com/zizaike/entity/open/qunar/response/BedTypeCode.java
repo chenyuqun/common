@@ -20,7 +20,7 @@ public enum BedTypeCode {
     BABY_COT("BABY_COT","婴儿床"),
     CONNECTED_BED("CONNECTED_BED","拼床"),
     TWIN("TWIN","双人床"),
-    OTHER("OTHERS", "其他");
+    OTHERS("OTHERS", "其他");
 
     private final String code;
     private final String desc;
