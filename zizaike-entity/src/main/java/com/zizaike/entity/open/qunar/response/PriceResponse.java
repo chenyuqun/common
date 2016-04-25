@@ -46,8 +46,8 @@ public class PriceResponse extends ResponseData {
     private String checkout;
 
     @XStreamAsAttribute
-    @XStreamAlias("currrencyCode")
-    private String currrencyCode;
+    @XStreamAlias("currencyCode")
+    private String currencyCode;
     /**
      * one or more <room><room/>
      */
@@ -110,12 +110,12 @@ public class PriceResponse extends ResponseData {
         this.checkout = checkout;
     }
 
-    public String getCurrrencyCode() {
-        return currrencyCode;
+    public String getCurrencyCode() {
+        return currencyCode;
     }
 
-    public void setCurrrencyCode(String currrencyCode) {
-        this.currrencyCode = currrencyCode;
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
     }
 
     public List<Room> getRooms() {
