@@ -15,11 +15,11 @@ import java.util.List;
  */
 @XStreamAlias("orderInfo")
 public class QunarOrderInfoResponse{
-    @XStreamAlias("orderInfo")
+    @XStreamAlias("orderNum")
     private String orderNum;
-    @XStreamAlias("orderInfo")
+    @XStreamAlias("orderId")
     private String orderId;
-    @XStreamAlias("orderInfo")
+    @XStreamAlias("payType")
     private PayType payType;
     @XStreamAlias("status")
     private Status status;
