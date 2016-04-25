@@ -54,12 +54,24 @@ public class ServiceSearchVo implements java.io.Serializable {
      * 要变成location_type_id/poi_id
      */
     private Integer searchid;
+    /**
+     * 用户id
+     */
+    private Integer userId;
     
     /**
      * 搜索半径
      */
     private Float searchRadius;
     
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
     public Float getSearchRadius() {
         return searchRadius;
     }
