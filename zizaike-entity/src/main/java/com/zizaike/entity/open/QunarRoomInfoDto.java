@@ -11,7 +11,7 @@ package com.zizaike.entity.open;
 public class QunarRoomInfoDto extends RoomInfoDto{
     private Integer fieldChuangxingTid;
 
-    private Integer fieldCHuangshuTid;
+    private Integer fieldChuangshuTid;
 
     private String title;
 
@@ -29,12 +29,12 @@ public class QunarRoomInfoDto extends RoomInfoDto{
         this.fieldChuangxingTid = fieldChuangxingTid;
     }
 
-    public Integer getFieldCHuangshuTid() {
-        return fieldCHuangshuTid;
+    public Integer getFieldChuangshuTid() {
+        return fieldChuangshuTid;
     }
 
-    public void setFieldCHuangshuTid(Integer fieldCHuangshuTid) {
-        this.fieldCHuangshuTid = fieldCHuangshuTid;
+    public void setFieldChuangshuTid(Integer fieldChuangshuTid) {
+        this.fieldChuangshuTid = fieldChuangshuTid;
     }
 
     public String getTitle() {
