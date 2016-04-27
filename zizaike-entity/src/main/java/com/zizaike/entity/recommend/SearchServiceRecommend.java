@@ -1,5 +1,6 @@
 package com.zizaike.entity.recommend;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import com.zizaike.entity.solr.BNBServiceType;
@@ -13,7 +14,8 @@ import com.zizaike.entity.solr.BNBServiceType;
  * @version   
  * @since JDK 1.7
  */
-public class SearchServiceRecommend{
+public class SearchServiceRecommend implements Serializable{
+    private static final long serialVersionUID = 1341219400782112316L;
     private Integer id;
     /**
      * 民宿id

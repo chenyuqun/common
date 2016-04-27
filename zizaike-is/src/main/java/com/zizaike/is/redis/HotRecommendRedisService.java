@@ -13,6 +13,7 @@ import java.util.List;
 
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.recommend.Recommend;
+import com.zizaike.entity.solr.ServiceSearchVo;
 
 /**  
  * ClassName:IHotRecommendDao <br/>  
@@ -45,5 +46,17 @@ public interface HotRecommendRedisService {
      * @since JDK 1.7
      */
     void save (List<Recommend> value) throws ZZKServiceException;
+    
+    /**
+     * 
+     * serviceRecommend:服务推荐. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param serviceSearchVo
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    List<com.zizaike.entity.solr.dto.User> serviceRecommend (ServiceSearchVo serviceSearchVo) throws ZZKServiceException;
 }
   
