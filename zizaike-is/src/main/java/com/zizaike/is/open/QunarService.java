@@ -1,12 +1,11 @@
 package com.zizaike.is.open;
 
+import java.util.List;
+
 import com.alibaba.fastjson.JSONObject;
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.HomestayDocking;
-import com.zizaike.entity.open.qunar.OrderQueryVO;
 import com.zizaike.entity.open.qunar.OtaOptVO;
-
-import java.util.List;
 
 /**
  * Project Name: code <br/>
