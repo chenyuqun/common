@@ -11,7 +11,11 @@ package com.zizaike.is.open;
 
 import com.alibaba.fastjson.JSONObject;
 import com.zizaike.core.framework.exception.ZZKServiceException;
+
 import com.zizaike.entity.open.QunarRoomInfoDto;
+
+import com.zizaike.entity.open.OpenDiscount;
+
 import com.zizaike.entity.open.RoomInfoDto;
 
 /**  
@@ -50,5 +54,17 @@ public interface BaseInfoService {
      * @throws ZZKServiceException
      */
     QunarRoomInfoDto getQunarRoomInfo(int nid)throws ZZKServiceException;
+
+    /***
+     * getOpenConfig: <br/>
+     *
+     * @author alex
+     * @param openConfig
+     * @return
+     * @throws ZZKServiceException
+     * @since JDK 1.7
+     */
+    OpenDiscount getOpenDiscount(OpenDiscount openDiscount)throws ZZKServiceException;
+
 }
   

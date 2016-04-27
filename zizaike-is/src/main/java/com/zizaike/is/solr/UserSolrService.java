@@ -13,7 +13,9 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
+import com.zizaike.core.common.page.PageList;
 import com.zizaike.core.framework.exception.ZZKServiceException;
+import com.zizaike.entity.solr.ServiceSearchVo;
 import com.zizaike.entity.solr.User;
 import com.zizaike.entity.solr.dto.AssociateWordsDTO;
 
@@ -60,4 +62,15 @@ public interface UserSolrService extends CrudRepository<User, Integer> {
      * @since JDK 1.7
      */
     List<AssociateWordsDTO> queryUserByWordsAndDest(String words,Integer destId) throws ZZKServiceException;
+    /**
+     * 
+     * serviceQuery:服务查询. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param searchVo
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    PageList<com.zizaike.entity.solr.dto.User> serviceQuery(ServiceSearchVo searchVo) throws ZZKServiceException;
 }

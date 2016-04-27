@@ -21,7 +21,11 @@
 		<javaClientGenerator type="XMLMAPPER" targetPackage="${mybatis.generator.package.path}" targetProject="${mybatis.generator.javaFileDir}">
 		</javaClientGenerator>
 		
+<<<<<<< HEAD
 		<table tableName="t_open_qunar_request" domainObjectName="open.QunarRequest" enableCountByExample="false" enableUpdateByExample="false"
+=======
+		<table tableName="t_loc_poi" domainObjectName="recommend.LocPoi" enableCountByExample="false" enableUpdateByExample="false"  
+>>>>>>> origin/master
            enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>
 

@@ -100,9 +100,6 @@ public class SearchableRoom {
     public static final String HS_COMMENTS_NUM_I_FIELD = "hs_comments_num_i";
     public static final String ROOM_RATING_AVG_I_FIELD = "room_rating_avg_i";
     public static final String ROOM_COMMENTS_NUM_I_FIELD = "room_comments_num_i";
-    public static final String JIESONG_SERVICE_I_FIELD = "jiesong_service_i";
-    public static final String BAOCHE_SERVICE_I_FIELD = "baoche_service_i";
-    public static final String OTHER_SERVICE_I_FIELD = "other_service_i";
     public static final String OTHER_SERVICE_TCN_FIELD = "other_service_tcn";
     public static final String CATEGORY_TAGS_SS_FIELD = "category_tags_ss";
     public static final String CATEGORY_TAGS_S_FIELD = "category_tags_s";
@@ -112,6 +109,12 @@ public class SearchableRoom {
     public static final String DISCOUNT_ROOM_DATES_SS_FIELD = "discount_room_dates_ss";
     public static final String IS_BNB_CUXIAO_I_FIELD = "is_bnb_cuxiao_i";
     public static final String IS_BNB_FIRST_ORDER_I_FIELD = "is_bnb_first_order_i";
+    public static final String HUWAI_SERVICE_I_FIELD = "huwai_service_i";
+    public static final String ZAOCAN_SERVICE_I_FIELD = "zaocan_service_i";
+    public static final String DAIDING_SERVICE_I_FIELD = "daiding_service_i";
+    public static final String BAOCHE_SERVICE_I_FIELD = "baoche_service_i";
+    public static final String JIESONG_SERVICE_I_FIELD = "jiesong_service_i";
+    public static final String OTHER_SERVICE_I_FIELD = "other_service_i";
 
 
 }

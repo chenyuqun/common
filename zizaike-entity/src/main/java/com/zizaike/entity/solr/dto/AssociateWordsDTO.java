@@ -20,10 +20,6 @@ package com.zizaike.entity.solr.dto;
  * @see        
  */
 public class AssociateWordsDTO implements java.io.Serializable{
-    /**  
-     * serialVersionUID:TODO(用一句话描述这个变量表示什么).  
-     * @since JDK 1.7
-     */
     private static final long serialVersionUID = 698449383206711451L;
     /**
      * 关联类型 1城市2商圈3景点4民宿名称5民宿地址

@@ -9,6 +9,8 @@
 
 package com.zizaike.entity.order.request;
 
+import com.zizaike.entity.open.OpenChannelType;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -24,6 +26,10 @@ import java.util.Date;
  */
 public class ValidateOrderRequest implements Serializable{
     private static final long serialVersionUID = -2692679234276166363L;
+    /**
+     * 来源
+     */
+    private OpenChannelType openChannelType;
     /**
      * open酒店id
      */
@@ -72,6 +78,15 @@ public class ValidateOrderRequest implements Serializable{
      * 扩展字段json，用于处理特殊OTA个性需求添加的扩展字段 {"key":"value"}
      */
     private String extensions;
+
+    public OpenChannelType getOpenChannelType() {
+        return openChannelType;
+    }
+
+    public void setOpenChannelType(OpenChannelType openChannelType) {
+        this.openChannelType = openChannelType;
+    }
+
     public String getOpenHotelId() {
         return openHotelId;
     }
