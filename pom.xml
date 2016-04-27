@@ -36,8 +36,8 @@
 		<httpclient.version>4.2.6</httpclient.version>
 		
 		<zizaike.core.version>1.0.6-RELEASE</zizaike.core.version>
-		<zizaike.entity.version>1.0.14-RELEASE</zizaike.entity.version>
-		<zizaike.is.version>1.0.14-RELEASE</zizaike.is.version>
+		<zizaike.entity.version>1.0.15-SNAPSHOT</zizaike.entity.version>
+		<zizaike.is.version>1.0.15-SNAPSHOT</zizaike.is.version>
 
 	</properties>
 

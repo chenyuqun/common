@@ -64,6 +64,19 @@ public class ServiceSearchVo implements java.io.Serializable {
      */
     private Float searchRadius;
     
+    /**
+     * 多价格
+     */
+    private int multiprice;
+    
+    public int getMultiprice() {
+        return multiprice;
+    }
+
+    public void setMultiprice(int multiprice) {
+        this.multiprice = multiprice;
+    }
+
     public Integer getUserId() {
         return userId;
     }

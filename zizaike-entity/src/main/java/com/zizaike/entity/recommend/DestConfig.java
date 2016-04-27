@@ -43,8 +43,20 @@ public class DestConfig implements Serializable{
     private String currencyIosCode;
 
     private String currencyCode;
+    /**
+     * 换算后价格
+     */
+    private Integer price;
     @Translate
     private String destName;
+    
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
 
     public Integer getId() {
         return id;

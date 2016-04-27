@@ -9,7 +9,6 @@
 
 package com.zizaike.entity.solr;
 
-import com.zizaike.core.framework.ienum.IEnum;
 
 /**
  * 
@@ -21,59 +20,41 @@ import com.zizaike.core.framework.ienum.IEnum;
  * @version
  * @since JDK 1.7
  */
-public enum BNBServiceType implements IEnum {
+public enum BNBServiceType  {
     /**
      * 户外服务
      */
-    OUTDOORS(1),
+    OUTDOORS("huwai"),
     /**
      * 餐饮美食
      */
-    FOOD(2),
+    FOOD("zaocan"),
     /**
      * 代订服务
      */
-    BOOKING(3),
+    BOOKING("daiding"),
     /**
      * 接送服务
      */
-    TRANSFER(4),
+    TRANSFER("jiesong"),
     /**
      * 包车服务
      */
-    BUS_SERVICE(5),
+    BUS_SERVICE("baoche"),
     /**
      * 其他服务
      */
-    OTHER(6), ;
-    private int value;
+    OTHER("other"), ;
+    private String value;
 
-    private BNBServiceType(int value) {
+    private BNBServiceType(String value) {
         this.value = value;
     }
 
-    @Override
-    public int getValue() {
+    public String getValue() {
         return this.value;
     }
 
-    public static BNBServiceType findByValue(int value) {
-        if (value == 1) {
-            return OUTDOORS;
-        } else if (value == 2) {
-            return FOOD;
-        } else if (value == 3) {
-            return BOOKING;
-        } else if (value == 4) {
-            return TRANSFER;
-        } else if (value == 5) {
-            return BUS_SERVICE;
-        } else if (value == 6) {
-            return OTHER;
-        } else {
-            return null;
-        }
-    }
 
     public static String findSolrServiceName(BNBServiceType bnbServiceType) {
         if (bnbServiceType == OUTDOORS) {
@@ -93,7 +74,7 @@ public enum BNBServiceType implements IEnum {
         }
     }
 
-    public static BNBServiceType findBySolrStr(String value) {
+    public static BNBServiceType findByValue(String value) {
         BNBServiceType type = null;
         switch (value) {
         case "huwai":
