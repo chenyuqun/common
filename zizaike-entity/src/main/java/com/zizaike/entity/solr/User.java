@@ -871,6 +871,36 @@ public class User extends SearchableUser implements java.io.Serializable {
     public void setHsSpeedRoomI(Integer hsSpeedRoomI) {
         this.hsSpeedRoomI = hsSpeedRoomI;
     }
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", version=" + version + ", text=" + text + ", created=" + created + ", changed="
+                + changed + ", uid=" + uid + ", username=" + username + ", nickname=" + nickname + ", usermail="
+                + usermail + ", address=" + address + ", phone=" + phone + ", userPhotoId=" + userPhotoId
+                + ", userPhotoFile=" + userPhotoFile + ", homestayPhotoFile=" + homestayPhotoFile + ", blankAccount="
+                + blankAccount + ", aboutme=" + aboutme + ", additionalServices=" + additionalServices
+                + ", dingfangshuoming=" + dingfangshuoming + ", zhuyishixiang=" + zhuyishixiang + ", jiaotongzixun="
+                + jiaotongzixun + ", huodong=" + huodong + ", roomNum=" + roomNum + ", orderSucc=" + orderSucc
+                + ", pmsgReply=" + pmsgReply + ", sendSms=" + sendSms + ", sendSmsTelnum=" + sendSmsTelnum
+                + ", followLanguage=" + followLanguage + ", commentNum=" + commentNum + ", intRoomNid=" + intRoomNid
+                + ", intRoomPrice=" + intRoomPrice + ", intRoomPriceTw=" + intRoomPriceTw + ", locTypeid=" + locTypeid
+                + ", locTypecode=" + locTypecode + ", locTypename=" + locTypename + ", pid=" + pid + ", poiTitle="
+                + poiTitle + ", poiPhone=" + poiPhone + ", poiEmail=" + poiEmail + ", poiMaster=" + poiMaster
+                + ", poiAddress=" + poiAddress + ", poiImages=" + poiImages + ", status=" + status + ", verifiedByZzk="
+                + verifiedByZzk + ", zzkWeights=" + zzkWeights + ", revPercent=" + revPercent + ", pricePercent="
+                + pricePercent + ", rebateNum=" + rebateNum + ", rebateRemark=" + rebateRemark + ", blankAccountPoi="
+                + blankAccountPoi + ", blankName=" + blankName + ", blankNameSub=" + blankNameSub + ", blankUsername="
+                + blankUsername + ", blankDaihao=" + blankDaihao + ", blankDaihaoSub=" + blankDaihaoSub
+                + ", alipayAccount=" + alipayAccount + ", paypalAccount=" + paypalAccount + ", destId=" + destId
+                + ", cnBlankAccount=" + cnBlankAccount + ", cnBlankName=" + cnBlankName + ", cnBlankNameSub="
+                + cnBlankNameSub + ", cnBlankUsername=" + cnBlankUsername + ", slat=" + slat + ", slng=" + slng
+                + ", defaultImageS=" + defaultImageS + ", latestSuccessTimeS=" + latestSuccessTimeS + ", breakfastI="
+                + breakfastI + ", latlngP0D=" + latlngP0D + ", latlngP1D=" + latlngP1D + ", latlngP=" + latlngP
+                + ", userPhotoVersionI=" + userPhotoVersionI + ", pmUsersI=" + pmUsersI + ", hsCommentsNumI="
+                + hsCommentsNumI + ", hsSpeedRoomI=" + hsSpeedRoomI + ", huwaiServiceI=" + huwaiServiceI
+                + ", zaocanServiceI=" + zaocanServiceI + ", daidingServiceI=" + daidingServiceI + ", jiesongServiceI="
+                + jiesongServiceI + ", baocheServiceI=" + baocheServiceI + ", otherServiceI=" + otherServiceI
+                + ", allServiceListS=" + allServiceListS + "]";
+    }
     
     
     
