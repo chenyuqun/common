@@ -17,7 +17,7 @@ import java.util.List;
 @XStreamAlias("refund")
 public class Refund {
     @XStreamAsAttribute
-    @XStreamAlias("refundnable")
+    @XStreamAlias("returnable")
     private Boolean returnable;
     @XStreamAsAttribute
     @XStreamAlias("timeZone")
