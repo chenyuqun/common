@@ -72,5 +72,16 @@ public interface UserSolrService extends CrudRepository<User, Integer> {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    PageList<com.zizaike.entity.solr.dto.User> serviceQuery(ServiceSearchVo searchVo) throws ZZKServiceException;
+    PageList<com.zizaike.entity.solr.dto.User> serviceQuery(ServiceSearchVo serviceSearchVo) throws ZZKServiceException;
+    /**
+     * 
+     * serviceRecommend:服务推荐. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param list
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    PageList<com.zizaike.entity.solr.dto.User> serviceRecommend(ServiceSearchVo serviceSearchVo) throws ZZKServiceException;
 }
