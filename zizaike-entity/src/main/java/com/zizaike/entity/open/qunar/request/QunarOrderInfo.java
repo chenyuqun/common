@@ -72,6 +72,9 @@ public class QunarOrderInfo {
     @XStreamAlias("invoiceCode")
     private String invoiceCode;
 
+    @XStreamAlias("invoice")
+    private String invoice;
+
     public String getOrderNum() {
         return orderNum;
     }
@@ -175,6 +178,13 @@ public class QunarOrderInfo {
     public void setInvoiceCode(String invoiceCode) {
         this.invoiceCode = invoiceCode;
     }
-    
+
+    public String getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(String invoice) {
+        this.invoice = invoice;
+    }
 }
   
