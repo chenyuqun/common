@@ -37,7 +37,7 @@ public class MappingInfoVo implements Serializable{
     /**
      * 0代表中国，1代表海外
      */
-    private int isOverSea;
+    private int isOversea;
     public List<Integer> getHotels() {
         return hotels;
     }
@@ -51,12 +51,12 @@ public class MappingInfoVo implements Serializable{
         this.getMappingInfoType = getMappingInfoType;
     }
 
-    public int getIsOverSea() {
-        return isOverSea;
+    public int getIsOversea() {
+        return isOversea;
     }
 
-    public void setIsOverSea(int isOverSea) {
-        this.isOverSea = isOverSea;
+    public void setIsOversea(int isOversea) {
+        this.isOversea = isOversea;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class MappingInfoVo implements Serializable{
         return "MappingInfoVo{" +
                 "hotels=" + hotels +
                 ", getMappingInfoType=" + getMappingInfoType +
-                ", isOverSea=" + isOverSea +
+                ", isOversea=" + isOversea +
                 '}';
     }
 }
