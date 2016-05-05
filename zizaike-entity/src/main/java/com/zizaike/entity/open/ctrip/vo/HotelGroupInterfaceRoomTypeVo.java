@@ -32,7 +32,11 @@ public class HotelGroupInterfaceRoomTypeVo extends RequestData implements Serial
      */
     @XStreamAlias("HotelGroupRatePlanCode")
     private Integer hotelGroupRatePlanCode;
-    
+
+    /**
+     *
+     */
+    private int isOversea;
 
     public Integer getHotelGroupRoomTypeCode() {
         return hotelGroupRoomTypeCode;
@@ -59,14 +63,22 @@ public class HotelGroupInterfaceRoomTypeVo extends RequestData implements Serial
         this.hotelGroupRatePlanCode = hotelGroupRatePlanCode;
     }
 
-    @Override
-    public String toString() {
-        return "HotelGroupInterfaceRoomTypeVo [hotelGroupRoomTypeCode=" + hotelGroupRoomTypeCode
-                + ", hotelGroupHotelCode=" + hotelGroupHotelCode + ", hotelGroupRatePlanCode=" + hotelGroupRatePlanCode
-                + "]";
+    public int getIsOversea() {
+        return isOversea;
     }
 
-        
-    
+    public void setIsOversea(int isOversea) {
+        this.isOversea = isOversea;
+    }
+
+    @Override
+    public String toString() {
+        return "HotelGroupInterfaceRoomTypeVo{" +
+                "hotelGroupRoomTypeCode=" + hotelGroupRoomTypeCode +
+                ", hotelGroupHotelCode=" + hotelGroupHotelCode +
+                ", hotelGroupRatePlanCode=" + hotelGroupRatePlanCode +
+                ", isOversea=" + isOversea +
+                '}';
+    }
 }
   
