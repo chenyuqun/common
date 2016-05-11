@@ -39,6 +39,17 @@ public class User implements Serializable {
      */
     private String image;
     /**
+     * 是否收藏
+     */
+    private Boolean isCollect;
+    
+    public Boolean getIsCollect() {
+        return isCollect;
+    }
+    public void setIsCollect(Boolean isCollect) {
+        this.isCollect = isCollect;
+    }
+    /**
      * 服务
      */
     private List<BNBService> bnbService;

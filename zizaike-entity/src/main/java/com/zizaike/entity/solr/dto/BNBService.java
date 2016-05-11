@@ -1,4 +1,5 @@
 /**  
+
  * Project Name:zizaike-entity  <br/>
  * File Name:PlaceDTO.java  <br/>
  * Package Name:com.zizaike.entity.solr.dto  <br/>
@@ -12,8 +13,6 @@ package com.zizaike.entity.solr.dto;
 import java.io.Serializable;
 import java.util.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.zizaike.core.common.ranslator.Translate;
 import com.zizaike.entity.solr.BNBServiceType;
 
 /**
@@ -52,7 +51,17 @@ public class BNBService implements Serializable {
      * 价格
      */
     private Integer price;
+    /**
+     * 货币代码  NT$,円  ,¥,
+     */
+    private String currencyCode;
     
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+    }
     public int getId() {
         return id;
     }

@@ -1,12 +1,11 @@
 package com.zizaike.is.redis;
 
 
+import java.util.List;
+
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.recommend.Loctype;
-import com.zizaike.entity.recommend.vo.CountryArea;
 import com.zizaike.entity.recommend.vo.RecommendArea;
-
-import java.util.List;
 
 public interface RecommendAreaRedisService {
     /**
