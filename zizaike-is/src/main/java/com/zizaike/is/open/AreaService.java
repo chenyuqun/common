@@ -32,5 +32,7 @@ public interface AreaService {
      * @since JDK 1.7
      */
     Area getAreaCodeTypeCode(String typeCode) throws ZZKServiceException;
+
+
 }
   

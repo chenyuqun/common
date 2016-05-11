@@ -21,6 +21,10 @@ public enum OpenChannelType implements IEnum{
      * alitrip
      */
     ALITRIP(1),
+    /**
+     * qunar
+     */
+    QUNAR(2)
     ;
     private int value;
 

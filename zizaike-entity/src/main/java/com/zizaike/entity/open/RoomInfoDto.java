@@ -21,6 +21,7 @@ public class RoomInfoDto {
     private int uid;
     private int value;
     private String name;
+    private Integer destId;
     public String getRefundRule() {
         return refundRule;
     }
@@ -45,6 +46,13 @@ public class RoomInfoDto {
     public void setName(String name) {
         this.name = name;
     }
-    
+
+    public Integer getDestId() {
+        return destId;
+    }
+
+    public void setDestId(Integer destId) {
+        this.destId = destId;
+    }
 }
-  
+
