@@ -20,8 +20,13 @@
 		<sqlMapGenerator targetPackage="${mybatis.generator.package.path}" targetProject="${mybatis.generator.resourcesFileDir}"/>
 		<javaClientGenerator type="XMLMAPPER" targetPackage="${mybatis.generator.package.path}" targetProject="${mybatis.generator.javaFileDir}">
 		</javaClientGenerator>
+<<<<<<< HEAD
 
 		<table tableName="t_room_price" domainObjectName="commodity.RoomPrice" enableCountByExample="false" enableUpdateByExample="false"
+=======
+		
+		<table tableName="t_search_service_recommend" domainObjectName="user.SearchServiceRecommend" enableCountByExample="false" enableUpdateByExample="false"  
+>>>>>>> origin/master
            enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
 		</table>
 

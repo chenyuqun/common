@@ -1,7 +1,5 @@
 package com.zizaike.entity.solr;
 
-import java.util.List;
-
 import org.apache.solr.client.solrj.beans.Field;
 
 import com.zizaike.entity.solr.model.SearchableUser;
@@ -348,25 +346,99 @@ public class User extends SearchableUser implements java.io.Serializable {
     @Field(PM_USERS_I_FIELD)
     private Integer pmUsersI;
     /**
+     * 评论数
+     */
+    @Field(HS_COMMENTS_NUM_I_FIELD)
+    private Integer hsCommentsNumI;
+    /**
      * 是否速订
      */
     @Field(HS_SPEED_ROOM_I_FIELD)
     private Integer hsSpeedRoomI;
     /**
-     * 新字段 多值
+     * 户外服务
      */
-    @Field(LOCATION_TYPEID_FIELD)
-    private List<Integer> locationTypeid;
+    @Field(HUWAI_SERVICE_I_FIELD)
+    private Integer huwaiServiceI;
     /**
-     * 新字段
+     * 餐饮美食
      */
-    @Field(LOCATION_TYPECODE_FIELD)
-    private String locationTypecode;
+    @Field(ZAOCAN_SERVICE_I_FIELD)
+    private Integer zaocanServiceI;
     /**
-     * 新字段 多值
+     * 代订服务
      */
-    @Field(LOCATION_TYPENAME_FIELD)
-    private List<String> locationTypename;
+    @Field(DAIDING_SERVICE_I_FIELD)
+    private Integer daidingServiceI;
+    /**
+     * 接送服务
+     */
+    @Field(JIESONG_SERVICE_I_FIELD)
+    private Integer jiesongServiceI;
+    /**
+     * 包车服务
+     */
+    @Field(BAOCHE_SERVICE_I_FIELD)
+    private Integer baocheServiceI;
+    /**
+     * 其他服务
+     */
+    @Field(OTHER_SERVICE_I_FIELD)
+    private Integer otherServiceI;
+    /**
+     * 所有的服务  json格式
+     */
+    @Field(ALL_SERVICE_LIST_S_FIELD)
+    private String allServiceListS;
+    
+    public Integer getHsCommentsNumI() {
+        return hsCommentsNumI;
+    }
+    public void setHsCommentsNumI(Integer hsCommentsNumI) {
+        this.hsCommentsNumI = hsCommentsNumI;
+    }
+    public Integer getHuwaiServiceI() {
+        return huwaiServiceI;
+    }
+    public void setHuwaiServiceI(Integer huwaiServiceI) {
+        this.huwaiServiceI = huwaiServiceI;
+    }
+    public Integer getZaocanServiceI() {
+        return zaocanServiceI;
+    }
+    public void setZaocanServiceI(Integer zaocanServiceI) {
+        this.zaocanServiceI = zaocanServiceI;
+    }
+    public Integer getDaidingServiceI() {
+        return daidingServiceI;
+    }
+    public void setDaidingServiceI(Integer daidingServiceI) {
+        this.daidingServiceI = daidingServiceI;
+    }
+    public Integer getJiesongServiceI() {
+        return jiesongServiceI;
+    }
+    public void setJiesongServiceI(Integer jiesongServiceI) {
+        this.jiesongServiceI = jiesongServiceI;
+    }
+    public Integer getBaocheServiceI() {
+        return baocheServiceI;
+    }
+    public void setBaocheServiceI(Integer baocheServiceI) {
+        this.baocheServiceI = baocheServiceI;
+    }
+    public Integer getOtherServiceI() {
+        return otherServiceI;
+    }
+    public void setOtherServiceI(Integer otherServiceI) {
+        this.otherServiceI = otherServiceI;
+    }
+    public String getAllServiceListS() {
+        return allServiceListS;
+    }
+    public void setAllServiceListS(String allServiceListS) {
+        this.allServiceListS = allServiceListS;
+    }
     public Integer getId() {
         return id;
     }
@@ -799,23 +871,35 @@ public class User extends SearchableUser implements java.io.Serializable {
     public void setHsSpeedRoomI(Integer hsSpeedRoomI) {
         this.hsSpeedRoomI = hsSpeedRoomI;
     }
-    public List<Integer> getLocationTypeid() {
-        return locationTypeid;
-    }
-    public void setLocationTypeid(List<Integer> locationTypeid) {
-        this.locationTypeid = locationTypeid;
-    }
-    public String getLocationTypecode() {
-        return locationTypecode;
-    }
-    public void setLocationTypecode(String locationTypecode) {
-        this.locationTypecode = locationTypecode;
-    }
-    public List<String> getLocationTypename() {
-        return locationTypename;
-    }
-    public void setLocationTypename(List<String> locationTypename) {
-        this.locationTypename = locationTypename;
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", version=" + version + ", text=" + text + ", created=" + created + ", changed="
+                + changed + ", uid=" + uid + ", username=" + username + ", nickname=" + nickname + ", usermail="
+                + usermail + ", address=" + address + ", phone=" + phone + ", userPhotoId=" + userPhotoId
+                + ", userPhotoFile=" + userPhotoFile + ", homestayPhotoFile=" + homestayPhotoFile + ", blankAccount="
+                + blankAccount + ", aboutme=" + aboutme + ", additionalServices=" + additionalServices
+                + ", dingfangshuoming=" + dingfangshuoming + ", zhuyishixiang=" + zhuyishixiang + ", jiaotongzixun="
+                + jiaotongzixun + ", huodong=" + huodong + ", roomNum=" + roomNum + ", orderSucc=" + orderSucc
+                + ", pmsgReply=" + pmsgReply + ", sendSms=" + sendSms + ", sendSmsTelnum=" + sendSmsTelnum
+                + ", followLanguage=" + followLanguage + ", commentNum=" + commentNum + ", intRoomNid=" + intRoomNid
+                + ", intRoomPrice=" + intRoomPrice + ", intRoomPriceTw=" + intRoomPriceTw + ", locTypeid=" + locTypeid
+                + ", locTypecode=" + locTypecode + ", locTypename=" + locTypename + ", pid=" + pid + ", poiTitle="
+                + poiTitle + ", poiPhone=" + poiPhone + ", poiEmail=" + poiEmail + ", poiMaster=" + poiMaster
+                + ", poiAddress=" + poiAddress + ", poiImages=" + poiImages + ", status=" + status + ", verifiedByZzk="
+                + verifiedByZzk + ", zzkWeights=" + zzkWeights + ", revPercent=" + revPercent + ", pricePercent="
+                + pricePercent + ", rebateNum=" + rebateNum + ", rebateRemark=" + rebateRemark + ", blankAccountPoi="
+                + blankAccountPoi + ", blankName=" + blankName + ", blankNameSub=" + blankNameSub + ", blankUsername="
+                + blankUsername + ", blankDaihao=" + blankDaihao + ", blankDaihaoSub=" + blankDaihaoSub
+                + ", alipayAccount=" + alipayAccount + ", paypalAccount=" + paypalAccount + ", destId=" + destId
+                + ", cnBlankAccount=" + cnBlankAccount + ", cnBlankName=" + cnBlankName + ", cnBlankNameSub="
+                + cnBlankNameSub + ", cnBlankUsername=" + cnBlankUsername + ", slat=" + slat + ", slng=" + slng
+                + ", defaultImageS=" + defaultImageS + ", latestSuccessTimeS=" + latestSuccessTimeS + ", breakfastI="
+                + breakfastI + ", latlngP0D=" + latlngP0D + ", latlngP1D=" + latlngP1D + ", latlngP=" + latlngP
+                + ", userPhotoVersionI=" + userPhotoVersionI + ", pmUsersI=" + pmUsersI + ", hsCommentsNumI="
+                + hsCommentsNumI + ", hsSpeedRoomI=" + hsSpeedRoomI + ", huwaiServiceI=" + huwaiServiceI
+                + ", zaocanServiceI=" + zaocanServiceI + ", daidingServiceI=" + daidingServiceI + ", jiesongServiceI="
+                + jiesongServiceI + ", baocheServiceI=" + baocheServiceI + ", otherServiceI=" + otherServiceI
+                + ", allServiceListS=" + allServiceListS + "]";
     }
     
     

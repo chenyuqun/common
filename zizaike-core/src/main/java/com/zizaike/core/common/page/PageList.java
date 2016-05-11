@@ -22,20 +22,17 @@ public class PageList<T> implements Serializable {
 
     private List<T> list;
 
-    private int total;// 总条数
 
     private Page page;
 
     public PageList(List<T> list, Page page) {
         this.list = list;
         this.page = page;
-        this.total = page.getTotalCount();
     }
 
     public PageList() {
         this.list = new ArrayList<T>();
         this.page = new Page();
-        this.total = page.getTotalCount();
     }
 
     public List<T> getList() {
@@ -52,7 +49,6 @@ public class PageList<T> implements Serializable {
 
     public void setPage(Page page) {
         this.page = page;
-        this.total = page.getTotalCount();
     }
 
     public String toString() {
@@ -86,12 +82,5 @@ public class PageList<T> implements Serializable {
         return objects;
     }
 
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
 
 }

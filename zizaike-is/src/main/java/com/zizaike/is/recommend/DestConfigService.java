@@ -30,5 +30,18 @@ public interface DestConfigService {
     List<DestConfig> query() throws ZZKServiceException;
     
     DestConfig queryByDestId(Integer destId) throws ZZKServiceException;
+    /**
+     * 
+     * priceConvert:价格转换. <br/>  
+     *  
+     * @author snow.zhang  
+     * @param oldDestId
+     * @param newDestId
+     * @param price
+     * @return
+     * @throws ZZKServiceException  
+     * @since JDK 1.7
+     */
+    DestConfig priceConvert(Integer oldDestId,Integer newDestId,Integer price) throws ZZKServiceException;
 }
   

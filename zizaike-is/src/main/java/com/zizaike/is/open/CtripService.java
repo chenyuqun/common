@@ -9,15 +9,11 @@
 
 package com.zizaike.is.open;
 
-import java.util.Map;
-
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.alibaba.Rates;
 import com.zizaike.entity.open.ctrip.GetHotelInfoResponse;
 import com.zizaike.entity.open.ctrip.GetMappingInfoResponseList;
 import com.zizaike.entity.open.ctrip.HotelGroupInterfaceRoomTypeEntity;
-import com.zizaike.entity.open.ctrip.request.DomesticCheckRoomAvailRequest;
-import com.zizaike.entity.open.ctrip.response.DomesticCheckRoomAvailResponse;
 import com.zizaike.entity.open.ctrip.vo.HotelGroupInterfaceRoomTypeVo;
 import com.zizaike.entity.open.ctrip.vo.MappingInfoVo;
 import com.zizaike.entity.open.ctrip.vo.SetMappingInfoVo;
@@ -58,12 +54,13 @@ public interface CtripService {
      * 
      * getHotelInfo:得到酒店信息. <br/>  
      *  
-     * @author snow.zhang  
+     * @author snow.zhang
+     * @param currentPage 当前页数  
      * @return
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    GetHotelInfoResponse getHotelInfo( )throws ZZKServiceException;
+    GetHotelInfoResponse getHotelInfo(Integer currentPage )throws ZZKServiceException;
     /**
      * 
      * getMappingInfo:得到mappinfo. <br/>  
