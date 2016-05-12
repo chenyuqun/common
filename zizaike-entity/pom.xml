@@ -26,6 +26,18 @@
 		<!--这个一般是xml所在的地方不过可以修改 -->
 		<mybatis.generator.resourcesFileDir>${basedir}/src/main/resources</mybatis.generator.resourcesFileDir>
 	</properties>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>zizaike-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://192.168.8.17:8081/content/repositories/zizaike-snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>zizaike-releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://192.168.8.17:8081/content/repositories/zizaike-releases/</url>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>com.zizaike</groupId>
@@ -95,4 +107,3 @@
 		</profile> 
 	</profiles>
 </project>
-
