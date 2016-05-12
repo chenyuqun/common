@@ -20,7 +20,7 @@ import com.zizaike.core.framework.ienum.IEnum;
  * @since    JDK 1.7  
  * @see        
  */
-public enum SetMappingOperateType implements IEnum{
+public enum   SetMappingOperateType implements IEnum{
     /**
      * 增加一个的
      */
@@ -33,6 +33,10 @@ public enum SetMappingOperateType implements IEnum{
      * 关联已经存在的子房型
      */
     MAP_EXISTING_HOTEL_AND_ROOM_ID (3),
+    /**
+     * 删除关联价格
+     */
+    UN_MAPPING_ROOM_ID_DELETE_PRICE(4),
     ;
     private int value;
 
@@ -52,7 +56,9 @@ public enum SetMappingOperateType implements IEnum{
             return UN_MAPPING_ROOM_ID_DO_NOT_DELETE_PRICE;
         }else if (value == 3) {
             return MAP_EXISTING_HOTEL_AND_ROOM_ID;
-        }  else {
+        }  else if (value == 4) {
+            return UN_MAPPING_ROOM_ID_DELETE_PRICE;
+        } else {
             return null;
         }
 

@@ -60,7 +60,7 @@ public interface CtripService {
      * @throws ZZKServiceException  
      * @since JDK 1.7
      */
-    GetHotelInfoResponse getHotelInfo(Integer currentPage )throws ZZKServiceException;
+    GetHotelInfoResponse getHotelInfo(Integer currentPage ,Integer isOversea)throws ZZKServiceException;
     /**
      * 
      * getMappingInfo:得到mappinfo. <br/>  

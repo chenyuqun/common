@@ -85,6 +85,19 @@ public class HttpProxyUtil {
     return result;
 
   }
+
+  public JSONObject httpUrlPOST(String url, Map<String, String> params) throws IOException {
+    List<NameValuePair> pair = new ArrayList<NameValuePair>();
+    if (params != null) {
+      for (Map.Entry<String, String> entry : params.entrySet()) {
+        pair.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+      }
+      url = url + "?" + URLEncodedUtils.format(pair, ENCODE_VALUE);
+    }
+    HttpPost post = new HttpPost(url);
+    JSONObject result = httpComponent.executeWithLog(post, new JSONObjectResponseHandler());
+    return result;
+  }
   /**
    * 
    * httpPostXml:post xml. <br/>  
@@ -137,6 +150,19 @@ public class HttpProxyUtil {
     }
     HttpGet get = new HttpGet(url);
     JSONObject result = httpComponent.executeWithLog(get, new JSONObjectResponseHandler());
+    return result;
+  }
+
+  public String httpGetXMl(String url, Map<String, String> params) throws IOException {
+    List<NameValuePair> pair = new ArrayList<NameValuePair>();
+    if (params != null) {
+      for (Map.Entry<String, String> entry : params.entrySet()) {
+        pair.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+      }
+      url = url + "?" + URLEncodedUtils.format(pair, ENCODE_VALUE);
+    }
+    HttpGet get = new HttpGet(url);
+    String result = (String)httpComponent.executeUriRequestWithLog(get, new StringResponseHandler());
     return result;
   }
 

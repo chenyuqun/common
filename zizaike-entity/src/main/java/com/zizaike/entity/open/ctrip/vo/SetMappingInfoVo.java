@@ -80,6 +80,11 @@ public class SetMappingInfoVo implements Serializable{
      * 设置类型
      */
     private SetType setType;
+
+    /**
+     *是否海外
+     */
+    private int isOversea;
     public String getMasterHotel() {
         return masterHotel;
     }
@@ -159,17 +164,33 @@ public class SetMappingInfoVo implements Serializable{
     public void setSetMappingOperateType(SetMappingOperateType setMappingOperateType) {
         this.setMappingOperateType = setMappingOperateType;
     }
+
+    public int getIsOversea() {
+        return isOversea;
+    }
+
+    public void setIsOversea(int isOversea) {
+        this.isOversea = isOversea;
+    }
+
     @Override
     public String toString() {
-        return "SetMappingInfoVo [masterHotel=" + masterHotel + ", masterRoom=" + masterRoom + ", hotel=" + hotel
-                + ", room=" + room + ", ratePlanCode=" + ratePlanCode + ", hotelGroupHotelCode=" + hotelGroupHotelCode
-                + ", hotelGroupRoomTypeCode=" + hotelGroupRoomTypeCode + ", hotelGroupRatePlanCode="
-                + hotelGroupRatePlanCode + ", hotelGroupRoomName=" + hotelGroupRoomName + ", balanceType="
-                + balanceType + ", mappingType=" + mappingType + ", setMappingOperateType=" + setMappingOperateType
-                + ", setType=" + setType + "]";
+        return "SetMappingInfoVo{" +
+                "masterHotel='" + masterHotel + '\'' +
+                ", masterRoom='" + masterRoom + '\'' +
+                ", hotel='" + hotel + '\'' +
+                ", room='" + room + '\'' +
+                ", ratePlanCode='" + ratePlanCode + '\'' +
+                ", hotelGroupHotelCode='" + hotelGroupHotelCode + '\'' +
+                ", hotelGroupRoomTypeCode='" + hotelGroupRoomTypeCode + '\'' +
+                ", hotelGroupRatePlanCode='" + hotelGroupRatePlanCode + '\'' +
+                ", hotelGroupRoomName='" + hotelGroupRoomName + '\'' +
+                ", balanceType=" + balanceType +
+                ", mappingType=" + mappingType +
+                ", setMappingOperateType=" + setMappingOperateType +
+                ", setType=" + setType +
+                ", isOversea=" + isOversea +
+                '}';
     }
-    
-    
-
 }
   

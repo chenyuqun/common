@@ -34,6 +34,10 @@ public class MappingInfoVo implements Serializable{
      * 
      */
     private GetMappingInfoType getMappingInfoType;
+    /**
+     * 0代表中国，1代表海外
+     */
+    private int isOversea;
     public List<Integer> getHotels() {
         return hotels;
     }
@@ -46,12 +50,22 @@ public class MappingInfoVo implements Serializable{
     public void setGetMappingInfoType(GetMappingInfoType getMappingInfoType) {
         this.getMappingInfoType = getMappingInfoType;
     }
+
+    public int getIsOversea() {
+        return isOversea;
+    }
+
+    public void setIsOversea(int isOversea) {
+        this.isOversea = isOversea;
+    }
+
     @Override
     public String toString() {
-        return "MappingInfoEntity [hotels=" + hotels + ", getMappingInfoType=" + getMappingInfoType + "]";
+        return "MappingInfoVo{" +
+                "hotels=" + hotels +
+                ", getMappingInfoType=" + getMappingInfoType +
+                ", isOversea=" + isOversea +
+                '}';
     }
-    
-    
-
 }
   
