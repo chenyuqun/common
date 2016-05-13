@@ -7,10 +7,12 @@
  *  
 */  
   
-package com.zizaike.entity.solr;  
+package com.zizaike.entity.solr;
 
 
-/**  
+import java.util.List;
+
+/**
  * ClassName:RoomList <br/>  
  * Function: TODO ADD FUNCTION. <br/>  
  * Reason:   TODO ADD REASON. <br/>  
@@ -70,7 +72,6 @@ public class RoomList implements java.io.Serializable {
      * Web专用
      */
     private String latestSuccessTimeS;
-    private int wifiI;
     private int destId;
     private int hasStoryI;
     private int baocheServiceI;
@@ -79,8 +80,7 @@ public class RoomList implements java.io.Serializable {
     private int huwaiServiceI;
     private int zaocanServiceI;
     private String followLanguageS;
-    private String chuangxing;
-    private String roomModel;
+    private List<RoomInfo> roomInfoList;
 
     public int getIsSubtract() {
         return isSubtract;
@@ -245,14 +245,6 @@ public class RoomList implements java.io.Serializable {
         this.latestSuccessTimeS = latestSuccessTimeS;
     }
 
-    public int getWifiI() {
-        return wifiI;
-    }
-
-    public void setWifiI(int wifiI) {
-        this.wifiI = wifiI;
-    }
-
     public int getDestId() {
         return destId;
     }
@@ -317,20 +309,12 @@ public class RoomList implements java.io.Serializable {
         this.followLanguageS = followLanguageS;
     }
 
-    public String getChuangxing() {
-        return chuangxing;
+    public List<RoomInfo> getRoomInfoList() {
+        return roomInfoList;
     }
 
-    public void setChuangxing(String chuangxing) {
-        this.chuangxing = chuangxing;
-    }
-
-    public String getRoomModel() {
-        return roomModel;
-    }
-
-    public void setRoomModel(String roomModel) {
-        this.roomModel = roomModel;
+    public void setRoomInfoList(List<RoomInfo> roomInfoList) {
+        this.roomInfoList = roomInfoList;
     }
 }
   
