@@ -10,6 +10,7 @@ package com.zizaike.entity.solr;
  */
 public class RoomInfo implements java.io.Serializable{
     private static final long serialVersionUID = 7242398989801744229L;
+    private int roomId;
     private String title;
     private String roomModel;
     private String chuangxing;
@@ -17,6 +18,14 @@ public class RoomInfo implements java.io.Serializable{
     private int breakfast;
     private int price;
     private int isSpeed;
+
+    public int getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(int roomId) {
+        this.roomId = roomId;
+    }
 
     public String getTitle() {
         return title;

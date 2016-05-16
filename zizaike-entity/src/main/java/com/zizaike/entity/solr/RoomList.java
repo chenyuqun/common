@@ -80,6 +80,8 @@ public class RoomList implements java.io.Serializable {
     private int huwaiServiceI;
     private int zaocanServiceI;
     private String followLanguageS;
+    private Double slat;
+    private Double slng;
     private List<RoomInfo> roomInfoList;
 
     public int getIsSubtract() {
@@ -307,6 +309,22 @@ public class RoomList implements java.io.Serializable {
 
     public void setFollowLanguageS(String followLanguageS) {
         this.followLanguageS = followLanguageS;
+    }
+
+    public Double getSlat() {
+        return slat;
+    }
+
+    public void setSlat(Double slat) {
+        this.slat = slat;
+    }
+
+    public Double getSlng() {
+        return slng;
+    }
+
+    public void setSlng(Double slng) {
+        this.slng = slng;
     }
 
     public List<RoomInfo> getRoomInfoList() {
