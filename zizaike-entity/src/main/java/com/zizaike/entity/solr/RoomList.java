@@ -7,10 +7,12 @@
  *  
 */  
   
-package com.zizaike.entity.solr;  
+package com.zizaike.entity.solr;
 
 
-/**  
+import java.util.List;
+
+/**
  * ClassName:RoomList <br/>  
  * Function: TODO ADD FUNCTION. <br/>  
  * Reason:   TODO ADD REASON. <br/>  
@@ -66,6 +68,22 @@ public class RoomList implements java.io.Serializable {
      * 特色服务
      */
     private int otherServiceI;
+    /**
+     * Web专用
+     */
+    private String latestSuccessTimeS;
+    private int destId;
+    private int hasStoryI;
+    private int baocheServiceI;
+    private int jiesongServiceI;
+    private int daidingServiceI;
+    private int huwaiServiceI;
+    private int zaocanServiceI;
+    private String followLanguageS;
+    private Double slat;
+    private Double slng;
+    private List<RoomInfo> roomInfoList;
+
     public int getIsSubtract() {
         return isSubtract;
     }
@@ -220,6 +238,101 @@ public class RoomList implements java.io.Serializable {
     public void setOtherServiceI(int otherServiceI) {
         this.otherServiceI = otherServiceI;
     }
-    
+
+    public String getLatestSuccessTimeS() {
+        return latestSuccessTimeS;
+    }
+
+    public void setLatestSuccessTimeS(String latestSuccessTimeS) {
+        this.latestSuccessTimeS = latestSuccessTimeS;
+    }
+
+    public int getDestId() {
+        return destId;
+    }
+
+    public void setDestId(int destId) {
+        this.destId = destId;
+    }
+
+    public int getHasStoryI() {
+        return hasStoryI;
+    }
+
+    public void setHasStoryI(int hasStoryI) {
+        this.hasStoryI = hasStoryI;
+    }
+
+    public int getBaocheServiceI() {
+        return baocheServiceI;
+    }
+
+    public void setBaocheServiceI(int baocheServiceI) {
+        this.baocheServiceI = baocheServiceI;
+    }
+
+    public int getJiesongServiceI() {
+        return jiesongServiceI;
+    }
+
+    public void setJiesongServiceI(int jiesongServiceI) {
+        this.jiesongServiceI = jiesongServiceI;
+    }
+
+    public int getDaidingServiceI() {
+        return daidingServiceI;
+    }
+
+    public void setDaidingServiceI(int daidingServiceI) {
+        this.daidingServiceI = daidingServiceI;
+    }
+
+    public int getHuwaiServiceI() {
+        return huwaiServiceI;
+    }
+
+    public void setHuwaiServiceI(int huwaiServiceI) {
+        this.huwaiServiceI = huwaiServiceI;
+    }
+
+    public int getZaocanServiceI() {
+        return zaocanServiceI;
+    }
+
+    public void setZaocanServiceI(int zaocanServiceI) {
+        this.zaocanServiceI = zaocanServiceI;
+    }
+
+    public String getFollowLanguageS() {
+        return followLanguageS;
+    }
+
+    public void setFollowLanguageS(String followLanguageS) {
+        this.followLanguageS = followLanguageS;
+    }
+
+    public Double getSlat() {
+        return slat;
+    }
+
+    public void setSlat(Double slat) {
+        this.slat = slat;
+    }
+
+    public Double getSlng() {
+        return slng;
+    }
+
+    public void setSlng(Double slng) {
+        this.slng = slng;
+    }
+
+    public List<RoomInfo> getRoomInfoList() {
+        return roomInfoList;
+    }
+
+    public void setRoomInfoList(List<RoomInfo> roomInfoList) {
+        this.roomInfoList = roomInfoList;
+    }
 }
   

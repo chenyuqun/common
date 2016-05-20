@@ -53,6 +53,10 @@ public class AssociateWordsDTO implements java.io.Serializable{
      * 速订 1是 0不是
      */
     private Integer isSpeedRoom;
+    /**
+     * 目的地信息
+     */
+    private String destDesc;
     public AssociateType getAssociateType() {
         return associateType;
     }
@@ -101,6 +105,13 @@ public class AssociateWordsDTO implements java.io.Serializable{
     public void setIsSpeedRoom(Integer isSpeedRoom) {
         this.isSpeedRoom = isSpeedRoom;
     }
-    
+
+    public String getDestDesc() {
+        return destDesc;
+    }
+
+    public void setDestDesc(String destDesc) {
+        this.destDesc = destDesc;
+    }
 }
   
