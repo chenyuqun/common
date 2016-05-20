@@ -10,7 +10,7 @@
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>zizaike-entity</artifactId>
-	<version>1.0.16-SNAPSHOT</version>
+	<version>1.0.17-SNAPSHOT</version>
 	<name>zizaike-entity</name>
 	<url>http://maven.apache.org</url>
 	<properties>
