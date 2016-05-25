@@ -63,6 +63,6 @@ public interface RoomSolrService extends CrudRepository<Room, Integer> {
      * @author alex
      * @throws ZZKServiceException
      */
-    void updateRoomPrice(int roomTypeId) throws ZZKServiceException;
+    Boolean updateRoomPrice(int roomTypeId) throws ZZKServiceException;
 }
   
