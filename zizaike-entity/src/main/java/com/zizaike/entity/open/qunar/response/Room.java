@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 /**
  * Project Name: code <br/>
@@ -110,6 +111,7 @@ public class Room {
     /**
      * remarks是room的可选节点。一些提示消费者的信息。
      */
+    @XStreamAlias("remarks")
     private List<Remark> remarks;
 
     /**

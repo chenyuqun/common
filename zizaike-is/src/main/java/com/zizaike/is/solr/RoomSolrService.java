@@ -56,5 +56,13 @@ public interface RoomSolrService extends CrudRepository<Room, Integer> {
      * @since JDK 1.7
      */
     RoomSolr searchSolr(SearchWordsVo searchWordsVo) throws ZZKServiceException;
+
+    /**
+     * updateRoomPrice
+     * 构建每天价格到Solr
+     * @author alex
+     * @throws ZZKServiceException
+     */
+    Boolean updateRoomPrice(int roomTypeId) throws ZZKServiceException;
 }
   

@@ -115,6 +115,7 @@ public class SearchableRoom {
     public static final String BAOCHE_SERVICE_I_FIELD = "baoche_service_i";
     public static final String JIESONG_SERVICE_I_FIELD = "jiesong_service_i";
     public static final String OTHER_SERVICE_I_FIELD = "other_service_i";
+    public static final String MIN_PRICE_FIELD = "min_price";
 
 
 }

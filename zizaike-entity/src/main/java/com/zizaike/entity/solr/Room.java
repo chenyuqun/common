@@ -503,7 +503,11 @@ public class Room extends SearchableRoom implements java.io.Serializable{
      */
     @Field(OTHER_SERVICE_I_FIELD)
     private int otherServiceI;
-    
+    /**
+     * 所选日期最小价格
+     */
+    @Field(MIN_PRICE_FIELD)
+    private float minPrice;
     
     
     public List<String> getDiscountRoomDatesSs() {
@@ -1071,6 +1075,15 @@ public class Room extends SearchableRoom implements java.io.Serializable{
     public void setHsSpeedRoomI(int hsSpeedRoomI) {
         this.hsSpeedRoomI = hsSpeedRoomI;
     }
+
+    public float getMinPrice() {
+        return minPrice;
+    }
+
+    public void setMinPrice(float minPrice) {
+        this.minPrice = minPrice;
+    }
+
     @Override
     public String toString() {
         return "Room [id=" + id + ", version=" + version + ", text=" + text + ", created=" + created + ", changed="
