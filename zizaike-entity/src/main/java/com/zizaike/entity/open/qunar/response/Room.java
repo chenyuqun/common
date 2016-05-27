@@ -111,8 +111,7 @@ public class Room {
     /**
      * remarks是room的可选节点。一些提示消费者的信息。
      */
-    //@XStreamAlias("remarks")
-    @XStreamImplicit(itemFieldName = "remark")
+    @XStreamAlias("remarks")
     private List<Remark> remarks;
 
     /**
