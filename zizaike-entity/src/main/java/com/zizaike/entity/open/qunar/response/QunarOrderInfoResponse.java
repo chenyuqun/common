@@ -268,6 +268,12 @@ public class QunarOrderInfoResponse{
         this.customerInfos = customerInfos;
     }
 
+    public String getRoomNum() {
+        return roomNum;
+    }
 
+    public void setRoomNum(String roomNum) {
+        this.roomNum = roomNum;
+    }
 }
 
