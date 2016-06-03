@@ -13,6 +13,7 @@ import com.zizaike.entity.open.alibaba.request.RequestData;
  */
 @XStreamAlias("qunarOrderQueryResponse")
 public class QunarOrderQueryResponse extends RequestData {
+    @XStreamAlias("orderInfo")
     private OrderInfoResponse orderInfoResponse;
 
     public OrderInfoResponse getOrderInfoResponse() {

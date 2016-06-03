@@ -3,6 +3,7 @@ package com.zizaike.entity.open.qunar.response;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.zizaike.entity.open.qunar.request.CustomerInfo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -14,7 +15,9 @@ import java.util.List;
  * @since JDK 1.7
  */
 @XStreamAlias("orderInfo")
-public class OrderInfoResponse {
+public class OrderInfoResponse implements Serializable{
+
+    private static final long serialVersionUID = 2131698920965662817L;
     @XStreamAlias("orderNum")
     private String orderNum;
     @XStreamAlias("hotelSeq")

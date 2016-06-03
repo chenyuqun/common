@@ -1,5 +1,6 @@
 package com.zizaike.entity.open.qunar.request;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
@@ -15,8 +16,9 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
  * @since JDK 1.7
  */
 @XStreamAlias("customerInfo")
-public class CustomerInfo {
-    
+public class CustomerInfo implements Serializable{
+
+    private static final long serialVersionUID = -4378807597599136114L;
     @XStreamImplicit(itemFieldName = "customer")
     private List<Customer> customer;
 
