@@ -27,6 +27,8 @@ public class OrderInfoResponse {
     private String cityName;
     @XStreamAlias("hotelPhone")
     private String hotelPhone;
+    @XStreamAlias("roomNum")
+    private String roomNum;
     @XStreamAlias("orderDate")
     private String orderDate;
     @XStreamAlias("contactName")
@@ -264,5 +266,13 @@ public class OrderInfoResponse {
 
     public void setTotalPrice(String totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public String getRoomNum() {
+        return roomNum;
+    }
+
+    public void setRoomNum(String roomNum) {
+        this.roomNum = roomNum;
     }
 }
