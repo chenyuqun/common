@@ -31,6 +31,8 @@ public class QunarOrderInfoResponse{
     private String hotelAddress;
     @XStreamAlias("cityName")
     private String cityName;
+    @XStreamAlias("roomNum")
+    private String roomNum;
     @XStreamAlias("hotelPhone")
     private String hotelPhone;
     @XStreamAlias("orderDate")
