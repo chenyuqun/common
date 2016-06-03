@@ -31,8 +31,6 @@ public class QunarOrderInfoResponse{
     private String hotelAddress;
     @XStreamAlias("cityName")
     private String cityName;
-    @XStreamAlias("roomNum")
-    private String roomNum;
     @XStreamAlias("hotelPhone")
     private String hotelPhone;
     @XStreamAlias("orderDate")
@@ -266,14 +264,6 @@ public class QunarOrderInfoResponse{
 
     public void setCustomerInfos(List<CustomerInfo> customerInfos) {
         this.customerInfos = customerInfos;
-    }
-
-    public String getRoomNum() {
-        return roomNum;
-    }
-
-    public void setRoomNum(String roomNum) {
-        this.roomNum = roomNum;
     }
 }
 
