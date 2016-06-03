@@ -59,8 +59,8 @@ public class QunarOrderInfoResponse{
     private String currencyCode;
     @XStreamAlias("room")
     private Room room;
-    @XStreamAlias("customerArriiveTime")
-    private String customerArriiveTime;
+    @XStreamAlias("customerArriveTime")
+    private String customerArriveTime;
     @XStreamAlias("specialRemarks")
     private String specialRemarks;
     @XStreamAlias("customerInfos")
@@ -243,11 +243,11 @@ public class QunarOrderInfoResponse{
     }
 
     public String getCustomerArriiveTime() {
-        return customerArriiveTime;
+        return customerArriveTime;
     }
 
     public void setCustomerArriiveTime(String customerArriiveTime) {
-        this.customerArriiveTime = customerArriiveTime;
+        this.customerArriveTime = customerArriiveTime;
     }
 
     public String getSpecialRemarks() {
