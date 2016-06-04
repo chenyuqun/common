@@ -20,6 +20,8 @@ package com.zizaike.entity.open.qunar.request;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
+import java.io.Serializable;
+
 /**  
  * ClassName: Customer <br/>  
  * Function: TODO ADD FUNCTION. <br/>  
@@ -31,8 +33,9 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
  * @since JDK 1.7  
  */
 @XStreamAlias("customer")
-public class Customer {
-    /**  
+public class Customer implements Serializable{
+    private static final long serialVersionUID = 9033068436425984793L;
+    /**
      * Creates a new instance of Customer.  
      *  
      * @param firstname

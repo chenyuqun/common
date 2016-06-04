@@ -3,26 +3,23 @@ package com.zizaike.entity.open.qunar.response;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.zizaike.entity.open.qunar.request.CustomerInfo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Project Name: code <br/>
- * Function:QunarOrderInfoResponse. <br/>
- * date: 2016/4/21 18:41 <br/>
+ * Function:OrderInfoResponse. <br/>
+ * date: 2016/6/3 16:13 <br/>
  *
  * @author alex
  * @since JDK 1.7
  */
 @XStreamAlias("orderInfo")
-public class QunarOrderInfoResponse{
+public class OrderInfoResponse implements Serializable{
+
+    private static final long serialVersionUID = 2131698920965662817L;
     @XStreamAlias("orderNum")
     private String orderNum;
-    @XStreamAlias("orderId")
-    private String orderId;
-    @XStreamAlias("payType")
-    private PayType payType;
-    @XStreamAlias("status")
-    private Status status;
     @XStreamAlias("hotelSeq")
     private String hotelSeq;
     @XStreamAlias("hotelName")
@@ -33,6 +30,8 @@ public class QunarOrderInfoResponse{
     private String cityName;
     @XStreamAlias("hotelPhone")
     private String hotelPhone;
+    @XStreamAlias("roomNum")
+    private String roomNum;
     @XStreamAlias("orderDate")
     private String orderDate;
     @XStreamAlias("contactName")
@@ -41,30 +40,36 @@ public class QunarOrderInfoResponse{
     private String contactPhone;
     @XStreamAlias("contactEmail")
     private String contactEmail;
+    @XStreamAlias("payType")
+    private PayType payType;
     @XStreamAlias("customerIp")
     private String customerIp;
     @XStreamAlias("invoiceCode")
     private String invoiceCode;
-    @XStreamAlias("invoice")
-    private Invoice invoice;
+    @XStreamAlias("orderId")
+    private String orderId;
+    @XStreamAlias("qunarStatus")
+    private String qunarStatus;
+    @XStreamAlias("qunarStatusCode")
+    private String qunarStatusCode;
     @XStreamAlias("hotelId")
     private String hotelId;
-    @XStreamAlias("checkin")
-    private String checkin;
-    @XStreamAlias("checkout")
-    private String checkout;
-    @XStreamAlias("totalPrice")
-    private String totalPrice;
+    @XStreamAlias("roomId")
+    private String roomId;
     @XStreamAlias("currencyCode")
     private String currencyCode;
-    @XStreamAlias("room")
-    private Room room;
     @XStreamAlias("customerArriveTime")
     private String customerArriveTime;
     @XStreamAlias("specialRemarks")
     private String specialRemarks;
     @XStreamAlias("customerInfos")
     private List<CustomerInfo> customerInfos;
+    @XStreamAlias("checkin")
+    private String checkin;
+    @XStreamAlias("checkout")
+    private String checkout;
+    @XStreamAlias("totalPrice")
+    private String totalPrice;
 
     public String getOrderNum() {
         return orderNum;
@@ -72,30 +77,6 @@ public class QunarOrderInfoResponse{
 
     public void setOrderNum(String orderNum) {
         this.orderNum = orderNum;
-    }
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
-    }
-
-    public PayType getPayType() {
-        return payType;
-    }
-
-    public void setPayType(PayType payType) {
-        this.payType = payType;
-    }
-
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
     }
 
     public String getHotelSeq() {
@@ -170,6 +151,14 @@ public class QunarOrderInfoResponse{
         this.contactEmail = contactEmail;
     }
 
+    public PayType getPayType() {
+        return payType;
+    }
+
+    public void setPayType(PayType payType) {
+        this.payType = payType;
+    }
+
     public String getCustomerIp() {
         return customerIp;
     }
@@ -186,12 +175,28 @@ public class QunarOrderInfoResponse{
         this.invoiceCode = invoiceCode;
     }
 
-    public Invoice getInvoice() {
-        return invoice;
+    public String getOrderId() {
+        return orderId;
     }
 
-    public void setInvoice(Invoice invoice) {
-        this.invoice = invoice;
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getQunarStatus() {
+        return qunarStatus;
+    }
+
+    public void setQunarStatus(String qunarStatus) {
+        this.qunarStatus = qunarStatus;
+    }
+
+    public String getQunarStatusCode() {
+        return qunarStatusCode;
+    }
+
+    public void setQunarStatusCode(String qunarStatusCode) {
+        this.qunarStatusCode = qunarStatusCode;
     }
 
     public String getHotelId() {
@@ -200,6 +205,46 @@ public class QunarOrderInfoResponse{
 
     public void setHotelId(String hotelId) {
         this.hotelId = hotelId;
+    }
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
+    }
+
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+    }
+
+    public String getCustomerArriiveTime() {
+        return customerArriveTime;
+    }
+
+    public void setCustomerArriiveTime(String customerArriiveTime) {
+        this.customerArriveTime = customerArriiveTime;
+    }
+
+    public String getSpecialRemarks() {
+        return specialRemarks;
+    }
+
+    public void setSpecialRemarks(String specialRemarks) {
+        this.specialRemarks = specialRemarks;
+    }
+
+    public List<CustomerInfo> getCustomerInfos() {
+        return customerInfos;
+    }
+
+    public void setCustomerInfos(List<CustomerInfo> customerInfos) {
+        this.customerInfos = customerInfos;
     }
 
     public String getCheckin() {
@@ -226,44 +271,11 @@ public class QunarOrderInfoResponse{
         this.totalPrice = totalPrice;
     }
 
-    public String getCurrencyCode() {
-        return currencyCode;
+    public String getRoomNum() {
+        return roomNum;
     }
 
-    public void setCurrencyCode(String currencyCode) {
-        this.currencyCode = currencyCode;
-    }
-
-    public Room getRoom() {
-        return room;
-    }
-
-    public void setRoom(Room room) {
-        this.room = room;
-    }
-
-    public String getCustomerArriiveTime() {
-        return customerArriveTime;
-    }
-
-    public void setCustomerArriiveTime(String customerArriiveTime) {
-        this.customerArriveTime = customerArriiveTime;
-    }
-
-    public String getSpecialRemarks() {
-        return specialRemarks;
-    }
-
-    public void setSpecialRemarks(String specialRemarks) {
-        this.specialRemarks = specialRemarks;
-    }
-
-    public List<CustomerInfo> getCustomerInfos() {
-        return customerInfos;
-    }
-
-    public void setCustomerInfos(List<CustomerInfo> customerInfos) {
-        this.customerInfos = customerInfos;
+    public void setRoomNum(String roomNum) {
+        this.roomNum = roomNum;
     }
 }
-

@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.zizaike.core.framework.exception.ZZKServiceException;
 import com.zizaike.entity.open.HomestayDocking;
 import com.zizaike.entity.open.qunar.OtaOptVO;
+import com.zizaike.entity.open.qunar.response.OrderInfoResponse;
 
 /**
  * Project Name: code <br/>
@@ -73,7 +74,7 @@ public interface QunarService {
      *查询qunar的订单信息
      * @return
      */
-    String qunarOrderQuery(String orderNums);
+    OrderInfoResponse qunarOrderQuery(String orderNums) throws ZZKServiceException;
 
     /**
      * 操作qunar订单
